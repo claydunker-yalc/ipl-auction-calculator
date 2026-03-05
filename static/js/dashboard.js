@@ -206,6 +206,43 @@ function renderAll() {
 }
 
 // ============================================================
+// Draft Active Toggle
+// ============================================================
+function updateDraftToggle(isActive) {
+    const btn = document.getElementById('draft-toggle-btn');
+    if (!btn) return;
+    const label = btn.querySelector('.draft-toggle-label');
+    if (isActive) {
+        btn.classList.remove('draft-off');
+        btn.classList.add('draft-on');
+        label.textContent = 'DRAFT LIVE';
+    } else {
+        btn.classList.remove('draft-on');
+        btn.classList.add('draft-off');
+        label.textContent = 'DRAFT OFF';
+    }
+}
+
+async function toggleDraftActive() {
+    try {
+        const res = await fetch('/api/toggle_draft', { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+            updateDraftToggle(data.draft_active);
+            if (data.draft_active) {
+                showToast('Draft is LIVE — board is updating for everyone');
+            } else {
+                showToast('Draft is OFF — board is frozen, sim safely');
+            }
+        } else {
+            showToast('Failed to toggle draft', true);
+        }
+    } catch (err) {
+        showToast('Failed to toggle draft: ' + err.message, true);
+    }
+}
+
+// ============================================================
 // Top Bar
 // ============================================================
 function renderTopBar() {
@@ -238,6 +275,9 @@ function renderTopBar() {
 
     // Pick counter
     document.getElementById('pick-counter').textContent = `Pick #${appState.draft_log.length}`;
+
+    // Draft active toggle
+    updateDraftToggle(appState.draft_active);
 }
 
 // ============================================================

@@ -2621,3 +2621,66 @@ thead .cat-divider {
 .delete-confirm-no:hover {
     background: var(--cream-dark);
 }
+
+/* ---- Draft Active Toggle Button ---- */
+.draft-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border: 2px solid;
+    border-radius: 20px;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.draft-toggle-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+}
+
+/* Draft OFF state — muted, safe for sim mode */
+.draft-toggle-btn.draft-off {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.draft-toggle-btn.draft-off .draft-toggle-dot {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.draft-toggle-btn.draft-off:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Draft ON state — glowing green, clearly live */
+.draft-toggle-btn.draft-on {
+    background: rgba(61, 107, 32, 0.25);
+    border-color: var(--forest-light);
+    color: #8FD460;
+}
+
+.draft-toggle-btn.draft-on .draft-toggle-dot {
+    background: #8FD460;
+    box-shadow: 0 0 6px rgba(143, 212, 96, 0.6);
+    animation: draftPulse 2s ease-in-out infinite;
+}
+
+.draft-toggle-btn.draft-on:hover {
+    background: rgba(61, 107, 32, 0.35);
+}
+
+@keyframes draftPulse {
+    0%, 100% { box-shadow: 0 0 4px rgba(143, 212, 96, 0.4); }
+    50% { box-shadow: 0 0 10px rgba(143, 212, 96, 0.8); }
+}

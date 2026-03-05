@@ -125,7 +125,7 @@
         /* ---- Spreadsheet Board ---- */
         .spreadsheet-wrap {
             overflow-x: auto;
-            padding: 12px 16px 0;
+            padding: 12px 0 0;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -410,7 +410,7 @@
         <div class="board-status">
             <div class="pick-count" id="pick-count">0 picks</div>
             <div><span class="connection-dot" id="connection-dot"></span><span id="connection-text">Connected</span></div>
-            <div class="refresh-note">Live — refreshes every 5 seconds</div>
+            <div class="refresh-note" id="board-status-note">Live — refreshes every 5 seconds</div>
         </div>
     </div>
 
@@ -502,6 +502,16 @@
 
             document.getElementById('pick-count').textContent =
                 `${picks} pick${picks !== 1 ? 's' : ''}`;
+
+            // Show draft status
+            const statusNote = document.getElementById('board-status-note');
+            if (boardState.draft_active) {
+                statusNote.textContent = 'Live — refreshes every 5 seconds';
+                statusNote.style.color = '';
+            } else {
+                statusNote.textContent = 'Draft has not started yet';
+                statusNote.style.color = 'rgba(255,255,255,0.35)';
+            }
 
             renderTicker(hasNew);
             renderSpreadsheet();

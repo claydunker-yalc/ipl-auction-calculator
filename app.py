@@ -95,6 +95,7 @@ state = {
     "draft_log": [],           # List of {pick_num, player, position, manager, price, projected_value}
     "mode": "manual",          # manual | interactive | batch
     "last_batch_results": None, # Store last batch sim for standings
+    "draft_active": False,     # When False, public board hides draft picks (sim mode)
 }
 
 MY_MANAGER = "Clay Dunker"
@@ -133,8 +134,10 @@ def load_data():
                 saved = json.load(f)
             state["draft_log"] = saved.get("draft_log", [])
             state["mode"] = saved.get("mode", "manual")
+            state["draft_active"] = saved.get("draft_active", False)
             if state["draft_log"]:
                 print(f"Auto-restored {len(state['draft_log'])} picks from saved draft")
+            print(f"Draft active: {state['draft_active']}")
         except Exception as e:
             print(f"[WARNING] Could not restore draft save: {e}")
             state["draft_log"] = []
@@ -160,6 +163,7 @@ def auto_save_draft():
         save_data("draft_save.json", {
             "draft_log": state["draft_log"],
             "mode": state["mode"],
+            "draft_active": state["draft_active"],
         })
     except Exception as e:
         print(f"[WARNING] Auto-save failed: {e}")
@@ -264,11 +268,18 @@ def public_board():
 
 @app.route("/api/board_state")
 def api_board_state():
-    """Slim state for the public board — no inflation, no recommendations, no profiles."""
+    """Slim state for the public board — no inflation, no recommendations, no profiles.
+
+    When draft_active is False, draft picks are hidden from the public board
+    so the commissioner can run sims without updating the live board.
+    """
+    # When draft is inactive, the public board sees NO draft picks
+    visible_log = state["draft_log"] if state["draft_active"] else []
+
     teams_info = []
     for team in state["league_state"].get("teams", []):
-        spent = sum(p["price"] for p in state["draft_log"] if p["manager"] == team["manager"])
-        drafted_count = sum(1 for p in state["draft_log"] if p["manager"] == team["manager"])
+        spent = sum(p["price"] for p in visible_log if p["manager"] == team["manager"])
+        drafted_count = sum(1 for p in visible_log if p["manager"] == team["manager"])
         teams_info.append({
             "manager": team["manager"],
             "auction_budget": team["auction_budget"],
@@ -283,12 +294,13 @@ def api_board_state():
                 - drafted_count
             ),
             "drafted_players": [
-                p for p in state["draft_log"] if p["manager"] == team["manager"]
+                p for p in visible_log if p["manager"] == team["manager"]
             ],
         })
     return safe_jsonify({
         "teams": teams_info,
-        "draft_log": state["draft_log"],
+        "draft_log": visible_log,
+        "draft_active": state["draft_active"],
         "total_roster_size": state["league_settings"].get("total_roster_size", 22),
     })
 
@@ -379,6 +391,7 @@ def api_state():
         ),
         "league_settings": state["league_settings"],
         "mode": state["mode"],
+        "draft_active": state["draft_active"],
         "profiles": state["manager_profiles_analyzed"],
     })
 
@@ -620,6 +633,7 @@ def api_save_draft():
     save_data("draft_save.json", {
         "draft_log": state["draft_log"],
         "mode": state["mode"],
+        "draft_active": state["draft_active"],
     })
     return safe_jsonify({"success": True, "path": save_path})
 
@@ -655,6 +669,17 @@ def api_set_mode():
         state["mode"] = mode
         return safe_jsonify({"success": True, "mode": mode})
     return safe_jsonify({"error": "Invalid mode"}), 400
+
+
+@app.route("/api/toggle_draft", methods=["POST"])
+def api_toggle_draft():
+    """Toggle draft active/inactive. When inactive, board hides draft picks (sim mode)."""
+    state["draft_active"] = not state["draft_active"]
+    auto_save_draft()
+    return safe_jsonify({
+        "success": True,
+        "draft_active": state["draft_active"],
+    })
 
 
 @app.route("/api/profiles")

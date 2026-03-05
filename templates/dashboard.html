@@ -24,6 +24,10 @@
             <button class="mode-btn" data-mode="batch">Batch Sim</button>
         </div>
         <span id="pick-counter" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--mustard)">Pick #0</span>
+        <button id="draft-toggle-btn" class="draft-toggle-btn draft-off" onclick="toggleDraftActive()">
+            <span class="draft-toggle-dot"></span>
+            <span class="draft-toggle-label">DRAFT OFF</span>
+        </button>
         <div class="view-selector">
             <button class="view-btn active" data-view="dashboard" onclick="switchView('dashboard')">Dashboard</button>
             <button class="view-btn" data-view="teams" onclick="switchView('teams')">Team View</button>
