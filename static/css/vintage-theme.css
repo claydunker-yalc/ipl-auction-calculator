@@ -2528,3 +2528,96 @@ thead .cat-divider {
 .move-pos-option:disabled {
     cursor: default;
 }
+
+.move-pos-option.full {
+    background: var(--cream-dark);
+    color: var(--text-muted);
+    border-color: var(--border-light);
+    cursor: not-allowed;
+    opacity: 0.5;
+    font-size: 0.6rem;
+}
+
+/* ---- Delete Pick Button ---- */
+.roster-slot-delete {
+    font-size: 0.65rem;
+    color: var(--burgundy);
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.15s, background 0.15s;
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.roster-slot:hover .roster-slot-delete {
+    opacity: 0.6;
+}
+
+.roster-slot-delete:hover {
+    opacity: 1 !important;
+    background: rgba(139, 26, 26, 0.1);
+}
+
+/* ---- Delete Confirmation Popup ---- */
+.delete-pick-confirm {
+    background: var(--cream);
+    border: 2px solid var(--burgundy);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    padding: 12px 16px;
+    max-width: 260px;
+    font-family: var(--font-body);
+}
+
+.delete-confirm-text {
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.delete-confirm-sub {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.delete-confirm-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.delete-confirm-yes {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    background: var(--burgundy);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.delete-confirm-yes:hover {
+    background: var(--burgundy-dark);
+}
+
+.delete-confirm-no {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    background: white;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.delete-confirm-no:hover {
+    background: var(--cream-dark);
+}

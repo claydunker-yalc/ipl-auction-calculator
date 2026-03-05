@@ -1874,6 +1874,11 @@ function renderRosterSlotRow(slot) {
     const safePlayer = escapeHtml(slot.player).replace(/'/g, "\\'");
     const safeManager = escapeHtml(slot.manager || '').replace(/'/g, "\\'");
 
+    // Delete button only for drafted players (not keepers)
+    const deleteBtn = slot.source === 'drafted'
+        ? `<span class="roster-slot-delete" onclick="confirmDeletePick('${safeManager}', '${safePlayer}', event)" title="Remove draft pick">✕</span>`
+        : '';
+
     return `
         <div class="roster-slot">
             <span class="roster-slot-pos ${posClass} pos-clickable"
@@ -1883,6 +1888,7 @@ function renderRosterSlotRow(slot) {
             ${mlbTeam}
             <span class="roster-slot-source ${sourceClass}">${sourceLabel}</span>
             <span class="roster-slot-price">$${slot.price}</span>
+            ${deleteBtn}
         </div>
     `;
 }
@@ -1891,10 +1897,41 @@ function renderRosterSlotRow(slot) {
 // Move Player Position
 // ============================================================
 const ALL_POSITIONS = ['C','1B','2B','SS','3B','CI','MI','OF','UTIL','SP','RP','P'];
+const POS_MAX = { C:1, '1B':1, '2B':1, SS:1, '3B':1, CI:1, MI:1, OF:5, UTIL:1, SP:4, RP:3, P:2 };
+
+// Count how many players a manager has at each position (from current appState)
+function getManagerPosCounts(manager) {
+    const counts = {};
+    ALL_POSITIONS.forEach(p => counts[p] = 0);
+
+    if (!appState) return counts;
+
+    // Count from draft log
+    (appState.draft_log || []).forEach(pick => {
+        if (pick.manager === manager && counts[pick.position] !== undefined) {
+            counts[pick.position]++;
+        }
+    });
+
+    // Count from keepers
+    const team = (appState.teams || []).find(t => t.manager === manager);
+    if (team) {
+        (team.keepers || []).forEach(k => {
+            if (counts[k.position] !== undefined) {
+                counts[k.position]++;
+            }
+        });
+    }
+
+    return counts;
+}
 
 function openMovePlayer(manager, player, currentPos, el) {
     // Close any existing dropdown
     closeMoveDropdown();
+
+    // Get position counts to show which are full
+    const posCounts = getManagerPosCounts(manager);
 
     const dropdown = document.createElement('div');
     dropdown.id = 'move-pos-dropdown';
@@ -1902,13 +1939,22 @@ function openMovePlayer(manager, player, currentPos, el) {
 
     dropdown.innerHTML = `
         <div class="move-pos-title">Move to:</div>
-        ${ALL_POSITIONS.map(pos => `
-            <button class="move-pos-option ${pos === currentPos ? 'current' : ''}"
-                    onclick="movePlayer('${manager.replace(/'/g, "\\'")}', '${player.replace(/'/g, "\\'")}', '${pos}')"
-                    ${pos === currentPos ? 'disabled' : ''}>
-                ${pos}
-            </button>
-        `).join('')}
+        ${ALL_POSITIONS.map(pos => {
+            const isCurrent = pos === currentPos;
+            // Subtract 1 from current pos count since this player will be leaving it
+            const countAtPos = isCurrent ? posCounts[pos] - 1 : posCounts[pos];
+            const maxSlots = POS_MAX[pos] || 1;
+            const isFull = countAtPos >= maxSlots && !isCurrent;
+            const disabled = isCurrent || isFull;
+            const label = isFull ? `${pos} (full)` : pos;
+            return `
+                <button class="move-pos-option ${isCurrent ? 'current' : ''} ${isFull ? 'full' : ''}"
+                        onclick="movePlayer('${manager.replace(/'/g, "\\'")}', '${player.replace(/'/g, "\\'")}', '${pos}')"
+                        ${disabled ? 'disabled' : ''}>
+                    ${label}
+                </button>
+            `;
+        }).join('')}
     `;
 
     // Position near the clicked element
@@ -1956,6 +2002,77 @@ async function movePlayer(manager, player, newPosition) {
         }
     } catch (err) {
         showToast('Move failed: ' + err.message, true);
+    }
+}
+
+// ============================================================
+// Delete Draft Pick
+// ============================================================
+function confirmDeletePick(manager, player, event) {
+    event.stopPropagation();
+
+    // Close any open dropdown
+    closeMoveDropdown();
+
+    // Create confirmation popup
+    const popup = document.createElement('div');
+    popup.id = 'delete-pick-confirm';
+    popup.className = 'delete-pick-confirm';
+    popup.innerHTML = `
+        <div class="delete-confirm-text">Remove <strong>${player}</strong> from ${manager}?</div>
+        <div class="delete-confirm-sub">Player returns to the available pool. Budget is restored.</div>
+        <div class="delete-confirm-buttons">
+            <button class="delete-confirm-yes" onclick="deletePick('${manager.replace(/'/g, "\\'")}', '${player.replace(/'/g, "\\'")}')">Yes, Delete</button>
+            <button class="delete-confirm-no" onclick="closeDeleteConfirm()">Cancel</button>
+        </div>
+    `;
+
+    // Position near the clicked element
+    const rect = event.target.getBoundingClientRect();
+    popup.style.position = 'fixed';
+    popup.style.top = (rect.bottom + 4) + 'px';
+    popup.style.left = Math.max(10, rect.left - 100) + 'px';
+    popup.style.zIndex = '3000';
+
+    // Remove any existing
+    closeDeleteConfirm();
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        document.addEventListener('click', closeDeleteConfirmOutside);
+    }, 10);
+}
+
+function closeDeleteConfirm() {
+    const existing = document.getElementById('delete-pick-confirm');
+    if (existing) existing.remove();
+    document.removeEventListener('click', closeDeleteConfirmOutside);
+}
+
+function closeDeleteConfirmOutside(e) {
+    const popup = document.getElementById('delete-pick-confirm');
+    if (popup && !popup.contains(e.target)) {
+        closeDeleteConfirm();
+    }
+}
+
+async function deletePick(manager, player) {
+    closeDeleteConfirm();
+    try {
+        const res = await fetch('/api/delete_pick', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ manager, player }),
+        });
+        const data = await res.json();
+        if (data.success) {
+            showToast(`Removed ${player} from ${manager} ($${data.removed.price} restored)`);
+            await fetchState();
+        } else {
+            showToast(data.error || 'Delete failed', true);
+        }
+    } catch (err) {
+        showToast('Delete failed: ' + err.message, true);
     }
 }
 

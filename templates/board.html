@@ -236,24 +236,73 @@
         .ss-cell {
             padding: 3px 6px;
             border-right: 1px solid var(--border-light);
-            border-bottom: 1px solid rgba(0,0,0,0.04);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             min-width: 140px;
-            background: var(--parchment);
             transition: background 0.2s;
         }
 
-        .ss-cell:nth-child(odd) {
-            background: var(--cream);
-        }
+        /* Row banding — consistent color across entire row */
+        .ss-cell.row-even { background: var(--parchment); }
+        .ss-cell.row-odd  { background: var(--cream-dark); }
 
         .ss-cell.empty-cell {
             color: var(--text-muted);
             font-style: italic;
             font-size: 0.7rem;
         }
+
+        /* Right-side position label */
+        .ss-pos-label-right {
+            position: sticky;
+            right: 0;
+            z-index: 10;
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 3px 6px;
+            border-left: 2px solid var(--mustard);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            min-width: 42px;
+            white-space: nowrap;
+        }
+
+        .ss-pos-label-right.row-even { background: var(--navy); color: var(--cream); }
+        .ss-pos-label-right.row-odd  { background: var(--navy); color: var(--cream); }
+
+        .ss-pos-label-right.section-hitting {
+            background: var(--navy-light);
+            color: var(--mustard);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .ss-pos-label-right.section-pitching {
+            background: var(--burgundy-dark);
+            color: var(--mustard);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        /* Right corner (top-right) */
+        .ss-corner-right {
+            position: sticky;
+            right: 0;
+            z-index: 20;
+            background: var(--navy);
+            border-left: 2px solid var(--mustard);
+            border-bottom: 2px solid var(--mustard);
+            min-width: 42px;
+        }
+
+        /* Row-based banding on left labels too */
+        .ss-pos-label.row-even { background: var(--navy); }
+        .ss-pos-label.row-odd  { background: var(--navy-light); }
 
         .ss-cell .player-name {
             font-weight: 600;
@@ -309,7 +358,7 @@
 
         @keyframes highlightCell {
             0% { background: rgba(200, 169, 81, 0.35); }
-            100% { background: var(--parchment); }
+            100% { background: inherit; }
         }
 
         /* Corner cell (top-left) */
@@ -480,8 +529,8 @@
             );
             const numTeams = teams.length;
 
-            // Set grid columns: label + team columns
-            el.style.gridTemplateColumns = `42px repeat(${numTeams}, minmax(140px, 1fr))`;
+            // Set grid columns: left label + team columns + right label
+            el.style.gridTemplateColumns = `42px repeat(${numTeams}, minmax(140px, 1fr)) 42px`;
 
             // Build all filled rosters
             const teamRosters = teams.map(t => {
@@ -496,7 +545,7 @@
 
             let html = '';
 
-            // ---- Header row: corner + team headers ----
+            // ---- Header row: corner + team headers + right corner ----
             html += `<div class="ss-corner"></div>`;
             teams.forEach(t => {
                 const maxBid = t.budget_remaining - (t.spots_remaining - 1);
@@ -507,21 +556,25 @@
                     <div class="ss-team-maxbid">max bid $${maxBid > 0 ? maxBid : 0}</div>
                 </div>`;
             });
+            html += `<div class="ss-corner-right"></div>`;
 
             // ---- Section header: HITTING ----
             html += `<div class="ss-pos-label section-hitting">Hit</div>`;
             for (let c = 0; c < numTeams; c++) {
                 html += `<div class="ss-section-cell hitting-section"></div>`;
             }
+            html += `<div class="ss-pos-label-right section-hitting">Hit</div>`;
 
             // ---- Hitting rows ----
             const hittingEnd = 13; // indices 0-12 are hitting
             for (let r = 0; r < hittingEnd; r++) {
-                html += `<div class="ss-pos-label">${ROSTER_SLOTS[r].pos}</div>`;
+                const band = r % 2 === 0 ? 'row-even' : 'row-odd';
+                html += `<div class="ss-pos-label ${band}">${ROSTER_SLOTS[r].pos}</div>`;
                 for (let c = 0; c < numTeams; c++) {
                     const slot = teamRosters[c][r];
-                    html += renderCell(slot);
+                    html += renderCell(slot, band);
                 }
+                html += `<div class="ss-pos-label-right ${band}">${ROSTER_SLOTS[r].pos}</div>`;
             }
 
             // ---- Section header: PITCHING ----
@@ -529,22 +582,25 @@
             for (let c = 0; c < numTeams; c++) {
                 html += `<div class="ss-section-cell pitching-section"></div>`;
             }
+            html += `<div class="ss-pos-label-right section-pitching">Pitch</div>`;
 
             // ---- Pitching rows ----
             for (let r = hittingEnd; r < ROSTER_SLOTS.length; r++) {
-                html += `<div class="ss-pos-label">${ROSTER_SLOTS[r].pos}</div>`;
+                const band = (r - hittingEnd) % 2 === 0 ? 'row-even' : 'row-odd';
+                html += `<div class="ss-pos-label ${band}">${ROSTER_SLOTS[r].pos}</div>`;
                 for (let c = 0; c < numTeams; c++) {
                     const slot = teamRosters[c][r];
-                    html += renderCell(slot);
+                    html += renderCell(slot, band);
                 }
+                html += `<div class="ss-pos-label-right ${band}">${ROSTER_SLOTS[r].pos}</div>`;
             }
 
             el.innerHTML = html;
         }
 
-        function renderCell(slot) {
+        function renderCell(slot, band) {
             if (!slot.player) {
-                return `<div class="ss-cell empty-cell">—</div>`;
+                return `<div class="ss-cell empty-cell ${band}">—</div>`;
             }
 
             const isNew = lastNewPlayer === slot.player;
@@ -552,7 +608,7 @@
             const tagClass = slot.source === 'keeper' ? 'tag-keeper' : 'tag-drafted';
             const tagLabel = slot.source === 'keeper' ? 'K' : 'D';
 
-            return `<div class="ss-cell ${isNew ? 'new-draft-cell' : ''}">
+            return `<div class="ss-cell ${band} ${isNew ? 'new-draft-cell' : ''}">
                 <span class="player-price ${priceClass}">$${slot.price}</span>
                 <span class="source-tag ${tagClass}">${tagLabel}</span>
                 <span class="player-name">${esc(slot.player)}</span>

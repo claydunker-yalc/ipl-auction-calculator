@@ -451,6 +451,39 @@ def api_undraft():
     return safe_jsonify({"success": True, "removed": removed})
 
 
+@app.route("/api/delete_pick", methods=["POST"])
+def api_delete_pick():
+    """Delete a specific draft pick by player name.
+
+    Body: {player, manager}
+    Removes the pick from draft_log and renumbers remaining picks.
+    The player returns to the available pool automatically (they're no longer in draft_log).
+    """
+    data = request.json
+    player_name = data.get("player", "")
+    manager_name = data.get("manager", "")
+
+    if not player_name or not manager_name:
+        return safe_jsonify({"error": "Player and manager are required"}), 400
+
+    # Find and remove the pick
+    removed = None
+    for i, pick in enumerate(state["draft_log"]):
+        if pick["player"] == player_name and pick["manager"] == manager_name:
+            removed = state["draft_log"].pop(i)
+            break
+
+    if not removed:
+        return safe_jsonify({"error": f"No draft pick found for {player_name} on {manager_name}"}), 404
+
+    # Renumber remaining picks
+    for j, pick in enumerate(state["draft_log"]):
+        pick["pick_num"] = j + 1
+
+    auto_save_draft()
+    return safe_jsonify({"success": True, "removed": removed})
+
+
 @app.route("/api/update_team", methods=["POST"])
 def api_update_team():
     """Update a team's data (budget, keepers, etc.)"""
@@ -515,6 +548,37 @@ def api_move_player():
 
     if not manager_name or not player_name or not new_position:
         return safe_jsonify({"error": "Missing manager, player, or new_position"}), 400
+
+    # ---- Check if the target position is full ----
+    # Max slots per position on a 22-man roster
+    POS_MAX = {
+        'C': 1, '1B': 1, '2B': 1, 'SS': 1, '3B': 1,
+        'CI': 1, 'MI': 1, 'OF': 5, 'UTIL': 1,
+        'SP': 4, 'RP': 3, 'P': 2,
+    }
+
+    max_slots = POS_MAX.get(new_position, 1)
+
+    # Count how many players this manager already has at new_position
+    # (excluding the player being moved)
+    count_at_pos = 0
+    for pick in state["draft_log"]:
+        if (pick.get("manager") == manager_name
+                and pick.get("position") == new_position
+                and pick.get("player") != player_name):
+            count_at_pos += 1
+
+    for team in state["league_state"]["teams"]:
+        if team["manager"] == manager_name:
+            for keeper in team.get("keepers", []):
+                if (keeper.get("position") == new_position
+                        and keeper.get("player") != player_name):
+                    count_at_pos += 1
+
+    if count_at_pos >= max_slots:
+        return safe_jsonify({
+            "error": f"{new_position} is full ({count_at_pos}/{max_slots}). Move the existing player out first."
+        }), 400
 
     # Check draft log first
     for pick in state["draft_log"]:
