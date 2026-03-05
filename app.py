@@ -12,7 +12,8 @@ import json
 import math
 import os
 import copy
-from flask import Flask, render_template, request, Response
+from functools import wraps
+from flask import Flask, render_template, request, Response, redirect, abort
 
 
 def safe_jsonify(obj):
@@ -48,6 +49,35 @@ from engine.standings import load_stat_projections, get_standings
 # ============================================================
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "ipl-auction-2026"
+
+# Dashboard access key — set via environment variable or use default for local dev.
+# On Render, set DASHBOARD_KEY in the environment variables.
+DASHBOARD_KEY = os.environ.get("DASHBOARD_KEY", "clay2026")
+
+# Public routes that don't need the key
+PUBLIC_ROUTES = {"/board", "/api/board_state", "/favicon.ico"}
+
+
+@app.before_request
+def check_dashboard_access():
+    """Protect all non-public routes with a key parameter."""
+    path = request.path
+
+    # Allow public routes
+    if path in PUBLIC_ROUTES:
+        return None
+
+    # Allow static files
+    if path.startswith("/static/"):
+        return None
+
+    # Check for key in query string (?key=xxx) or session cookie
+    key = request.args.get("key") or request.cookies.get("dashboard_key")
+    if key == DASHBOARD_KEY:
+        return None
+
+    # No valid key — redirect to board
+    return redirect("/board")
 
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -95,8 +125,21 @@ def load_data():
     # Run the profile analyzer
     state["manager_profiles_analyzed"] = analyze_all_managers(state["manager_profiles_raw"])
 
-    # Reset draft log
-    state["draft_log"] = []
+    # Auto-restore draft log from last save (crash recovery)
+    draft_save_path = os.path.join(DATA_DIR, "draft_save.json")
+    if os.path.exists(draft_save_path):
+        try:
+            with open(draft_save_path) as f:
+                saved = json.load(f)
+            state["draft_log"] = saved.get("draft_log", [])
+            state["mode"] = saved.get("mode", "manual")
+            if state["draft_log"]:
+                print(f"Auto-restored {len(state['draft_log'])} picks from saved draft")
+        except Exception as e:
+            print(f"[WARNING] Could not restore draft save: {e}")
+            state["draft_log"] = []
+    else:
+        state["draft_log"] = []
 
     print(f"Loaded {len(state['player_projections'])} players")
     print(f"Loaded {len(state['league_state'].get('teams', []))} teams")
@@ -109,6 +152,17 @@ def save_data(filename, data):
     filepath = os.path.join(DATA_DIR, filename)
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2)
+
+
+def auto_save_draft():
+    """Auto-save draft state after every pick/undo/move. Crash-proof."""
+    try:
+        save_data("draft_save.json", {
+            "draft_log": state["draft_log"],
+            "mode": state["mode"],
+        })
+    except Exception as e:
+        print(f"[WARNING] Auto-save failed: {e}")
 
 
 def get_current_inflation():
@@ -193,8 +247,13 @@ def get_my_team():
 # ============================================================
 @app.route("/")
 def dashboard():
-    """Main dashboard page."""
-    return render_template("dashboard.html")
+    """Main dashboard page. Key must be provided to reach here (before_request enforces it)."""
+    resp = Response(render_template("dashboard.html"))
+    # Set cookie so subsequent requests (API calls, etc.) don't need ?key= in the URL
+    key = request.args.get("key") or request.cookies.get("dashboard_key")
+    if key == DASHBOARD_KEY:
+        resp.set_cookie("dashboard_key", key, max_age=60*60*24*7, httponly=True, samesite="Lax")
+    return resp
 
 
 @app.route("/board")
@@ -376,6 +435,7 @@ def api_draft():
         "is_rookie": player_data.get("is_rookie", False),
     }
     state["draft_log"].append(pick)
+    auto_save_draft()
 
     return safe_jsonify({"success": True, "pick": pick})
 
@@ -387,6 +447,7 @@ def api_undraft():
         return safe_jsonify({"error": "No picks to undo"}), 400
 
     removed = state["draft_log"].pop()
+    auto_save_draft()
     return safe_jsonify({"success": True, "removed": removed})
 
 
@@ -460,6 +521,7 @@ def api_move_player():
         if pick.get("manager") == manager_name and pick.get("player") == player_name:
             old_pos = pick.get("position", "")
             pick["position"] = new_position
+            auto_save_draft()
             return safe_jsonify({
                 "success": True,
                 "player": player_name,

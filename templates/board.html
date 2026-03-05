@@ -4,38 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPL Draft Board 2026</title>
+    <link rel="stylesheet" href="/static/css/vintage-theme.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Code+Pro:wght@400;600;700&display=swap');
-
-        :root {
-            --navy: #1a2744;
-            --navy-light: #243256;
-            --cream: #f5f0e1;
-            --cream-dark: #e8e0cc;
-            --mustard: #c9a959;
-            --gold-border: #b8943e;
-            --brick: #8b3a3a;
-            --green: #6b8f71;
-            --text-dark: #1a2744;
-            --text-muted: #8a8575;
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-mono: 'Source Code Pro', monospace;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             background: var(--cream);
-            color: var(--text-dark);
-            font-family: var(--font-mono);
-            font-size: 13px;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Header */
+        /* ---- Board Header ---- */
         .board-header {
             background: var(--navy);
             color: var(--cream);
-            padding: 16px 24px;
+            padding: 14px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -44,53 +25,67 @@
 
         .board-title {
             font-family: var(--font-display);
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 900;
             letter-spacing: 0.04em;
+            color: var(--cream);
         }
 
-        .board-title span {
-            color: var(--mustard);
-        }
+        .board-title span { color: var(--mustard); }
 
         .board-status {
             text-align: right;
+            font-family: var(--font-mono);
             font-size: 0.75rem;
         }
 
         .board-status .pick-count {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--mustard);
             font-family: var(--font-display);
         }
 
         .board-status .refresh-note {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.65rem;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.6rem;
+            margin-top: 2px;
         }
 
-        /* Draft Ticker */
+        .connection-dot {
+            display: inline-block;
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background: var(--forest-light);
+            box-shadow: 0 0 4px rgba(61, 107, 32, 0.5);
+        }
+
+        .connection-dot.disconnected {
+            background: var(--burgundy);
+            box-shadow: 0 0 4px rgba(139, 26, 26, 0.5);
+        }
+
+        /* ---- Draft Ticker ---- */
         .draft-ticker {
-            background: var(--navy-light);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             color: var(--cream);
             padding: 8px 24px;
-            overflow: hidden;
-            white-space: nowrap;
-            border-bottom: 1px solid rgba(201, 169, 89, 0.3);
+            border-bottom: 1px solid rgba(200, 169, 81, 0.25);
         }
 
         .ticker-label {
-            font-size: 0.65rem;
+            font-family: var(--font-display);
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.15em;
             color: var(--mustard);
-            margin-bottom: 4px;
+            margin-bottom: 5px;
         }
 
         .ticker-items {
             display: flex;
-            gap: 16px;
+            gap: 10px;
             overflow-x: auto;
             padding-bottom: 4px;
             scrollbar-width: thin;
@@ -98,10 +93,11 @@
 
         .ticker-item {
             flex-shrink: 0;
-            font-size: 0.72rem;
-            padding: 3px 10px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 3px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
             border-left: 2px solid var(--mustard);
         }
 
@@ -111,209 +107,70 @@
         }
 
         .ticker-item .pick-price {
-            color: var(--green);
+            color: var(--forest-light);
             font-weight: 600;
+        }
+
+        .ticker-item .pick-pos {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.6rem;
         }
 
         .ticker-empty {
             color: rgba(255,255,255,0.3);
             font-style: italic;
             font-size: 0.72rem;
+            font-family: var(--font-body);
         }
 
-        /* New pick flash */
         .ticker-item.new-pick {
-            animation: flashPick 2s ease-out;
+            animation: flashPick 2.5s ease-out;
         }
 
         @keyframes flashPick {
-            0% { background: rgba(201, 169, 89, 0.4); }
-            100% { background: rgba(255,255,255,0.06); }
+            0% { background: rgba(200, 169, 81, 0.4); }
+            100% { background: rgba(255,255,255,0.05); }
         }
 
-        /* Teams Grid */
-        .teams-grid {
+        /* ---- Teams Grid — mirrors dashboard team-view-grid ---- */
+        .board-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            padding: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 14px;
+            padding: 16px 20px;
+            max-width: 1800px;
+            margin: 0 auto;
         }
 
-        @media (max-width: 1400px) {
-            .teams-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 1000px) {
-            .teams-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 650px) {
-            .teams-grid { grid-template-columns: 1fr; }
+        /* ---- New-draft highlight on roster slots ---- */
+        .roster-slot.new-draft-slot {
+            animation: highlightSlot 3.5s ease-out;
         }
 
-        /* Team Card */
-        .team-card {
-            background: white;
-            border: 1px solid var(--cream-dark);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        @keyframes highlightSlot {
+            0% { background: rgba(200, 169, 81, 0.3); }
+            100% { background: transparent; }
         }
 
-        .team-card-header {
-            background: var(--navy);
-            color: var(--cream);
-            padding: 8px 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .team-name {
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.02em;
-        }
-
-        .team-budget {
-            text-align: right;
-            font-size: 0.7rem;
-        }
-
-        .team-budget .amount {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--mustard);
-        }
-
-        .team-budget .spots {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.6rem;
-        }
-
-        .team-roster {
-            padding: 0;
-        }
-
-        .roster-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 3px 10px;
-            font-size: 0.7rem;
-            border-bottom: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .roster-row:last-child {
-            border-bottom: none;
-        }
-
-        .roster-row.keeper {
-            background: rgba(107, 143, 113, 0.06);
-        }
-
-        .roster-row.drafted {
-            background: rgba(201, 169, 89, 0.08);
-        }
-
-        .roster-row.empty {
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        .roster-row.new-draft {
-            animation: highlightDraft 3s ease-out;
-        }
-
-        @keyframes highlightDraft {
-            0% { background: rgba(201, 169, 89, 0.35); }
-            100% { background: rgba(201, 169, 89, 0.08); }
-        }
-
-        .roster-pos {
-            font-weight: 700;
-            min-width: 28px;
-            color: var(--navy);
-        }
-
-        .roster-player {
-            flex: 1;
-            margin: 0 6px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .roster-price {
-            font-weight: 600;
-            min-width: 30px;
-            text-align: right;
-        }
-
-        .roster-price.keeper-price {
-            color: var(--green);
-        }
-
-        .roster-price.draft-price {
-            color: var(--brick);
-        }
-
-        .keeper-tag {
-            font-size: 0.55rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--green);
-            padding: 0 3px;
-            border: 1px solid rgba(107, 143, 113, 0.3);
-            border-radius: 2px;
-            margin-left: 4px;
-        }
-
-        .draft-tag {
-            font-size: 0.55rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--brick);
-            padding: 0 3px;
-            border: 1px solid rgba(139, 58, 58, 0.3);
-            border-radius: 2px;
-            margin-left: 4px;
-        }
-
-        /* Connection status */
-        .connection-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 6px;
-            background: var(--green);
-            box-shadow: 0 0 4px rgba(107, 143, 113, 0.6);
-        }
-
-        .connection-dot.disconnected {
-            background: var(--brick);
-            box-shadow: 0 0 4px rgba(139, 58, 58, 0.6);
-        }
-
-        /* Footer */
+        /* ---- Footer ---- */
         .board-footer {
             text-align: center;
-            padding: 12px;
-            font-size: 0.6rem;
+            padding: 16px;
+            font-family: var(--font-body);
+            font-size: 0.65rem;
             color: var(--text-muted);
-            border-top: 1px solid var(--cream-dark);
+            border-top: 1px solid var(--border-light);
+            margin-top: 8px;
         }
     </style>
 </head>
 <body>
     <div class="board-header">
-        <div>
-            <div class="board-title">IPL <span>Draft Board</span> 2026</div>
-        </div>
+        <div class="board-title">IPL <span>Draft Board</span> 2026</div>
         <div class="board-status">
             <div class="pick-count" id="pick-count">0 picks</div>
             <div><span class="connection-dot" id="connection-dot"></span><span id="connection-text">Connected</span></div>
-            <div class="refresh-note">Auto-refreshes every 5 seconds</div>
+            <div class="refresh-note">Live — refreshes every 5 seconds</div>
         </div>
     </div>
 
@@ -324,19 +181,41 @@
         </div>
     </div>
 
-    <div class="teams-grid" id="teams-grid">
-        <!-- Team cards rendered by JS -->
-    </div>
+    <div class="board-grid" id="board-grid"></div>
 
     <div class="board-footer">
-        Illini Penal League · Est. 2001 · Draft Board powered by vintage vibes
+        Illini Penal League · Est. 2001
     </div>
 
     <script>
         let boardState = null;
         let lastPickCount = 0;
-        let refreshTimer = null;
+        let lastNewPlayer = null; // track the most recently drafted player for highlight
 
+        // Same roster slot order as the main dashboard
+        const ROSTER_SLOT_ORDER = [
+            { pos: 'C',    count: 1, type: 'hitting' },
+            { pos: '1B',   count: 1, type: 'hitting' },
+            { pos: '2B',   count: 1, type: 'hitting' },
+            { pos: 'SS',   count: 1, type: 'hitting' },
+            { pos: '3B',   count: 1, type: 'hitting' },
+            { pos: 'CI',   count: 1, type: 'hitting' },
+            { pos: 'MI',   count: 1, type: 'hitting' },
+            { pos: 'OF',   count: 5, type: 'hitting' },
+            { pos: 'UTIL', count: 1, type: 'hitting' },
+            { pos: 'SP',   count: 4, type: 'pitching' },
+            { pos: 'RP',   count: 3, type: 'pitching' },
+            { pos: 'P',    count: 2, type: 'pitching' },
+        ];
+
+        const flexMap = {
+            'CI':   ['1B', '3B'],
+            'MI':   ['2B', 'SS'],
+            'P':    ['SP', 'RP'],
+            'UTIL': ['C', '1B', '2B', 'SS', '3B', 'OF', 'CI', 'MI'],
+        };
+
+        // ---- Data fetching ----
         async function fetchBoardState() {
             try {
                 const res = await fetch('/api/board_state');
@@ -344,141 +223,194 @@
                 renderBoard();
                 setConnected(true);
             } catch (err) {
-                console.error('Failed to fetch board state:', err);
+                console.error('Fetch failed:', err);
                 setConnected(false);
             }
         }
 
-        function setConnected(connected) {
+        function setConnected(ok) {
             const dot = document.getElementById('connection-dot');
-            const text = document.getElementById('connection-text');
-            if (connected) {
-                dot.className = 'connection-dot';
-                text.textContent = 'Connected';
-            } else {
-                dot.className = 'connection-dot disconnected';
-                text.textContent = 'Reconnecting...';
-            }
+            const txt = document.getElementById('connection-text');
+            dot.className = ok ? 'connection-dot' : 'connection-dot disconnected';
+            txt.textContent = ok ? 'Connected' : 'Reconnecting...';
         }
 
+        // ---- Main render ----
         function renderBoard() {
             if (!boardState) return;
-
             const picks = boardState.draft_log.length;
-            const isNew = picks > lastPickCount;
-            document.getElementById('pick-count').textContent = `${picks} pick${picks !== 1 ? 's' : ''}`;
+            const hasNew = picks > lastPickCount;
 
-            renderTicker(isNew);
-            renderTeams(isNew);
+            // Figure out which player was just drafted (for highlight)
+            if (hasNew && boardState.draft_log.length > 0) {
+                const newest = boardState.draft_log[boardState.draft_log.length - 1];
+                lastNewPlayer = newest.player;
+            } else {
+                lastNewPlayer = null;
+            }
+
+            document.getElementById('pick-count').textContent =
+                `${picks} pick${picks !== 1 ? 's' : ''}`;
+
+            renderTicker(hasNew);
+            renderTeams();
 
             lastPickCount = picks;
         }
 
-        function renderTicker(hasNewPicks) {
-            const container = document.getElementById('ticker-items');
+        // ---- Ticker ----
+        function renderTicker(hasNew) {
+            const el = document.getElementById('ticker-items');
             const log = boardState.draft_log;
 
             if (log.length === 0) {
-                container.innerHTML = '<span class="ticker-empty">Waiting for the draft to begin...</span>';
+                el.innerHTML = '<span class="ticker-empty">Waiting for the draft to begin...</span>';
                 return;
             }
 
-            // Show last 15 picks, most recent first
-            const recent = log.slice(-15).reverse();
-            container.innerHTML = recent.map((pick, i) => {
-                const pickNum = log.length - i;
-                const isNew = hasNewPicks && i === 0;
-                return `<div class="ticker-item ${isNew ? 'new-pick' : ''}">
-                    <span class="pick-num">#${pickNum}</span>
-                    ${escapeHtml(pick.player)}
-                    → ${escapeHtml(pick.manager)}
+            const recent = log.slice(-20).reverse();
+            el.innerHTML = recent.map((pick, i) => {
+                const num = log.length - i;
+                return `<div class="ticker-item ${hasNew && i === 0 ? 'new-pick' : ''}">
+                    <span class="pick-num">#${num}</span>
+                    ${esc(pick.player)}
+                    <span class="pick-pos">${esc(pick.position)}</span>
+                    → ${esc(pick.manager)}
                     <span class="pick-price">$${pick.price}</span>
                 </div>`;
             }).join('');
         }
 
-        function renderTeams(hasNewPicks) {
-            const container = document.getElementById('teams-grid');
-            const rosterSize = boardState.total_roster_size;
-
-            // Sort teams by budget remaining desc
+        // ---- Teams ----
+        function renderTeams() {
+            const el = document.getElementById('board-grid');
+            // Sort: highest budget first
             const teams = [...boardState.teams].sort((a, b) => b.budget_remaining - a.budget_remaining);
+            el.innerHTML = teams.map(t => renderTeamCard(t)).join('');
+        }
 
-            container.innerHTML = teams.map(team => {
-                // Build roster: keepers first, then drafted, then empty slots
-                const keepers = (team.keepers || []).map(k => ({
-                    player: k.player,
-                    position: k.position,
-                    price: k.price,
-                    type: 'keeper'
-                }));
+        function renderTeamCard(team) {
+            // Merge keepers and drafted into a single list
+            const keepers = (team.keepers || []).map(k => ({
+                player: k.player, position: k.position, price: k.price, source: 'keeper',
+            }));
+            const drafted = (team.drafted_players || []).map(d => ({
+                player: d.player, position: d.position, price: d.price, source: 'drafted',
+            }));
+            const allPlayers = [...keepers, ...drafted];
 
-                const drafted = (team.drafted_players || []).map(p => ({
-                    player: p.player,
-                    position: p.position,
-                    price: p.price,
-                    type: 'drafted',
-                    isNew: hasNewPicks && boardState.draft_log.indexOf(p) === boardState.draft_log.length - 1
-                }));
+            // Fill slots using same logic as dashboard
+            const filledSlots = fillRosterSlots(allPlayers);
 
-                const filled = keepers.length + drafted.length;
-                const emptyCount = rosterSize - filled;
+            let hittingRows = '';
+            let pitchingRows = '';
+            for (const slot of filledSlots) {
+                const row = renderSlotRow(slot);
+                if (slot.type === 'hitting') hittingRows += row;
+                else pitchingRows += row;
+            }
 
-                let rosterHTML = '';
+            const spotsLeft = team.spots_remaining;
 
-                // Keepers
-                rosterHTML += keepers.map(k => `
-                    <div class="roster-row keeper">
-                        <span class="roster-pos">${escapeHtml(k.position)}</span>
-                        <span class="roster-player">${escapeHtml(k.player)}<span class="keeper-tag">K</span></span>
-                        <span class="roster-price keeper-price">$${k.price}</span>
-                    </div>
-                `).join('');
-
-                // Drafted players
-                rosterHTML += drafted.map(d => `
-                    <div class="roster-row drafted ${d.isNew ? 'new-draft' : ''}">
-                        <span class="roster-pos">${escapeHtml(d.position)}</span>
-                        <span class="roster-player">${escapeHtml(d.player)}<span class="draft-tag">NEW</span></span>
-                        <span class="roster-price draft-price">$${d.price}</span>
-                    </div>
-                `).join('');
-
-                // Empty slots
-                for (let i = 0; i < emptyCount; i++) {
-                    rosterHTML += `<div class="roster-row empty">
-                        <span class="roster-pos">—</span>
-                        <span class="roster-player">Open roster spot</span>
-                        <span class="roster-price"></span>
-                    </div>`;
-                }
-
-                return `
-                    <div class="team-card">
-                        <div class="team-card-header">
-                            <div class="team-name">${escapeHtml(team.manager)}</div>
-                            <div class="team-budget">
-                                <div class="amount">$${team.budget_remaining}</div>
-                                <div class="spots">${team.spots_remaining} spot${team.spots_remaining !== 1 ? 's' : ''} left</div>
-                            </div>
+            return `
+                <div class="team-roster-card">
+                    <div class="team-roster-header">
+                        <div class="team-roster-name">${esc(team.manager)}</div>
+                        <div class="team-roster-budget">
+                            <div class="budget-big">$${team.budget_remaining}</div>
+                            <div class="budget-detail">${spotsLeft} spot${spotsLeft !== 1 ? 's' : ''} left</div>
                         </div>
-                        <div class="team-roster">${rosterHTML}</div>
                     </div>
-                `;
-            }).join('');
+                    <div class="team-roster-body">
+                        <div class="roster-section-header">Hitting</div>
+                        ${hittingRows}
+                        <div class="roster-section-header">Pitching</div>
+                        ${pitchingRows}
+                    </div>
+                </div>
+            `;
         }
 
-        function escapeHtml(str) {
+        // ---- Roster Slot Logic (mirrors dashboard.js fillRosterSlots) ----
+        function fillRosterSlots(players) {
+            const slots = [];
+            for (const def of ROSTER_SLOT_ORDER) {
+                for (let i = 0; i < def.count; i++) {
+                    slots.push({ pos: def.pos, type: def.type, player: null, price: null, source: null });
+                }
+            }
+
+            const unassigned = [...players];
+
+            // Pass 1: exact position match
+            for (const slot of slots) {
+                if (slot.player) continue;
+                const idx = unassigned.findIndex(p => p.position === slot.pos);
+                if (idx !== -1) {
+                    const p = unassigned.splice(idx, 1)[0];
+                    Object.assign(slot, { player: p.player, price: p.price, source: p.source });
+                }
+            }
+
+            // Pass 2: flex mapping
+            for (const slot of slots) {
+                if (slot.player) continue;
+                const eligible = flexMap[slot.pos] || [];
+                if (!eligible.length) continue;
+                const idx = unassigned.findIndex(p => eligible.includes(p.position));
+                if (idx !== -1) {
+                    const p = unassigned.splice(idx, 1)[0];
+                    Object.assign(slot, { player: p.player, price: p.price, source: p.source });
+                }
+            }
+
+            // Pass 3: overflow — put remaining in any empty slot of matching type
+            for (const p of unassigned) {
+                const pType = ['SP', 'RP', 'P'].includes(p.position) ? 'pitching' : 'hitting';
+                const empty = slots.find(s => !s.player && s.type === pType);
+                if (empty) {
+                    Object.assign(empty, { player: p.player, price: p.price, source: p.source });
+                }
+            }
+
+            return slots;
+        }
+
+        function renderSlotRow(slot) {
+            const posClass = slot.type === 'hitting' ? 'pos-hitting' : 'pos-pitching';
+
+            if (!slot.player) {
+                return `
+                    <div class="roster-slot">
+                        <span class="roster-slot-pos ${posClass}">${slot.pos}</span>
+                        <span class="roster-slot-player empty-slot">—</span>
+                        <span class="roster-slot-price"></span>
+                    </div>`;
+            }
+
+            const sourceClass = slot.source === 'keeper' ? 'source-keeper' : 'source-drafted';
+            const sourceLabel = slot.source === 'keeper' ? 'K' : 'D';
+            const isNew = lastNewPlayer === slot.player;
+
+            return `
+                <div class="roster-slot ${isNew ? 'new-draft-slot' : ''}">
+                    <span class="roster-slot-pos ${posClass}">${slot.pos}</span>
+                    <span class="roster-slot-player">${esc(slot.player)}</span>
+                    <span class="roster-slot-source ${sourceClass}">${sourceLabel}</span>
+                    <span class="roster-slot-price">$${slot.price}</span>
+                </div>`;
+        }
+
+        // ---- Utility ----
+        function esc(str) {
             if (!str) return '';
-            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-            return String(str).replace(/[&<>"']/g, c => map[c]);
+            const m = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+            return String(str).replace(/[&<>"']/g, c => m[c]);
         }
 
-        // Initial load
+        // ---- Init ----
         fetchBoardState();
-
-        // Auto-refresh every 5 seconds
-        refreshTimer = setInterval(fetchBoardState, 5000);
+        setInterval(fetchBoardState, 5000);
     </script>
 </body>
 </html>
