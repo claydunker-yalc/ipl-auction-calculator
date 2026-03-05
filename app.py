@@ -51,8 +51,8 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "ipl-auction-2026"
 
 # Dashboard access key — set via environment variable or use default for local dev.
-# On Render, set DASHBOARD_KEY in the environment variables.
-DASHBOARD_KEY = os.environ.get("DASHBOARD_KEY", "clay2026")
+DASHBOARD_KEY = os.environ.get("DASHBOARD_KEY", "YandyChrist")
+print(f"[STARTUP] Dashboard key configured (default: YandyChrist)")
 
 # Public routes that don't need the key
 PUBLIC_ROUTES = {"/board", "/api/board_state", "/favicon.ico"}
