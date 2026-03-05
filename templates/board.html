@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Draft Board 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Code+Pro:wght@400;600;700&display=swap');
+
+        :root {
+            --navy: #1a2744;
+            --navy-light: #243256;
+            --cream: #f5f0e1;
+            --cream-dark: #e8e0cc;
+            --mustard: #c9a959;
+            --gold-border: #b8943e;
+            --brick: #8b3a3a;
+            --green: #6b8f71;
+            --text-dark: #1a2744;
+            --text-muted: #8a8575;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-mono: 'Source Code Pro', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--cream);
+            color: var(--text-dark);
+            font-family: var(--font-mono);
+            font-size: 13px;
+        }
+
+        /* Header */
+        .board-header {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--mustard);
+        }
+
+        .board-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+        }
+
+        .board-title span {
+            color: var(--mustard);
+        }
+
+        .board-status {
+            text-align: right;
+            font-size: 0.75rem;
+        }
+
+        .board-status .pick-count {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--mustard);
+            font-family: var(--font-display);
+        }
+
+        .board-status .refresh-note {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.65rem;
+        }
+
+        /* Draft Ticker */
+        .draft-ticker {
+            background: var(--navy-light);
+            color: var(--cream);
+            padding: 8px 24px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 1px solid rgba(201, 169, 89, 0.3);
+        }
+
+        .ticker-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--mustard);
+            margin-bottom: 4px;
+        }
+
+        .ticker-items {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: thin;
+        }
+
+        .ticker-item {
+            flex-shrink: 0;
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 3px;
+            border-left: 2px solid var(--mustard);
+        }
+
+        .ticker-item .pick-num {
+            color: var(--mustard);
+            font-weight: 700;
+        }
+
+        .ticker-item .pick-price {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .ticker-empty {
+            color: rgba(255,255,255,0.3);
+            font-style: italic;
+            font-size: 0.72rem;
+        }
+
+        /* New pick flash */
+        .ticker-item.new-pick {
+            animation: flashPick 2s ease-out;
+        }
+
+        @keyframes flashPick {
+            0% { background: rgba(201, 169, 89, 0.4); }
+            100% { background: rgba(255,255,255,0.06); }
+        }
+
+        /* Teams Grid */
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            padding: 16px;
+        }
+
+        @media (max-width: 1400px) {
+            .teams-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 1000px) {
+            .teams-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 650px) {
+            .teams-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Team Card */
+        .team-card {
+            background: white;
+            border: 1px solid var(--cream-dark);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .team-card-header {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .team-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+
+        .team-budget {
+            text-align: right;
+            font-size: 0.7rem;
+        }
+
+        .team-budget .amount {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--mustard);
+        }
+
+        .team-budget .spots {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.6rem;
+        }
+
+        .team-roster {
+            padding: 0;
+        }
+
+        .roster-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px 10px;
+            font-size: 0.7rem;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .roster-row:last-child {
+            border-bottom: none;
+        }
+
+        .roster-row.keeper {
+            background: rgba(107, 143, 113, 0.06);
+        }
+
+        .roster-row.drafted {
+            background: rgba(201, 169, 89, 0.08);
+        }
+
+        .roster-row.empty {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .roster-row.new-draft {
+            animation: highlightDraft 3s ease-out;
+        }
+
+        @keyframes highlightDraft {
+            0% { background: rgba(201, 169, 89, 0.35); }
+            100% { background: rgba(201, 169, 89, 0.08); }
+        }
+
+        .roster-pos {
+            font-weight: 700;
+            min-width: 28px;
+            color: var(--navy);
+        }
+
+        .roster-player {
+            flex: 1;
+            margin: 0 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .roster-price {
+            font-weight: 600;
+            min-width: 30px;
+            text-align: right;
+        }
+
+        .roster-price.keeper-price {
+            color: var(--green);
+        }
+
+        .roster-price.draft-price {
+            color: var(--brick);
+        }
+
+        .keeper-tag {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--green);
+            padding: 0 3px;
+            border: 1px solid rgba(107, 143, 113, 0.3);
+            border-radius: 2px;
+            margin-left: 4px;
+        }
+
+        .draft-tag {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brick);
+            padding: 0 3px;
+            border: 1px solid rgba(139, 58, 58, 0.3);
+            border-radius: 2px;
+            margin-left: 4px;
+        }
+
+        /* Connection status */
+        .connection-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+            background: var(--green);
+            box-shadow: 0 0 4px rgba(107, 143, 113, 0.6);
+        }
+
+        .connection-dot.disconnected {
+            background: var(--brick);
+            box-shadow: 0 0 4px rgba(139, 58, 58, 0.6);
+        }
+
+        /* Footer */
+        .board-footer {
+            text-align: center;
+            padding: 12px;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--cream-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="board-header">
+        <div>
+            <div class="board-title">IPL <span>Draft Board</span> 2026</div>
+        </div>
+        <div class="board-status">
+            <div class="pick-count" id="pick-count">0 picks</div>
+            <div><span class="connection-dot" id="connection-dot"></span><span id="connection-text">Connected</span></div>
+            <div class="refresh-note">Auto-refreshes every 5 seconds</div>
+        </div>
+    </div>
+
+    <div class="draft-ticker">
+        <div class="ticker-label">Recent Picks</div>
+        <div class="ticker-items" id="ticker-items">
+            <span class="ticker-empty">Waiting for the draft to begin...</span>
+        </div>
+    </div>
+
+    <div class="teams-grid" id="teams-grid">
+        <!-- Team cards rendered by JS -->
+    </div>
+
+    <div class="board-footer">
+        Illini Penal League · Est. 2001 · Draft Board powered by vintage vibes
+    </div>
+
+    <script>
+        let boardState = null;
+        let lastPickCount = 0;
+        let refreshTimer = null;
+
+        async function fetchBoardState() {
+            try {
+                const res = await fetch('/api/board_state');
+                boardState = await res.json();
+                renderBoard();
+                setConnected(true);
+            } catch (err) {
+                console.error('Failed to fetch board state:', err);
+                setConnected(false);
+            }
+        }
+
+        function setConnected(connected) {
+            const dot = document.getElementById('connection-dot');
+            const text = document.getElementById('connection-text');
+            if (connected) {
+                dot.className = 'connection-dot';
+                text.textContent = 'Connected';
+            } else {
+                dot.className = 'connection-dot disconnected';
+                text.textContent = 'Reconnecting...';
+            }
+        }
+
+        function renderBoard() {
+            if (!boardState) return;
+
+            const picks = boardState.draft_log.length;
+            const isNew = picks > lastPickCount;
+            document.getElementById('pick-count').textContent = `${picks} pick${picks !== 1 ? 's' : ''}`;
+
+            renderTicker(isNew);
+            renderTeams(isNew);
+
+            lastPickCount = picks;
+        }
+
+        function renderTicker(hasNewPicks) {
+            const container = document.getElementById('ticker-items');
+            const log = boardState.draft_log;
+
+            if (log.length === 0) {
+                container.innerHTML = '<span class="ticker-empty">Waiting for the draft to begin...</span>';
+                return;
+            }
+
+            // Show last 15 picks, most recent first
+            const recent = log.slice(-15).reverse();
+            container.innerHTML = recent.map((pick, i) => {
+                const pickNum = log.length - i;
+                const isNew = hasNewPicks && i === 0;
+                return `<div class="ticker-item ${isNew ? 'new-pick' : ''}">
+                    <span class="pick-num">#${pickNum}</span>
+                    ${escapeHtml(pick.player)}
+                    → ${escapeHtml(pick.manager)}
+                    <span class="pick-price">$${pick.price}</span>
+                </div>`;
+            }).join('');
+        }
+
+        function renderTeams(hasNewPicks) {
+            const container = document.getElementById('teams-grid');
+            const rosterSize = boardState.total_roster_size;
+
+            // Sort teams by budget remaining desc
+            const teams = [...boardState.teams].sort((a, b) => b.budget_remaining - a.budget_remaining);
+
+            container.innerHTML = teams.map(team => {
+                // Build roster: keepers first, then drafted, then empty slots
+                const keepers = (team.keepers || []).map(k => ({
+                    player: k.player,
+                    position: k.position,
+                    price: k.price,
+                    type: 'keeper'
+                }));
+
+                const drafted = (team.drafted_players || []).map(p => ({
+                    player: p.player,
+                    position: p.position,
+                    price: p.price,
+                    type: 'drafted',
+                    isNew: hasNewPicks && boardState.draft_log.indexOf(p) === boardState.draft_log.length - 1
+                }));
+
+                const filled = keepers.length + drafted.length;
+                const emptyCount = rosterSize - filled;
+
+                let rosterHTML = '';
+
+                // Keepers
+                rosterHTML += keepers.map(k => `
+                    <div class="roster-row keeper">
+                        <span class="roster-pos">${escapeHtml(k.position)}</span>
+                        <span class="roster-player">${escapeHtml(k.player)}<span class="keeper-tag">K</span></span>
+                        <span class="roster-price keeper-price">$${k.price}</span>
+                    </div>
+                `).join('');
+
+                // Drafted players
+                rosterHTML += drafted.map(d => `
+                    <div class="roster-row drafted ${d.isNew ? 'new-draft' : ''}">
+                        <span class="roster-pos">${escapeHtml(d.position)}</span>
+                        <span class="roster-player">${escapeHtml(d.player)}<span class="draft-tag">NEW</span></span>
+                        <span class="roster-price draft-price">$${d.price}</span>
+                    </div>
+                `).join('');
+
+                // Empty slots
+                for (let i = 0; i < emptyCount; i++) {
+                    rosterHTML += `<div class="roster-row empty">
+                        <span class="roster-pos">—</span>
+                        <span class="roster-player">Open roster spot</span>
+                        <span class="roster-price"></span>
+                    </div>`;
+                }
+
+                return `
+                    <div class="team-card">
+                        <div class="team-card-header">
+                            <div class="team-name">${escapeHtml(team.manager)}</div>
+                            <div class="team-budget">
+                                <div class="amount">$${team.budget_remaining}</div>
+                                <div class="spots">${team.spots_remaining} spot${team.spots_remaining !== 1 ? 's' : ''} left</div>
+                            </div>
+                        </div>
+                        <div class="team-roster">${rosterHTML}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+            return String(str).replace(/[&<>"']/g, c => map[c]);
+        }
+
+        // Initial load
+        fetchBoardState();
+
+        // Auto-refresh every 5 seconds
+        refreshTimer = setInterval(fetchBoardState, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,7296 @@
+{
+  "_README": "2026 IPL PLAYER PROJECTIONS — Complete auction pool. projected_value = Clay's final projection. predicted_value = model-predicted auction price. Pitchers have stats: IP, SV_H (saves+holds), QS, ERA, WHIP, K. Hitters have stats: AB, R, HR, RBI, SB, OPS. Rookies (is_rookie=true) get keeper premium bump.",
+  "players": [
+    {
+      "_comment": "ELITE PITCHER — Tier 1B",
+      "player": "Chris Sale",
+      "mlb_team": "ATL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "1B",
+      "projected_value": 21.0,
+      "predicted_value": 45.0,
+      "is_rookie": false,
+      "rank": 1,
+      "stats": {
+        "IP": 158,
+        "SV_H": 0,
+        "QS": 15,
+        "ERA": 3.11,
+        "WHIP": 1.11,
+        "K": 192
+      },
+      "notes": "⚠️ Injury history — 70% conf. slight adj"
+    },
+    {
+      "_comment": "ELITE PITCHER — Tier 1B",
+      "player": "Logan Gilbert",
+      "mlb_team": "SEA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "1B",
+      "projected_value": 20.0,
+      "predicted_value": 42.0,
+      "is_rookie": false,
+      "rank": 2,
+      "stats": {
+        "IP": 160,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 3.36,
+        "WHIP": 1.09,
+        "K": 184
+      },
+      "notes": "⚠️ 2025 IL history — mild concern"
+    },
+    {
+      "_comment": "PREMIUM PITCHER — Tier 2",
+      "player": "Zack Wheeler",
+      "mlb_team": "PHI",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "2",
+      "projected_value": 15.0,
+      "predicted_value": 39.0,
+      "is_rookie": false,
+      "rank": 3,
+      "stats": {
+        "IP": 133,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 3.24,
+        "WHIP": 1.09,
+        "K": 157
+      },
+      "notes": "✅ TOS surgery — projection already discounted"
+    },
+    {
+      "_comment": "PREMIUM PITCHER — Tier 2",
+      "player": "Devin Williams",
+      "mlb_team": "NYM",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "2",
+      "projected_value": 14.0,
+      "predicted_value": 28.0,
+      "is_rookie": false,
+      "rank": 4,
+      "stats": {
+        "IP": 66,
+        "SV_H": 35,
+        "QS": 0,
+        "ERA": 2.87,
+        "WHIP": 1.12,
+        "K": 90
+      }
+    },
+    {
+      "_comment": "PREMIUM PITCHER — Tier 2",
+      "player": "Jhoan Duran",
+      "mlb_team": "MIN",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "2",
+      "projected_value": 12.0,
+      "predicted_value": 24.0,
+      "is_rookie": false,
+      "rank": 5,
+      "stats": {
+        "IP": 74,
+        "SV_H": 35,
+        "QS": 0,
+        "ERA": 3.11,
+        "WHIP": 1.15,
+        "K": 83
+      }
+    },
+    {
+      "_comment": "STRONG PITCHER — Tier 3",
+      "player": "Blake Snell",
+      "mlb_team": "LAD",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "3",
+      "projected_value": 9.0,
+      "predicted_value": 29.0,
+      "is_rookie": false,
+      "rank": 6,
+      "stats": {
+        "IP": 131,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 3.47,
+        "WHIP": 1.25,
+        "K": 163
+      },
+      "notes": "✅ Proj already discounted"
+    },
+    {
+      "_comment": "STRONG PITCHER — Tier 3",
+      "player": "Drew Rasmussen",
+      "mlb_team": "PIT",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "3",
+      "projected_value": 9.0,
+      "predicted_value": 13.0,
+      "is_rookie": false,
+      "rank": 7,
+      "stats": {
+        "IP": 153,
+        "SV_H": 0,
+        "QS": 11,
+        "ERA": 3.78,
+        "WHIP": 1.19,
+        "K": 145
+      }
+    },
+    {
+      "_comment": "STRONG PITCHER — Tier 3",
+      "player": "Luis Castillo",
+      "mlb_team": "SEA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "3",
+      "projected_value": 9.0,
+      "predicted_value": 13.0,
+      "is_rookie": false,
+      "rank": 8,
+      "stats": {
+        "IP": 177,
+        "SV_H": 0,
+        "QS": 15,
+        "ERA": 4.08,
+        "WHIP": 1.22,
+        "K": 168
+      }
+    },
+    {
+      "_comment": "STRONG PITCHER — Tier 3",
+      "player": "Spencer Schwellenbach",
+      "mlb_team": "ATL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "3",
+      "projected_value": 9.0,
+      "predicted_value": 13.0,
+      "is_rookie": false,
+      "rank": 9,
+      "stats": {
+        "IP": 153,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 3.55,
+        "WHIP": 1.15,
+        "K": 153
+      },
+      "notes": "↓ 60-day IL → June return (Tier 2→3)"
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "David Bednar",
+      "mlb_team": "PIT",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 11.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 10,
+      "stats": {
+        "IP": 69,
+        "SV_H": 35,
+        "QS": 0,
+        "ERA": 3.39,
+        "WHIP": 1.14,
+        "K": 81
+      }
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "Carlos Rodon",
+      "mlb_team": "CWS",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 7.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 11,
+      "stats": {
+        "IP": 167,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.06,
+        "WHIP": 1.24,
+        "K": 179
+      }
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "Daniel Palencia",
+      "mlb_team": "CHC",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 7.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 12,
+      "stats": {
+        "IP": 65,
+        "SV_H": 34,
+        "QS": 0,
+        "ERA": 3.52,
+        "WHIP": 1.21,
+        "K": 76
+      }
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "Griffin Jax",
+      "mlb_team": "HOU",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 7.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 13,
+      "stats": {
+        "IP": 73,
+        "SV_H": 26,
+        "QS": 0,
+        "ERA": 2.83,
+        "WHIP": 1.11,
+        "K": 91
+      }
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "Ryan Helsley",
+      "mlb_team": "LAA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 7.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 14,
+      "stats": {
+        "IP": 68,
+        "SV_H": 31,
+        "QS": 0,
+        "ERA": 3.51,
+        "WHIP": 1.19,
+        "K": 77
+      }
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "Aaron Nola",
+      "mlb_team": "STL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 6.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 15,
+      "stats": {
+        "IP": 165,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.09,
+        "WHIP": 1.25,
+        "K": 164
+      }
+    },
+    {
+      "_comment": "SOLID PITCHER — Tier 4",
+      "player": "Trevor Rogers",
+      "mlb_team": "KC",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "4",
+      "projected_value": 6.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 16,
+      "stats": {
+        "IP": 160,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.02,
+        "WHIP": 1.24,
+        "K": 148
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Ryan Walker",
+      "mlb_team": "ARI",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 7.0,
+      "predicted_value": 2.0,
+      "is_rookie": false,
+      "rank": 17,
+      "stats": {
+        "IP": 68,
+        "SV_H": 33,
+        "QS": 0,
+        "ERA": 3.63,
+        "WHIP": 1.22,
+        "K": 70
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Abner Uribe",
+      "mlb_team": "MIA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 6.0,
+      "predicted_value": 2.0,
+      "is_rookie": false,
+      "rank": 18,
+      "stats": {
+        "IP": 74,
+        "SV_H": 31,
+        "QS": 0,
+        "ERA": 3.4,
+        "WHIP": 1.21,
+        "K": 82
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Grayson Rodriguez",
+      "mlb_team": "MIL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 19,
+      "stats": {
+        "IP": 125,
+        "SV_H": 0,
+        "QS": 10,
+        "ERA": 3.72,
+        "WHIP": 1.22,
+        "K": 136
+      },
+      "notes": "⚠️ Missed 2025 — adj down"
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Joe Musgrove",
+      "mlb_team": "SF",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 20,
+      "stats": {
+        "IP": 141,
+        "SV_H": 0,
+        "QS": 11,
+        "ERA": 3.91,
+        "WHIP": 1.22,
+        "K": 138
+      },
+      "notes": "⚠️ TJ returnee — adjust down"
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Reid Detmers",
+      "mlb_team": "TOR",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 21,
+      "stats": {
+        "IP": 130,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 3.55,
+        "WHIP": 1.23,
+        "K": 156
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Sean Manaea",
+      "mlb_team": "LAD",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 22,
+      "stats": {
+        "IP": 133,
+        "SV_H": 0,
+        "QS": 9,
+        "ERA": 3.97,
+        "WHIP": 1.21,
+        "K": 139
+      },
+      "notes": "⚠️ Arm issues 2025"
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Andrew Abbott",
+      "mlb_team": "CIN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 3.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 23,
+      "stats": {
+        "IP": 163,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.36,
+        "WHIP": 1.25,
+        "K": 151
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Clay Holmes",
+      "mlb_team": "MIA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 3.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 24,
+      "stats": {
+        "IP": 173,
+        "SV_H": 0,
+        "QS": 7,
+        "ERA": 4.1,
+        "WHIP": 1.31,
+        "K": 148
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Jeremiah Estrada",
+      "mlb_team": "CIN",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 3.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 25,
+      "stats": {
+        "IP": 75,
+        "SV_H": 22,
+        "QS": 0,
+        "ERA": 3.21,
+        "WHIP": 1.12,
+        "K": 101
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Jose Soriano",
+      "mlb_team": "CIN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 3.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 26,
+      "stats": {
+        "IP": 167,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.06,
+        "WHIP": 1.34,
+        "K": 150
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Ryne Nelson",
+      "mlb_team": "MIA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 2.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 27,
+      "stats": {
+        "IP": 160,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.3,
+        "WHIP": 1.27,
+        "K": 143
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Shane Smith",
+      "mlb_team": "DET",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 2.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 28,
+      "stats": {
+        "IP": 161,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.26,
+        "WHIP": 1.27,
+        "K": 154
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Braxton Garrett",
+      "mlb_team": "CWS",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 1.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 29,
+      "stats": {
+        "IP": 125,
+        "SV_H": 1,
+        "QS": 6,
+        "ERA": 3.91,
+        "WHIP": 1.24,
+        "K": 114
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Casey Mize",
+      "mlb_team": "CIN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 1.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 30,
+      "stats": {
+        "IP": 153,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.2,
+        "WHIP": 1.28,
+        "K": 135
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "David Peterson",
+      "mlb_team": "MIN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 1.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 31,
+      "stats": {
+        "IP": 171,
+        "SV_H": 0,
+        "QS": 15,
+        "ERA": 4.15,
+        "WHIP": 1.34,
+        "K": 151
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Shane Bieber",
+      "mlb_team": "MIA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 1.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 32,
+      "stats": {
+        "IP": 112,
+        "SV_H": 0,
+        "QS": 10,
+        "ERA": 3.85,
+        "WHIP": 1.23,
+        "K": 112
+      },
+      "notes": "✅ Proj already deeply discounted"
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Brady Singer",
+      "mlb_team": "CWS",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 33,
+      "stats": {
+        "IP": 172,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.34,
+        "WHIP": 1.32,
+        "K": 161
+      }
+    },
+    {
+      "_comment": "DEPTH PITCHER — Tier 5",
+      "player": "Brandon Pfaadt",
+      "mlb_team": "MIL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 34,
+      "stats": {
+        "IP": 173,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.38,
+        "WHIP": 1.3,
+        "K": 150
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Shane Baz",
+      "mlb_team": "BAL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 35,
+      "stats": {
+        "IP": 157,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.12,
+        "WHIP": 1.25,
+        "K": 159
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Trevor Megill",
+      "mlb_team": "MIL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 36,
+      "stats": {
+        "IP": 66,
+        "SV_H": 22,
+        "QS": 0,
+        "ERA": 3.13,
+        "WHIP": 1.15,
+        "K": 84
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Garrett Cleavinger",
+      "mlb_team": "TBR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 37,
+      "stats": {
+        "IP": 70,
+        "SV_H": 24,
+        "QS": 0,
+        "ERA": 3.46,
+        "WHIP": 1.16,
+        "K": 85
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Chris Bassitt",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 38,
+      "stats": {
+        "IP": 163,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.28,
+        "WHIP": 1.31,
+        "K": 149
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Chad Patrick",
+      "mlb_team": "MIL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 39,
+      "stats": {
+        "IP": 136,
+        "SV_H": 0,
+        "QS": 10,
+        "ERA": 4.13,
+        "WHIP": 1.28,
+        "K": 134
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Noah Cameron",
+      "mlb_team": "KCR",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 40,
+      "stats": {
+        "IP": 143,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.32,
+        "WHIP": 1.26,
+        "K": 127
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Logan Henderson",
+      "mlb_team": "MIL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 41,
+      "stats": {
+        "IP": 95,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 3.77,
+        "WHIP": 1.14,
+        "K": 105
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Zack Littell",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 42,
+      "stats": {
+        "IP": 178,
+        "SV_H": 0,
+        "QS": 15,
+        "ERA": 4.8,
+        "WHIP": 1.22,
+        "K": 137
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Michael McGreevy",
+      "mlb_team": "STL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 43,
+      "stats": {
+        "IP": 153,
+        "SV_H": 1,
+        "QS": 6,
+        "ERA": 4.12,
+        "WHIP": 1.27,
+        "K": 102
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Bailey Ober",
+      "mlb_team": "MIN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 44,
+      "stats": {
+        "IP": 145,
+        "SV_H": 1,
+        "QS": 6,
+        "ERA": 4.41,
+        "WHIP": 1.23,
+        "K": 132
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Michael Wacha",
+      "mlb_team": "KCR",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 45,
+      "stats": {
+        "IP": 167,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.46,
+        "WHIP": 1.28,
+        "K": 134
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jared Jones",
+      "mlb_team": "PIT",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 46,
+      "stats": {
+        "IP": 98,
+        "SV_H": 0,
+        "QS": 8,
+        "ERA": 3.94,
+        "WHIP": 1.21,
+        "K": 107
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jordan Leasure",
+      "mlb_team": "CHW",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 47,
+      "stats": {
+        "IP": 68,
+        "SV_H": 27,
+        "QS": 0,
+        "ERA": 4.25,
+        "WHIP": 1.27,
+        "K": 77
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Trey Yesavage",
+      "mlb_team": "TOR",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 48,
+      "stats": {
+        "IP": 117,
+        "SV_H": 1,
+        "QS": 5,
+        "ERA": 3.95,
+        "WHIP": 1.28,
+        "K": 125
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Zach Eflin",
+      "mlb_team": "BAL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 49,
+      "stats": {
+        "IP": 140,
+        "SV_H": 0,
+        "QS": 10,
+        "ERA": 4.43,
+        "WHIP": 1.22,
+        "K": 102
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Gabe Speier",
+      "mlb_team": "SEA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 50,
+      "stats": {
+        "IP": 61,
+        "SV_H": 16,
+        "QS": 0,
+        "ERA": 3.09,
+        "WHIP": 1.08,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Will Vest",
+      "mlb_team": "DET",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 51,
+      "stats": {
+        "IP": 73,
+        "SV_H": 18,
+        "QS": 0,
+        "ERA": 3.47,
+        "WHIP": 1.22,
+        "K": 76
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Reese Olson",
+      "mlb_team": "DET",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 52,
+      "stats": {
+        "IP": 130,
+        "SV_H": 1,
+        "QS": 6,
+        "ERA": 4.07,
+        "WHIP": 1.31,
+        "K": 126
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Joey Cantillo",
+      "mlb_team": "CLE",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 53,
+      "stats": {
+        "IP": 133,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.04,
+        "WHIP": 1.29,
+        "K": 143
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Braxton Ashcraft",
+      "mlb_team": "PIT",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 54,
+      "stats": {
+        "IP": 124,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 3.91,
+        "WHIP": 1.27,
+        "K": 119
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Alex Vesia",
+      "mlb_team": "LAD",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 55,
+      "stats": {
+        "IP": 66,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.45,
+        "WHIP": 1.09,
+        "K": 85
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Kutter Crawford",
+      "mlb_team": "BOS",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 56,
+      "stats": {
+        "IP": 121,
+        "SV_H": 5,
+        "QS": 0,
+        "ERA": 4.23,
+        "WHIP": 1.2,
+        "K": 118
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jeffrey Springs",
+      "mlb_team": "ATH",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 57,
+      "stats": {
+        "IP": 158,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.55,
+        "WHIP": 1.29,
+        "K": 145
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Nick Martinez",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 58,
+      "stats": {
+        "IP": 158,
+        "SV_H": 0,
+        "QS": 7,
+        "ERA": 4.5,
+        "WHIP": 1.27,
+        "K": 123
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Matt Strahm",
+      "mlb_team": "KCR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 59,
+      "stats": {
+        "IP": 71,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.59,
+        "WHIP": 1.11,
+        "K": 80
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Tanner Scott",
+      "mlb_team": "LAD",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 60,
+      "stats": {
+        "IP": 67,
+        "SV_H": 18,
+        "QS": 0,
+        "ERA": 3.36,
+        "WHIP": 1.19,
+        "K": 80
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Slade Cecconi",
+      "mlb_team": "CLE",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 61,
+      "stats": {
+        "IP": 158,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.47,
+        "WHIP": 1.3,
+        "K": 128
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Garrett Whitlock",
+      "mlb_team": "BOS",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 62,
+      "stats": {
+        "IP": 70,
+        "SV_H": 20,
+        "QS": 0,
+        "ERA": 3.39,
+        "WHIP": 1.18,
+        "K": 78
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Max Scherzer",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 63,
+      "stats": {
+        "IP": 115,
+        "SV_H": 0,
+        "QS": 9,
+        "ERA": 4.39,
+        "WHIP": 1.22,
+        "K": 113
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Andrew Kittredge",
+      "mlb_team": "BAL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 64,
+      "stats": {
+        "IP": 71,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.59,
+        "WHIP": 1.18,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Lucas Giolito",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 65,
+      "stats": {
+        "IP": 158,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.46,
+        "WHIP": 1.32,
+        "K": 141
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Zebby Matthews",
+      "mlb_team": "MIN",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 66,
+      "stats": {
+        "IP": 123,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.06,
+        "WHIP": 1.27,
+        "K": 125
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Phil Maton",
+      "mlb_team": "CHC",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 67,
+      "stats": {
+        "IP": 70,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.54,
+        "WHIP": 1.19,
+        "K": 80
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jack Leiter",
+      "mlb_team": "TEX",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 68,
+      "stats": {
+        "IP": 147,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.42,
+        "WHIP": 1.32,
+        "K": 145
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Adrian Morejon",
+      "mlb_team": "SDP",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 69,
+      "stats": {
+        "IP": 73,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.49,
+        "WHIP": 1.18,
+        "K": 72
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Matt Svanson",
+      "mlb_team": "STL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 70,
+      "stats": {
+        "IP": 69,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.68,
+        "WHIP": 1.19,
+        "K": 72
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Dean Kremer",
+      "mlb_team": "BAL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 71,
+      "stats": {
+        "IP": 153,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.5,
+        "WHIP": 1.3,
+        "K": 134
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Dylan Lee",
+      "mlb_team": "ATL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 72,
+      "stats": {
+        "IP": 70,
+        "SV_H": 20,
+        "QS": 0,
+        "ERA": 3.5,
+        "WHIP": 1.14,
+        "K": 81
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Clayton Beeter",
+      "mlb_team": "WSN",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 73,
+      "stats": {
+        "IP": 57,
+        "SV_H": 26,
+        "QS": 0,
+        "ERA": 3.98,
+        "WHIP": 1.29,
+        "K": 66
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Justin Verlander",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 74,
+      "stats": {
+        "IP": 138,
+        "SV_H": 0,
+        "QS": 11,
+        "ERA": 4.43,
+        "WHIP": 1.29,
+        "K": 122
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Robert Stephenson",
+      "mlb_team": "LAA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 75,
+      "stats": {
+        "IP": 52,
+        "SV_H": 22,
+        "QS": 0,
+        "ERA": 3.91,
+        "WHIP": 1.21,
+        "K": 54
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Mike Burrows",
+      "mlb_team": "HOU",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 76,
+      "stats": {
+        "IP": 122,
+        "SV_H": 1,
+        "QS": 5,
+        "ERA": 4.24,
+        "WHIP": 1.26,
+        "K": 121
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Riley O'Brien",
+      "mlb_team": "STL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 77,
+      "stats": {
+        "IP": 61,
+        "SV_H": 27,
+        "QS": 0,
+        "ERA": 4.07,
+        "WHIP": 1.3,
+        "K": 60
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jacob Lopez",
+      "mlb_team": "ATH",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 78,
+      "stats": {
+        "IP": 114,
+        "SV_H": 0,
+        "QS": 9,
+        "ERA": 4.24,
+        "WHIP": 1.29,
+        "K": 120
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Max Meyer",
+      "mlb_team": "MIA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 79,
+      "stats": {
+        "IP": 145,
+        "SV_H": 1,
+        "QS": 6,
+        "ERA": 4.38,
+        "WHIP": 1.3,
+        "K": 132
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Michael Soroka",
+      "mlb_team": "ARI",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 80,
+      "stats": {
+        "IP": 134,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.34,
+        "WHIP": 1.26,
+        "K": 133
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Foster Griffin",
+      "mlb_team": "WSN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 81,
+      "stats": {
+        "IP": 138,
+        "SV_H": 1,
+        "QS": 5,
+        "ERA": 4.27,
+        "WHIP": 1.29,
+        "K": 120
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "JoJo Romero",
+      "mlb_team": "STL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 82,
+      "stats": {
+        "IP": 69,
+        "SV_H": 25,
+        "QS": 0,
+        "ERA": 4.02,
+        "WHIP": 1.3,
+        "K": 63
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Tyler Wells",
+      "mlb_team": "BAL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 83,
+      "stats": {
+        "IP": 108,
+        "SV_H": 3,
+        "QS": 0,
+        "ERA": 4.23,
+        "WHIP": 1.2,
+        "K": 100
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Ryan Weathers",
+      "mlb_team": "NYY",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 84,
+      "stats": {
+        "IP": 108,
+        "SV_H": 1,
+        "QS": 7,
+        "ERA": 4.19,
+        "WHIP": 1.29,
+        "K": 105
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Louis Varland",
+      "mlb_team": "TOR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 85,
+      "stats": {
+        "IP": 70,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.6,
+        "WHIP": 1.22,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Fernando Cruz",
+      "mlb_team": "NYY",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 86,
+      "stats": {
+        "IP": 63,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.39,
+        "WHIP": 1.22,
+        "K": 86
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Reynaldo López",
+      "mlb_team": "ATL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 87,
+      "stats": {
+        "IP": 123,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.19,
+        "WHIP": 1.29,
+        "K": 124
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Cody Bradford",
+      "mlb_team": "TEX",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 88,
+      "stats": {
+        "IP": 99,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.08,
+        "WHIP": 1.21,
+        "K": 90
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jose A. Ferrer",
+      "mlb_team": "SEA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 89,
+      "stats": {
+        "IP": 74,
+        "SV_H": 22,
+        "QS": 0,
+        "ERA": 3.6,
+        "WHIP": 1.23,
+        "K": 65
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Victor Vodnik",
+      "mlb_team": "COL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 90,
+      "stats": {
+        "IP": 66,
+        "SV_H": 27,
+        "QS": 0,
+        "ERA": 4.34,
+        "WHIP": 1.45,
+        "K": 65
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Orion Kerkering",
+      "mlb_team": "PHI",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 91,
+      "stats": {
+        "IP": 67,
+        "SV_H": 17,
+        "QS": 0,
+        "ERA": 3.5,
+        "WHIP": 1.2,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Luke Weaver",
+      "mlb_team": "NYM",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 92,
+      "stats": {
+        "IP": 71,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.92,
+        "WHIP": 1.21,
+        "K": 80
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Chris Martin",
+      "mlb_team": "TEX",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 93,
+      "stats": {
+        "IP": 56,
+        "SV_H": 18,
+        "QS": 0,
+        "ERA": 3.49,
+        "WHIP": 1.14,
+        "K": 54
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Taj Bradley",
+      "mlb_team": "MIN",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 94,
+      "stats": {
+        "IP": 134,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.35,
+        "WHIP": 1.29,
+        "K": 130
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Matt Brash",
+      "mlb_team": "SEA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 95,
+      "stats": {
+        "IP": 64,
+        "SV_H": 18,
+        "QS": 0,
+        "ERA": 3.52,
+        "WHIP": 1.23,
+        "K": 73
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Justin Sterner",
+      "mlb_team": "ATH",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 96,
+      "stats": {
+        "IP": 65,
+        "SV_H": 20,
+        "QS": 0,
+        "ERA": 4.04,
+        "WHIP": 1.24,
+        "K": 70
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Roki Sasaki",
+      "mlb_team": "LAD",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 97,
+      "stats": {
+        "IP": 127,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.13,
+        "WHIP": 1.32,
+        "K": 122
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Bryan Baker",
+      "mlb_team": "TBR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 98,
+      "stats": {
+        "IP": 65,
+        "SV_H": 17,
+        "QS": 0,
+        "ERA": 3.67,
+        "WHIP": 1.18,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Cade Cavalli",
+      "mlb_team": "WSN",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 99,
+      "stats": {
+        "IP": 123,
+        "SV_H": 0,
+        "QS": 9,
+        "ERA": 4.24,
+        "WHIP": 1.33,
+        "K": 106
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Eduard Bazardo",
+      "mlb_team": "SEA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 100,
+      "stats": {
+        "IP": 71,
+        "SV_H": 17,
+        "QS": 0,
+        "ERA": 3.77,
+        "WHIP": 1.17,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Cole Sands",
+      "mlb_team": "MIN",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 101,
+      "stats": {
+        "IP": 74,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.98,
+        "WHIP": 1.22,
+        "K": 71
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Kirby Yates",
+      "mlb_team": "LAA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 102,
+      "stats": {
+        "IP": 58,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.82,
+        "WHIP": 1.24,
+        "K": 71
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Shawn Armstrong",
+      "mlb_team": "CLE",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 103,
+      "stats": {
+        "IP": 75,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.92,
+        "WHIP": 1.2,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Tyler Rogers",
+      "mlb_team": "TOR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 104,
+      "stats": {
+        "IP": 81,
+        "SV_H": 23,
+        "QS": 0,
+        "ERA": 3.82,
+        "WHIP": 1.19,
+        "K": 58
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Will Warren",
+      "mlb_team": "NYY",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 105,
+      "stats": {
+        "IP": 137,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.21,
+        "WHIP": 1.34,
+        "K": 138
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Steven Okert",
+      "mlb_team": "HOU",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 106,
+      "stats": {
+        "IP": 68,
+        "SV_H": 14,
+        "QS": 0,
+        "ERA": 3.75,
+        "WHIP": 1.16,
+        "K": 78
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Hunter Gaddis",
+      "mlb_team": "CLE",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 107,
+      "stats": {
+        "IP": 72,
+        "SV_H": 21,
+        "QS": 0,
+        "ERA": 3.95,
+        "WHIP": 1.21,
+        "K": 74
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Yimi García",
+      "mlb_team": "TOR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 108,
+      "stats": {
+        "IP": 57,
+        "SV_H": 17,
+        "QS": 0,
+        "ERA": 3.68,
+        "WHIP": 1.17,
+        "K": 64
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jameson Taillon",
+      "mlb_team": "CHC",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 109,
+      "stats": {
+        "IP": 159,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.69,
+        "WHIP": 1.31,
+        "K": 128
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Brayan Bello",
+      "mlb_team": "BOS",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 110,
+      "stats": {
+        "IP": 157,
+        "SV_H": 0,
+        "QS": 13,
+        "ERA": 4.48,
+        "WHIP": 1.36,
+        "K": 129
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Andrew Nardi",
+      "mlb_team": "MIA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 111,
+      "stats": {
+        "IP": 57,
+        "SV_H": 8,
+        "QS": 0,
+        "ERA": 3.32,
+        "WHIP": 1.17,
+        "K": 73
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Kodai Senga",
+      "mlb_team": "NYM",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 112,
+      "stats": {
+        "IP": 116,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.18,
+        "WHIP": 1.3,
+        "K": 119
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Steven Matz",
+      "mlb_team": "TBR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 113,
+      "stats": {
+        "IP": 121,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.21,
+        "WHIP": 1.28,
+        "K": 101
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Caleb Thielbar",
+      "mlb_team": "CHC",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 114,
+      "stats": {
+        "IP": 69,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.8,
+        "WHIP": 1.18,
+        "K": 72
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Ian Seymour",
+      "mlb_team": "TBR",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 115,
+      "stats": {
+        "IP": 94,
+        "SV_H": 2,
+        "QS": 0,
+        "ERA": 4.07,
+        "WHIP": 1.24,
+        "K": 95
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Drew Pomeranz",
+      "mlb_team": "LAA",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 116,
+      "stats": {
+        "IP": 61,
+        "SV_H": 16,
+        "QS": 0,
+        "ERA": 3.78,
+        "WHIP": 1.17,
+        "K": 67
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Jon Gray",
+      "mlb_team": "",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 117,
+      "stats": {
+        "IP": 119,
+        "SV_H": 0,
+        "QS": 9,
+        "ERA": 4.48,
+        "WHIP": 1.28,
+        "K": 98
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Justin Steele",
+      "mlb_team": "CHC",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 118,
+      "stats": {
+        "IP": 78,
+        "SV_H": 0,
+        "QS": 6,
+        "ERA": 4.06,
+        "WHIP": 1.21,
+        "K": 71
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Dustin May",
+      "mlb_team": "STL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 119,
+      "stats": {
+        "IP": 149,
+        "SV_H": 1,
+        "QS": 5,
+        "ERA": 4.44,
+        "WHIP": 1.35,
+        "K": 138
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "A.J. Minter",
+      "mlb_team": "NYM",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 120,
+      "stats": {
+        "IP": 55,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.5,
+        "WHIP": 1.16,
+        "K": 62
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Robby Snelling",
+      "mlb_team": "MIA",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 121,
+      "stats": {
+        "IP": 119,
+        "SV_H": 0,
+        "QS": 10,
+        "ERA": 4.15,
+        "WHIP": 1.37,
+        "K": 102
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Andrew Saalfrank",
+      "mlb_team": "ARI",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 122,
+      "stats": {
+        "IP": 63,
+        "SV_H": 26,
+        "QS": 0,
+        "ERA": 4.07,
+        "WHIP": 1.41,
+        "K": 53
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Camilo Doval",
+      "mlb_team": "NYY",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 123,
+      "stats": {
+        "IP": 69,
+        "SV_H": 17,
+        "QS": 0,
+        "ERA": 3.67,
+        "WHIP": 1.28,
+        "K": 77
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Kyle Finnegan",
+      "mlb_team": "DET",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 124,
+      "stats": {
+        "IP": 68,
+        "SV_H": 17,
+        "QS": 0,
+        "ERA": 3.86,
+        "WHIP": 1.24,
+        "K": 68
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Matthew Liberatore",
+      "mlb_team": "STL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 125,
+      "stats": {
+        "IP": 156,
+        "SV_H": 0,
+        "QS": 12,
+        "ERA": 4.78,
+        "WHIP": 1.31,
+        "K": 125
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Bryan King",
+      "mlb_team": "HOU",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 126,
+      "stats": {
+        "IP": 68,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.84,
+        "WHIP": 1.19,
+        "K": 69
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Landen Roupp",
+      "mlb_team": "SFG",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 127,
+      "stats": {
+        "IP": 123,
+        "SV_H": 1,
+        "QS": 5,
+        "ERA": 4.11,
+        "WHIP": 1.37,
+        "K": 115
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "José Alvarado",
+      "mlb_team": "PHI",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 128,
+      "stats": {
+        "IP": 62,
+        "SV_H": 15,
+        "QS": 0,
+        "ERA": 3.71,
+        "WHIP": 1.24,
+        "K": 68
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "JP Sears",
+      "mlb_team": "SDP",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 129,
+      "stats": {
+        "IP": 135,
+        "SV_H": 1,
+        "QS": 6,
+        "ERA": 4.72,
+        "WHIP": 1.26,
+        "K": 114
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Joe Jiménez",
+      "mlb_team": "ATL",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 130,
+      "stats": {
+        "IP": 54,
+        "SV_H": 5,
+        "QS": 0,
+        "ERA": 3.42,
+        "WHIP": 1.15,
+        "K": 64
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Hurston Waldrep",
+      "mlb_team": "ATL",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 131,
+      "stats": {
+        "IP": 117,
+        "SV_H": 0,
+        "QS": 9,
+        "ERA": 4.28,
+        "WHIP": 1.36,
+        "K": 110
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Adrian Houser",
+      "mlb_team": "SFG",
+      "position_primary": "SP",
+      "position_eligibility": [
+        "SP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 132,
+      "stats": {
+        "IP": 152,
+        "SV_H": 0,
+        "QS": 14,
+        "ERA": 4.46,
+        "WHIP": 1.37,
+        "K": 112
+      }
+    },
+    {
+      "_comment": "POOL PITCHER — Tier 6",
+      "player": "Hunter Harvey",
+      "mlb_team": "CHC",
+      "position_primary": "RP",
+      "position_eligibility": [
+        "RP",
+        "UTIL"
+      ],
+      "type": "Pitcher",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 133,
+      "stats": {
+        "IP": 48,
+        "SV_H": 19,
+        "QS": 0,
+        "ERA": 3.66,
+        "WHIP": 1.17,
+        "K": 52
+      }
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1A",
+      "player": "Shohei Ohtani",
+      "mlb_team": "LAD",
+      "position_primary": "UT",
+      "position_eligibility": [
+        "UT",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1A",
+      "projected_value": 75.0,
+      "predicted_value": 96.0,
+      "is_rookie": false,
+      "rank": 134,
+      "stats": {
+        "AB": 585,
+        "R": 124,
+        "HR": 50,
+        "RBI": 117,
+        "SB": 20,
+        "OPS": 0.99
+      }
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1A",
+      "player": "Aaron Judge",
+      "mlb_team": "NYY",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1A",
+      "projected_value": 72.0,
+      "predicted_value": 94.0,
+      "is_rookie": false,
+      "rank": 135,
+      "stats": {
+        "AB": 548,
+        "R": 120,
+        "HR": 51,
+        "RBI": 120,
+        "SB": 9,
+        "OPS": 1.07
+      }
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1A",
+      "player": "Bobby Witt Jr.",
+      "mlb_team": "KC",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1A",
+      "projected_value": 57.0,
+      "predicted_value": 81.0,
+      "is_rookie": false,
+      "rank": 136,
+      "stats": {
+        "AB": 614,
+        "R": 98,
+        "HR": 29,
+        "RBI": 96,
+        "SB": 32,
+        "OPS": 0.877
+      }
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1B",
+      "player": "Julio Rodriguez",
+      "mlb_team": "SEA",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1B",
+      "projected_value": 41.0,
+      "predicted_value": 71.0,
+      "is_rookie": false,
+      "rank": 137,
+      "stats": {
+        "AB": 614,
+        "R": 88,
+        "HR": 27,
+        "RBI": 91,
+        "SB": 25,
+        "OPS": 0.796
+      }
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1B",
+      "player": "Kyle Schwarber",
+      "mlb_team": "PHI",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1B",
+      "projected_value": 40.0,
+      "predicted_value": 67.0,
+      "is_rookie": false,
+      "rank": 138,
+      "stats": {
+        "AB": 574,
+        "R": 102,
+        "HR": 40,
+        "RBI": 103,
+        "SB": 7,
+        "OPS": 0.874
+      }
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1B",
+      "player": "Francisco Lindor",
+      "mlb_team": "NYM",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1B",
+      "projected_value": 39.0,
+      "predicted_value": 57.0,
+      "is_rookie": false,
+      "rank": 139,
+      "stats": {
+        "AB": 612,
+        "R": 97,
+        "HR": 27,
+        "RBI": 85,
+        "SB": 26,
+        "OPS": 0.799
+      },
+      "notes": "↓ Hamate surgery — minor downgrade"
+    },
+    {
+      "_comment": "ELITE HITTER — Tier 1B",
+      "player": "Kyle Tucker",
+      "mlb_team": "LAD",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "1B",
+      "projected_value": 37.0,
+      "predicted_value": 69.0,
+      "is_rookie": false,
+      "rank": 140,
+      "stats": {
+        "AB": 531,
+        "R": 93,
+        "HR": 25,
+        "RBI": 84,
+        "SB": 22,
+        "OPS": 0.856
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Jazz Chisholm Jr.",
+      "mlb_team": "NYM",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 32.0,
+      "predicted_value": 31.0,
+      "is_rookie": false,
+      "rank": 141,
+      "stats": {
+        "AB": 526,
+        "R": 77,
+        "HR": 28,
+        "RBI": 83,
+        "SB": 30,
+        "OPS": 0.776
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Freddie Freeman",
+      "mlb_team": "LAD",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 30.0,
+      "predicted_value": 29.0,
+      "is_rookie": false,
+      "rank": 142,
+      "stats": {
+        "AB": 570,
+        "R": 91,
+        "HR": 25,
+        "RBI": 92,
+        "SB": 6,
+        "OPS": 0.838
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Christian Yelich",
+      "mlb_team": "MIL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 21.0,
+      "predicted_value": 20.0,
+      "is_rookie": false,
+      "rank": 143,
+      "stats": {
+        "AB": 529,
+        "R": 75,
+        "HR": 22,
+        "RBI": 78,
+        "SB": 16,
+        "OPS": 0.781
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Corey Seager",
+      "mlb_team": "TEX",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 21.0,
+      "predicted_value": 20.0,
+      "is_rookie": false,
+      "rank": 144,
+      "stats": {
+        "AB": 471,
+        "R": 79,
+        "HR": 28,
+        "RBI": 79,
+        "SB": 2,
+        "OPS": 0.895
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Jeremy Pena",
+      "mlb_team": "HOU",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 21.0,
+      "predicted_value": 20.0,
+      "is_rookie": false,
+      "rank": 145,
+      "stats": {
+        "AB": 581,
+        "R": 80,
+        "HR": 17,
+        "RBI": 71,
+        "SB": 18,
+        "OPS": 0.755
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Luis Robert Jr.",
+      "mlb_team": "CWS",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 21.0,
+      "predicted_value": 20.0,
+      "is_rookie": false,
+      "rank": 146,
+      "stats": {
+        "AB": 495,
+        "R": 67,
+        "HR": 21,
+        "RBI": 70,
+        "SB": 33,
+        "OPS": 0.727
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Austin Riley",
+      "mlb_team": "ATL",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 20.0,
+      "predicted_value": 19.0,
+      "is_rookie": false,
+      "rank": 147,
+      "stats": {
+        "AB": 559,
+        "R": 83,
+        "HR": 26,
+        "RBI": 86,
+        "SB": 3,
+        "OPS": 0.786
+      }
+    },
+    {
+      "_comment": "PREMIUM HITTER — Tier 2",
+      "player": "Cody Bellinger",
+      "mlb_team": "NYY",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "2",
+      "projected_value": 20.0,
+      "predicted_value": 19.0,
+      "is_rookie": false,
+      "rank": 148,
+      "stats": {
+        "AB": 570,
+        "R": 78,
+        "HR": 21,
+        "RBI": 81,
+        "SB": 11,
+        "OPS": 0.77
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Munetaka Murakami",
+      "mlb_team": "CWS",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 19.0,
+      "predicted_value": 12.0,
+      "is_rookie": true,
+      "rank": 149,
+      "stats": {
+        "AB": 493,
+        "R": 76,
+        "HR": 31,
+        "RBI": 79,
+        "SB": 11,
+        "OPS": 0.795
+      },
+      "notes": "🌟 Rookie (NPB import)"
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Nico Hoerner",
+      "mlb_team": "CHC",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 19.0,
+      "predicted_value": 12.0,
+      "is_rookie": false,
+      "rank": 150,
+      "stats": {
+        "AB": 589,
+        "R": 74,
+        "HR": 9,
+        "RBI": 65,
+        "SB": 27,
+        "OPS": 0.723
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Sal Stewart",
+      "mlb_team": "CIN",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 19.0,
+      "predicted_value": 12.0,
+      "is_rookie": true,
+      "rank": 151,
+      "stats": {
+        "AB": 496,
+        "R": 69,
+        "HR": 28,
+        "RBI": 78,
+        "SB": 6,
+        "OPS": 0.824
+      },
+      "notes": "🌟 Rookie"
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Yordan Alvarez",
+      "mlb_team": "HOU",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 19.0,
+      "predicted_value": 12.0,
+      "is_rookie": false,
+      "rank": 152,
+      "stats": {
+        "AB": 451,
+        "R": 77,
+        "HR": 24,
+        "RBI": 77,
+        "SB": 3,
+        "OPS": 0.906
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Ian Happ",
+      "mlb_team": "CHC",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 17.0,
+      "predicted_value": 11.0,
+      "is_rookie": false,
+      "rank": 153,
+      "stats": {
+        "AB": 564,
+        "R": 88,
+        "HR": 23,
+        "RBI": 76,
+        "SB": 7,
+        "OPS": 0.773
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Ceddanne Rafaela",
+      "mlb_team": "BOS",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "OF",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 16.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 154,
+      "stats": {
+        "AB": 556,
+        "R": 69,
+        "HR": 18,
+        "RBI": 72,
+        "SB": 19,
+        "OPS": 0.716
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Heliot Ramos",
+      "mlb_team": "SF",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 16.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 155,
+      "stats": {
+        "AB": 579,
+        "R": 81,
+        "HR": 23,
+        "RBI": 77,
+        "SB": 6,
+        "OPS": 0.759
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Matt Chapman",
+      "mlb_team": "SF",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 16.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 156,
+      "stats": {
+        "AB": 556,
+        "R": 78,
+        "HR": 23,
+        "RBI": 81,
+        "SB": 10,
+        "OPS": 0.762
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Adolis Garcia",
+      "mlb_team": "TEX",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 15.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 157,
+      "stats": {
+        "AB": 537,
+        "R": 70,
+        "HR": 23,
+        "RBI": 80,
+        "SB": 13,
+        "OPS": 0.725
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Agustin Ramirez",
+      "mlb_team": "MIA",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 15.0,
+      "predicted_value": 10.0,
+      "is_rookie": true,
+      "rank": 158,
+      "stats": {
+        "AB": 479,
+        "R": 69,
+        "HR": 19,
+        "RBI": 72,
+        "SB": 15,
+        "OPS": 0.795
+      },
+      "notes": "🌟 Rookie"
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Willson Contreras",
+      "mlb_team": "STL",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 15.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 159,
+      "stats": {
+        "AB": 503,
+        "R": 74,
+        "HR": 24,
+        "RBI": 78,
+        "SB": 5,
+        "OPS": 0.81
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Brandon Nimmo",
+      "mlb_team": "NYM",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 15.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 160,
+      "stats": {
+        "AB": 557,
+        "R": 76,
+        "HR": 21,
+        "RBI": 75,
+        "SB": 11,
+        "OPS": 0.753
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Colson Montgomery",
+      "mlb_team": "CWS",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "SS",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 15.0,
+      "predicted_value": 10.0,
+      "is_rookie": true,
+      "rank": 161,
+      "stats": {
+        "AB": 509,
+        "R": 72,
+        "HR": 31,
+        "RBI": 82,
+        "SB": 3,
+        "OPS": 0.787
+      },
+      "notes": "🌟 Rookie"
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Oneil Cruz",
+      "mlb_team": "PIT",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 15.0,
+      "predicted_value": 10.0,
+      "is_rookie": false,
+      "rank": 162,
+      "stats": {
+        "AB": 466,
+        "R": 64,
+        "HR": 21,
+        "RBI": 64,
+        "SB": 29,
+        "OPS": 0.737
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Alec Burleson",
+      "mlb_team": "STL",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "OF",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 14.0,
+      "predicted_value": 9.0,
+      "is_rookie": false,
+      "rank": 163,
+      "stats": {
+        "AB": 543,
+        "R": 71,
+        "HR": 20,
+        "RBI": 76,
+        "SB": 5,
+        "OPS": 0.777
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Ivan Herrera",
+      "mlb_team": "STL",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 14.0,
+      "predicted_value": 9.0,
+      "is_rookie": false,
+      "rank": 164,
+      "stats": {
+        "AB": 490,
+        "R": 72,
+        "HR": 20,
+        "RBI": 68,
+        "SB": 8,
+        "OPS": 0.822
+      }
+    },
+    {
+      "_comment": "STRONG HITTER — Tier 3",
+      "player": "Otto Lopez",
+      "mlb_team": "MIA",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "3",
+      "projected_value": 14.0,
+      "predicted_value": 9.0,
+      "is_rookie": false,
+      "rank": 165,
+      "stats": {
+        "AB": 541,
+        "R": 69,
+        "HR": 17,
+        "RBI": 69,
+        "SB": 16,
+        "OPS": 0.729
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Christian Walker",
+      "mlb_team": "ARI",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 12.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 166,
+      "stats": {
+        "AB": 553,
+        "R": 74,
+        "HR": 25,
+        "RBI": 84,
+        "SB": 2,
+        "OPS": 0.75
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Marcus Semien",
+      "mlb_team": "TEX",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 12.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 167,
+      "stats": {
+        "AB": 556,
+        "R": 76,
+        "HR": 19,
+        "RBI": 74,
+        "SB": 11,
+        "OPS": 0.729
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Xander Bogaerts",
+      "mlb_team": "SD",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 12.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 168,
+      "stats": {
+        "AB": 520,
+        "R": 68,
+        "HR": 14,
+        "RBI": 67,
+        "SB": 17,
+        "OPS": 0.746
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Andrew Vaughn",
+      "mlb_team": "ARI",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 11.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 169,
+      "stats": {
+        "AB": 528,
+        "R": 71,
+        "HR": 21,
+        "RBI": 80,
+        "SB": 1,
+        "OPS": 0.772
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Ezequiel Tovar",
+      "mlb_team": "COL",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 11.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 170,
+      "stats": {
+        "AB": 572,
+        "R": 71,
+        "HR": 18,
+        "RBI": 73,
+        "SB": 8,
+        "OPS": 0.739
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Ramon Laureano",
+      "mlb_team": "PIT",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 11.0,
+      "predicted_value": 5.0,
+      "is_rookie": false,
+      "rank": 171,
+      "stats": {
+        "AB": 480,
+        "R": 67,
+        "HR": 22,
+        "RBI": 73,
+        "SB": 8,
+        "OPS": 0.779
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Brandon Lowe",
+      "mlb_team": "TB",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 10.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 172,
+      "stats": {
+        "AB": 489,
+        "R": 69,
+        "HR": 26,
+        "RBI": 73,
+        "SB": 4,
+        "OPS": 0.775
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Daylen Lile",
+      "mlb_team": "WSH",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 10.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 173,
+      "stats": {
+        "AB": 493,
+        "R": 64,
+        "HR": 14,
+        "RBI": 64,
+        "SB": 13,
+        "OPS": 0.783
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Kazuma Okamoto",
+      "mlb_team": "TOR",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 10.0,
+      "predicted_value": 4.0,
+      "is_rookie": true,
+      "rank": 174,
+      "stats": {
+        "AB": 501,
+        "R": 72,
+        "HR": 23,
+        "RBI": 73,
+        "SB": 2,
+        "OPS": 0.794
+      },
+      "notes": "🌟 Rookie"
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Ozzie Albies",
+      "mlb_team": "ATL",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 10.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 175,
+      "stats": {
+        "AB": 553,
+        "R": 70,
+        "HR": 16,
+        "RBI": 72,
+        "SB": 11,
+        "OPS": 0.711
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Nolan Schanuel",
+      "mlb_team": "LAA",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 10.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 176,
+      "stats": {
+        "AB": 521,
+        "R": 71,
+        "HR": 13,
+        "RBI": 58,
+        "SB": 5,
+        "OPS": 0.749
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "TJ Friedl",
+      "mlb_team": "CIN",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 9.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 177,
+      "stats": {
+        "AB": 531,
+        "R": 69,
+        "HR": 10,
+        "RBI": 52,
+        "SB": 9,
+        "OPS": 0.689
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Ernie Clement",
+      "mlb_team": "CLE",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "3B",
+        "SS",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 9.0,
+      "predicted_value": 4.0,
+      "is_rookie": true,
+      "rank": 178,
+      "stats": {
+        "AB": 581,
+        "R": 70,
+        "HR": 12,
+        "RBI": 69,
+        "SB": 9,
+        "OPS": 0.713
+      },
+      "notes": "🌟 Rookie (NPB import)"
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Jorge Polanco",
+      "mlb_team": "TEX",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 9.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 179,
+      "stats": {
+        "AB": 472,
+        "R": 68,
+        "HR": 20,
+        "RBI": 70,
+        "SB": 6,
+        "OPS": 0.78
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Yainer Diaz",
+      "mlb_team": "ATL",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 9.0,
+      "predicted_value": 4.0,
+      "is_rookie": false,
+      "rank": 180,
+      "stats": {
+        "AB": 517,
+        "R": 66,
+        "HR": 20,
+        "RBI": 73,
+        "SB": 1,
+        "OPS": 0.763
+      },
+      "notes": "⚠️ Foot sprain — monitor"
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Alec Bohm",
+      "mlb_team": "CIN",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 7.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 181,
+      "stats": {
+        "AB": 534,
+        "R": 71,
+        "HR": 15,
+        "RBI": 70,
+        "SB": 2,
+        "OPS": 0.754
+      }
+    },
+    {
+      "_comment": "SOLID HITTER — Tier 4",
+      "player": "Mike Trout",
+      "mlb_team": "STL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "4",
+      "projected_value": 7.0,
+      "predicted_value": 3.0,
+      "is_rookie": false,
+      "rank": 182,
+      "stats": {
+        "AB": 447,
+        "R": 71,
+        "HR": 25,
+        "RBI": 67,
+        "SB": 4,
+        "OPS": 0.819
+      },
+      "notes": "✅ Proj already discounts injury history"
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Matt McLain",
+      "mlb_team": "NYY",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 7.0,
+      "predicted_value": 2.0,
+      "is_rookie": false,
+      "rank": 183,
+      "stats": {
+        "AB": 527,
+        "R": 69,
+        "HR": 16,
+        "RBI": 64,
+        "SB": 16,
+        "OPS": 0.711
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Josh Bell",
+      "mlb_team": "SF",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 6.0,
+      "predicted_value": 2.0,
+      "is_rookie": false,
+      "rank": 184,
+      "stats": {
+        "AB": 495,
+        "R": 69,
+        "HR": 21,
+        "RBI": 71,
+        "SB": 1,
+        "OPS": 0.776
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Jurickson Profar",
+      "mlb_team": "MIA",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 6.0,
+      "predicted_value": 2.0,
+      "is_rookie": false,
+      "rank": 185,
+      "stats": {
+        "AB": 531,
+        "R": 78,
+        "HR": 17,
+        "RBI": 63,
+        "SB": 11,
+        "OPS": 0.716
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Dylan Crews",
+      "mlb_team": "BAL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": true,
+      "rank": 186,
+      "stats": {
+        "AB": 487,
+        "R": 56,
+        "HR": 15,
+        "RBI": 58,
+        "SB": 26,
+        "OPS": 0.672
+      },
+      "notes": "🌟 Rookie"
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Jordan Beck",
+      "mlb_team": "ATL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 187,
+      "stats": {
+        "AB": 502,
+        "R": 62,
+        "HR": 16,
+        "RBI": 61,
+        "SB": 17,
+        "OPS": 0.714
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Paul Goldschmidt",
+      "mlb_team": "TOR",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 188,
+      "stats": {
+        "AB": 476,
+        "R": 66,
+        "HR": 18,
+        "RBI": 65,
+        "SB": 5,
+        "OPS": 0.766
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Royce Lewis",
+      "mlb_team": "ARI",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 5.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 189,
+      "stats": {
+        "AB": 470,
+        "R": 60,
+        "HR": 18,
+        "RBI": 63,
+        "SB": 14,
+        "OPS": 0.73
+      },
+      "notes": "⚠️ ACL history"
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Alejandro Kirk",
+      "mlb_team": "BAL",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 4.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 190,
+      "stats": {
+        "AB": 463,
+        "R": 66,
+        "HR": 16,
+        "RBI": 65,
+        "SB": 1,
+        "OPS": 0.799
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Carlos Correa",
+      "mlb_team": "NYY",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "SS",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 4.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 191,
+      "stats": {
+        "AB": 496,
+        "R": 68,
+        "HR": 17,
+        "RBI": 67,
+        "SB": 1,
+        "OPS": 0.77
+      },
+      "notes": "⚠️ WBC insurance denied"
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Jake Burger",
+      "mlb_team": "TEX",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 4.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 192,
+      "stats": {
+        "AB": 505,
+        "R": 63,
+        "HR": 22,
+        "RBI": 72,
+        "SB": 2,
+        "OPS": 0.726
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Jesus Sanchez",
+      "mlb_team": "COL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 4.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 193,
+      "stats": {
+        "AB": 433,
+        "R": 61,
+        "HR": 18,
+        "RBI": 60,
+        "SB": 11,
+        "OPS": 0.765
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Mickey Moniak",
+      "mlb_team": "ATL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 4.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 194,
+      "stats": {
+        "AB": 444,
+        "R": 58,
+        "HR": 20,
+        "RBI": 62,
+        "SB": 9,
+        "OPS": 0.763
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Adley Rutschman",
+      "mlb_team": "COL",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 195,
+      "stats": {
+        "AB": 514,
+        "R": 71,
+        "HR": 16,
+        "RBI": 65,
+        "SB": 1,
+        "OPS": 0.735
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Austin Wells",
+      "mlb_team": "MIN",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 196,
+      "stats": {
+        "AB": 462,
+        "R": 65,
+        "HR": 20,
+        "RBI": 66,
+        "SB": 5,
+        "OPS": 0.737
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Brandon Marsh",
+      "mlb_team": "CIN",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 197,
+      "stats": {
+        "AB": 443,
+        "R": 62,
+        "HR": 16,
+        "RBI": 60,
+        "SB": 9,
+        "OPS": 0.755
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Brenton Doyle",
+      "mlb_team": "MIL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 198,
+      "stats": {
+        "AB": 534,
+        "R": 65,
+        "HR": 20,
+        "RBI": 66,
+        "SB": 21,
+        "OPS": 0.713
+      }
+    },
+    {
+      "_comment": "DEPTH HITTER — Tier 5",
+      "player": "Caleb Durbin",
+      "mlb_team": "NYM",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "5",
+      "projected_value": 0.0,
+      "predicted_value": 1.0,
+      "is_rookie": false,
+      "rank": 199,
+      "stats": {
+        "AB": 525,
+        "R": 67,
+        "HR": 11,
+        "RBI": 64,
+        "SB": 21,
+        "OPS": 0.729
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Luis García Jr.",
+      "mlb_team": "WSN",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 200,
+      "stats": {
+        "AB": 498,
+        "R": 62,
+        "HR": 18,
+        "RBI": 68,
+        "SB": 15,
+        "OPS": 0.764
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Josh Jung",
+      "mlb_team": "TEX",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 201,
+      "stats": {
+        "AB": 486,
+        "R": 61,
+        "HR": 17,
+        "RBI": 65,
+        "SB": 5,
+        "OPS": 0.732
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Josh Lowe",
+      "mlb_team": "LAA",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 202,
+      "stats": {
+        "AB": 436,
+        "R": 54,
+        "HR": 14,
+        "RBI": 53,
+        "SB": 21,
+        "OPS": 0.707
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Andrés Giménez",
+      "mlb_team": "TOR",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 203,
+      "stats": {
+        "AB": 510,
+        "R": 60,
+        "HR": 11,
+        "RBI": 58,
+        "SB": 17,
+        "OPS": 0.67
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "J.P. Crawford",
+      "mlb_team": "SEA",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 204,
+      "stats": {
+        "AB": 537,
+        "R": 74,
+        "HR": 13,
+        "RBI": 58,
+        "SB": 6,
+        "OPS": 0.711
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Lars Nootbaar",
+      "mlb_team": "STL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 205,
+      "stats": {
+        "AB": 487,
+        "R": 69,
+        "HR": 15,
+        "RBI": 59,
+        "SB": 5,
+        "OPS": 0.748
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Miguel Vargas",
+      "mlb_team": "CHW",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 206,
+      "stats": {
+        "AB": 501,
+        "R": 67,
+        "HR": 16,
+        "RBI": 65,
+        "SB": 6,
+        "OPS": 0.732
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Matt Wallner",
+      "mlb_team": "MIN",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 207,
+      "stats": {
+        "AB": 409,
+        "R": 60,
+        "HR": 21,
+        "RBI": 63,
+        "SB": 6,
+        "OPS": 0.772
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Cedric Mullins",
+      "mlb_team": "TBR",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 208,
+      "stats": {
+        "AB": 426,
+        "R": 54,
+        "HR": 13,
+        "RBI": 53,
+        "SB": 23,
+        "OPS": 0.689
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Ha-Seong Kim",
+      "mlb_team": "ATL",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 209,
+      "stats": {
+        "AB": 470,
+        "R": 61,
+        "HR": 11,
+        "RBI": 54,
+        "SB": 18,
+        "OPS": 0.692
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Colt Keith",
+      "mlb_team": "DET",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 210,
+      "stats": {
+        "AB": 452,
+        "R": 64,
+        "HR": 14,
+        "RBI": 58,
+        "SB": 2,
+        "OPS": 0.776
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Gavin Sheets",
+      "mlb_team": "SDP",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "OF",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 211,
+      "stats": {
+        "AB": 492,
+        "R": 63,
+        "HR": 16,
+        "RBI": 66,
+        "SB": 2,
+        "OPS": 0.728
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Carter Jensen",
+      "mlb_team": "KCR",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 212,
+      "stats": {
+        "AB": 397,
+        "R": 59,
+        "HR": 17,
+        "RBI": 58,
+        "SB": 4,
+        "OPS": 0.803
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jeff McNeil",
+      "mlb_team": "ATH",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "OF",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 213,
+      "stats": {
+        "AB": 499,
+        "R": 65,
+        "HR": 13,
+        "RBI": 62,
+        "SB": 4,
+        "OPS": 0.734
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Harrison Bader",
+      "mlb_team": "",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 214,
+      "stats": {
+        "AB": 468,
+        "R": 58,
+        "HR": 15,
+        "RBI": 58,
+        "SB": 12,
+        "OPS": 0.697
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Ryan Jeffers",
+      "mlb_team": "MIN",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 215,
+      "stats": {
+        "AB": 471,
+        "R": 65,
+        "HR": 16,
+        "RBI": 62,
+        "SB": 2,
+        "OPS": 0.752
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Dominic Canzone",
+      "mlb_team": "SEA",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 216,
+      "stats": {
+        "AB": 408,
+        "R": 55,
+        "HR": 17,
+        "RBI": 59,
+        "SB": 4,
+        "OPS": 0.777
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Sal Frelick",
+      "mlb_team": "MIL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 217,
+      "stats": {
+        "AB": 489,
+        "R": 61,
+        "HR": 9,
+        "RBI": 52,
+        "SB": 15,
+        "OPS": 0.687
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Spencer Steer",
+      "mlb_team": "CIN",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "OF",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 218,
+      "stats": {
+        "AB": 498,
+        "R": 62,
+        "HR": 16,
+        "RBI": 62,
+        "SB": 7,
+        "OPS": 0.707
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Austin Hays",
+      "mlb_team": "",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 219,
+      "stats": {
+        "AB": 456,
+        "R": 56,
+        "HR": 16,
+        "RBI": 63,
+        "SB": 6,
+        "OPS": 0.718
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jac Caglianone",
+      "mlb_team": "KCR",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "OF",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 220,
+      "stats": {
+        "AB": 467,
+        "R": 59,
+        "HR": 17,
+        "RBI": 63,
+        "SB": 3,
+        "OPS": 0.736
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Max Muncy",
+      "mlb_team": "LAD",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 221,
+      "stats": {
+        "AB": 362,
+        "R": 61,
+        "HR": 19,
+        "RBI": 62,
+        "SB": 3,
+        "OPS": 0.803
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Nolan Arenado",
+      "mlb_team": "ARI",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 222,
+      "stats": {
+        "AB": 515,
+        "R": 61,
+        "HR": 14,
+        "RBI": 65,
+        "SB": 3,
+        "OPS": 0.704
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jake Cronenworth",
+      "mlb_team": "SDP",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "SS",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 223,
+      "stats": {
+        "AB": 515,
+        "R": 68,
+        "HR": 14,
+        "RBI": 63,
+        "SB": 4,
+        "OPS": 0.714
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Mike Yastrzemski",
+      "mlb_team": "ATL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 224,
+      "stats": {
+        "AB": 432,
+        "R": 64,
+        "HR": 16,
+        "RBI": 58,
+        "SB": 5,
+        "OPS": 0.743
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Ke'Bryan Hayes",
+      "mlb_team": "CIN",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 225,
+      "stats": {
+        "AB": 528,
+        "R": 60,
+        "HR": 11,
+        "RBI": 56,
+        "SB": 12,
+        "OPS": 0.668
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Andrew Benintendi",
+      "mlb_team": "CHW",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 226,
+      "stats": {
+        "AB": 450,
+        "R": 59,
+        "HR": 18,
+        "RBI": 61,
+        "SB": 2,
+        "OPS": 0.737
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Ryan McMahon",
+      "mlb_team": "NYY",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 227,
+      "stats": {
+        "AB": 458,
+        "R": 64,
+        "HR": 19,
+        "RBI": 63,
+        "SB": 3,
+        "OPS": 0.716
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Willi Castro",
+      "mlb_team": "COL",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 228,
+      "stats": {
+        "AB": 484,
+        "R": 58,
+        "HR": 13,
+        "RBI": 55,
+        "SB": 13,
+        "OPS": 0.692
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jared Triolo",
+      "mlb_team": "PIT",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "3B",
+        "SS",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 229,
+      "stats": {
+        "AB": 471,
+        "R": 60,
+        "HR": 12,
+        "RBI": 51,
+        "SB": 16,
+        "OPS": 0.683
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jonathan India",
+      "mlb_team": "KCR",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 230,
+      "stats": {
+        "AB": 487,
+        "R": 69,
+        "HR": 14,
+        "RBI": 56,
+        "SB": 3,
+        "OPS": 0.73
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Chase Meidroth",
+      "mlb_team": "CHW",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 231,
+      "stats": {
+        "AB": 503,
+        "R": 63,
+        "HR": 8,
+        "RBI": 48,
+        "SB": 13,
+        "OPS": 0.688
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Victor Scott II",
+      "mlb_team": "STL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 232,
+      "stats": {
+        "AB": 482,
+        "R": 52,
+        "HR": 8,
+        "RBI": 47,
+        "SB": 29,
+        "OPS": 0.606
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Brooks Lee",
+      "mlb_team": "MIN",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "SS",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 233,
+      "stats": {
+        "AB": 515,
+        "R": 60,
+        "HR": 15,
+        "RBI": 61,
+        "SB": 5,
+        "OPS": 0.675
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Brady House",
+      "mlb_team": "WSN",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 234,
+      "stats": {
+        "AB": 484,
+        "R": 54,
+        "HR": 12,
+        "RBI": 56,
+        "SB": 10,
+        "OPS": 0.69
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Nasim Nuñez",
+      "mlb_team": "WSN",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 235,
+      "stats": {
+        "AB": 349,
+        "R": 43,
+        "HR": 8,
+        "RBI": 37,
+        "SB": 33,
+        "OPS": 0.678
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jake Meyers",
+      "mlb_team": "HOU",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 236,
+      "stats": {
+        "AB": 419,
+        "R": 53,
+        "HR": 10,
+        "RBI": 49,
+        "SB": 14,
+        "OPS": 0.719
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Nolan Gorman",
+      "mlb_team": "STL",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 237,
+      "stats": {
+        "AB": 454,
+        "R": 58,
+        "HR": 21,
+        "RBI": 63,
+        "SB": 3,
+        "OPS": 0.71
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Brett Baty",
+      "mlb_team": "NYM",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 238,
+      "stats": {
+        "AB": 391,
+        "R": 54,
+        "HR": 16,
+        "RBI": 54,
+        "SB": 6,
+        "OPS": 0.748
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Mark Vientos",
+      "mlb_team": "NYM",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 239,
+      "stats": {
+        "AB": 399,
+        "R": 56,
+        "HR": 17,
+        "RBI": 61,
+        "SB": 1,
+        "OPS": 0.754
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Connor Norby",
+      "mlb_team": "MIA",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 240,
+      "stats": {
+        "AB": 439,
+        "R": 53,
+        "HR": 14,
+        "RBI": 57,
+        "SB": 9,
+        "OPS": 0.697
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jordan Walker",
+      "mlb_team": "STL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 241,
+      "stats": {
+        "AB": 473,
+        "R": 55,
+        "HR": 14,
+        "RBI": 57,
+        "SB": 10,
+        "OPS": 0.675
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Tommy Edman",
+      "mlb_team": "LAD",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 242,
+      "stats": {
+        "AB": 460,
+        "R": 59,
+        "HR": 12,
+        "RBI": 57,
+        "SB": 7,
+        "OPS": 0.685
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Justin Crawford",
+      "mlb_team": "PHI",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 243,
+      "stats": {
+        "AB": 403,
+        "R": 51,
+        "HR": 6,
+        "RBI": 43,
+        "SB": 21,
+        "OPS": 0.688
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Lourdes Gurriel Jr.",
+      "mlb_team": "ARI",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 244,
+      "stats": {
+        "AB": 385,
+        "R": 49,
+        "HR": 13,
+        "RBI": 53,
+        "SB": 8,
+        "OPS": 0.749
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "José Caballero",
+      "mlb_team": "NYY",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "SS",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 245,
+      "stats": {
+        "AB": 320,
+        "R": 40,
+        "HR": 7,
+        "RBI": 36,
+        "SB": 36,
+        "OPS": 0.661
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Anthony Santander",
+      "mlb_team": "TOR",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 246,
+      "stats": {
+        "AB": 472,
+        "R": 60,
+        "HR": 17,
+        "RBI": 64,
+        "SB": 2,
+        "OPS": 0.693
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Spencer Horwitz",
+      "mlb_team": "PIT",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 247,
+      "stats": {
+        "AB": 439,
+        "R": 60,
+        "HR": 14,
+        "RBI": 55,
+        "SB": 1,
+        "OPS": 0.753
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Kyle Teel",
+      "mlb_team": "CHW",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 248,
+      "stats": {
+        "AB": 431,
+        "R": 58,
+        "HR": 16,
+        "RBI": 54,
+        "SB": 4,
+        "OPS": 0.737
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Romy Gonzalez",
+      "mlb_team": "BOS",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 249,
+      "stats": {
+        "AB": 360,
+        "R": 48,
+        "HR": 13,
+        "RBI": 50,
+        "SB": 9,
+        "OPS": 0.772
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Zach Cole",
+      "mlb_team": "HOU",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 250,
+      "stats": {
+        "AB": 344,
+        "R": 46,
+        "HR": 17,
+        "RBI": 48,
+        "SB": 15,
+        "OPS": 0.723
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jorge Soler",
+      "mlb_team": "LAA",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 251,
+      "stats": {
+        "AB": 450,
+        "R": 60,
+        "HR": 18,
+        "RBI": 61,
+        "SB": 1,
+        "OPS": 0.728
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Logan O'Hoppe",
+      "mlb_team": "LAA",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 252,
+      "stats": {
+        "AB": 432,
+        "R": 54,
+        "HR": 19,
+        "RBI": 58,
+        "SB": 2,
+        "OPS": 0.718
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Josh Smith",
+      "mlb_team": "TEX",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "3B",
+        "SS",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 253,
+      "stats": {
+        "AB": 444,
+        "R": 59,
+        "HR": 11,
+        "RBI": 48,
+        "SB": 10,
+        "OPS": 0.703
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Gabriel Moreno",
+      "mlb_team": "ARI",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 254,
+      "stats": {
+        "AB": 403,
+        "R": 54,
+        "HR": 12,
+        "RBI": 52,
+        "SB": 3,
+        "OPS": 0.764
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Trevor Larnach",
+      "mlb_team": "MIN",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 255,
+      "stats": {
+        "AB": 406,
+        "R": 55,
+        "HR": 14,
+        "RBI": 53,
+        "SB": 4,
+        "OPS": 0.744
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Francisco Alvarez",
+      "mlb_team": "NYM",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 256,
+      "stats": {
+        "AB": 414,
+        "R": 58,
+        "HR": 15,
+        "RBI": 58,
+        "SB": 1,
+        "OPS": 0.742
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Wenceel Pérez",
+      "mlb_team": "DET",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 257,
+      "stats": {
+        "AB": 443,
+        "R": 53,
+        "HR": 12,
+        "RBI": 54,
+        "SB": 9,
+        "OPS": 0.683
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Zach McKinstry",
+      "mlb_team": "DET",
+      "position_primary": "3B",
+      "position_eligibility": [
+        "3B",
+        "SS",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 258,
+      "stats": {
+        "AB": 407,
+        "R": 50,
+        "HR": 9,
+        "RBI": 47,
+        "SB": 16,
+        "OPS": 0.689
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Evan Carter",
+      "mlb_team": "TEX",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 259,
+      "stats": {
+        "AB": 367,
+        "R": 46,
+        "HR": 9,
+        "RBI": 43,
+        "SB": 20,
+        "OPS": 0.701
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Tyler O'Neill",
+      "mlb_team": "BAL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 260,
+      "stats": {
+        "AB": 331,
+        "R": 48,
+        "HR": 18,
+        "RBI": 51,
+        "SB": 6,
+        "OPS": 0.773
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Dillon Dingler",
+      "mlb_team": "DET",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 261,
+      "stats": {
+        "AB": 423,
+        "R": 53,
+        "HR": 14,
+        "RBI": 55,
+        "SB": 1,
+        "OPS": 0.73
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Brayan Rocchio",
+      "mlb_team": "CLE",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 262,
+      "stats": {
+        "AB": 480,
+        "R": 56,
+        "HR": 9,
+        "RBI": 51,
+        "SB": 11,
+        "OPS": 0.663
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Dylan Beavers",
+      "mlb_team": "BAL",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 263,
+      "stats": {
+        "AB": 382,
+        "R": 54,
+        "HR": 16,
+        "RBI": 50,
+        "SB": 7,
+        "OPS": 0.734
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "C.J. Kayfus",
+      "mlb_team": "CLE",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "OF",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 264,
+      "stats": {
+        "AB": 391,
+        "R": 49,
+        "HR": 14,
+        "RBI": 50,
+        "SB": 11,
+        "OPS": 0.71
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Gabriel Arias",
+      "mlb_team": "CLE",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 265,
+      "stats": {
+        "AB": 435,
+        "R": 50,
+        "HR": 15,
+        "RBI": 54,
+        "SB": 9,
+        "OPS": 0.672
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Bryce Eldridge",
+      "mlb_team": "SFG",
+      "position_primary": "UT",
+      "position_eligibility": [
+        "UT",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 266,
+      "stats": {
+        "AB": 414,
+        "R": 53,
+        "HR": 16,
+        "RBI": 55,
+        "SB": 2,
+        "OPS": 0.719
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Christian Moore",
+      "mlb_team": "LAA",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 267,
+      "stats": {
+        "AB": 431,
+        "R": 54,
+        "HR": 15,
+        "RBI": 52,
+        "SB": 7,
+        "OPS": 0.682
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Carson Benge",
+      "mlb_team": "NYM",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 268,
+      "stats": {
+        "AB": 431,
+        "R": 55,
+        "HR": 11,
+        "RBI": 50,
+        "SB": 8,
+        "OPS": 0.678
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Parker Meadows",
+      "mlb_team": "DET",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 269,
+      "stats": {
+        "AB": 433,
+        "R": 56,
+        "HR": 11,
+        "RBI": 49,
+        "SB": 9,
+        "OPS": 0.679
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jake Mangum",
+      "mlb_team": "PIT",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 270,
+      "stats": {
+        "AB": 382,
+        "R": 41,
+        "HR": 6,
+        "RBI": 41,
+        "SB": 18,
+        "OPS": 0.67
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Bo Naylor",
+      "mlb_team": "CLE",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 271,
+      "stats": {
+        "AB": 431,
+        "R": 54,
+        "HR": 16,
+        "RBI": 55,
+        "SB": 3,
+        "OPS": 0.698
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Chase DeLauter",
+      "mlb_team": "CLE",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 272,
+      "stats": {
+        "AB": 442,
+        "R": 54,
+        "HR": 13,
+        "RBI": 53,
+        "SB": 3,
+        "OPS": 0.685
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Samuel Basallo",
+      "mlb_team": "BAL",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 273,
+      "stats": {
+        "AB": 407,
+        "R": 50,
+        "HR": 15,
+        "RBI": 54,
+        "SB": 3,
+        "OPS": 0.699
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Pavin Smith",
+      "mlb_team": "ARI",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 274,
+      "stats": {
+        "AB": 372,
+        "R": 52,
+        "HR": 14,
+        "RBI": 51,
+        "SB": 3,
+        "OPS": 0.749
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Isaac Collins",
+      "mlb_team": "KCR",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 275,
+      "stats": {
+        "AB": 384,
+        "R": 49,
+        "HR": 8,
+        "RBI": 43,
+        "SB": 14,
+        "OPS": 0.704
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Carlos Narváez",
+      "mlb_team": "BOS",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 276,
+      "stats": {
+        "AB": 406,
+        "R": 52,
+        "HR": 14,
+        "RBI": 52,
+        "SB": 2,
+        "OPS": 0.716
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Joc Pederson",
+      "mlb_team": "TEX",
+      "position_primary": "UT",
+      "position_eligibility": [
+        "UT",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 277,
+      "stats": {
+        "AB": 378,
+        "R": 52,
+        "HR": 14,
+        "RBI": 53,
+        "SB": 3,
+        "OPS": 0.742
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Lenyn Sosa",
+      "mlb_team": "CHW",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 278,
+      "stats": {
+        "AB": 385,
+        "R": 46,
+        "HR": 14,
+        "RBI": 51,
+        "SB": 1,
+        "OPS": 0.723
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Marcelo Mayer",
+      "mlb_team": "BOS",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 279,
+      "stats": {
+        "AB": 433,
+        "R": 51,
+        "HR": 13,
+        "RBI": 53,
+        "SB": 4,
+        "OPS": 0.68
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Cam Smith",
+      "mlb_team": "HOU",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 280,
+      "stats": {
+        "AB": 402,
+        "R": 52,
+        "HR": 11,
+        "RBI": 49,
+        "SB": 6,
+        "OPS": 0.707
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Carson Williams",
+      "mlb_team": "TBR",
+      "position_primary": "SS",
+      "position_eligibility": [
+        "SS",
+        "MI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 281,
+      "stats": {
+        "AB": 405,
+        "R": 48,
+        "HR": 16,
+        "RBI": 52,
+        "SB": 11,
+        "OPS": 0.641
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Luis Rengifo",
+      "mlb_team": "",
+      "position_primary": "2B",
+      "position_eligibility": [
+        "2B",
+        "3B",
+        "OF",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 282,
+      "stats": {
+        "AB": 394,
+        "R": 47,
+        "HR": 9,
+        "RBI": 44,
+        "SB": 10,
+        "OPS": 0.686
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Moisés Ballesteros",
+      "mlb_team": "CHC",
+      "position_primary": "UT",
+      "position_eligibility": [
+        "UT",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 283,
+      "stats": {
+        "AB": 380,
+        "R": 50,
+        "HR": 12,
+        "RBI": 50,
+        "SB": 2,
+        "OPS": 0.736
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Tyler Stephenson",
+      "mlb_team": "CIN",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 284,
+      "stats": {
+        "AB": 409,
+        "R": 52,
+        "HR": 15,
+        "RBI": 53,
+        "SB": 1,
+        "OPS": 0.72
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Patrick Bailey",
+      "mlb_team": "SFG",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 285,
+      "stats": {
+        "AB": 491,
+        "R": 58,
+        "HR": 12,
+        "RBI": 54,
+        "SB": 2,
+        "OPS": 0.647
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Carson Kelly",
+      "mlb_team": "CHC",
+      "position_primary": "C",
+      "position_eligibility": [
+        "C",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 286,
+      "stats": {
+        "AB": 360,
+        "R": 49,
+        "HR": 13,
+        "RBI": 49,
+        "SB": 2,
+        "OPS": 0.738
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Alek Thomas",
+      "mlb_team": "ARI",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 287,
+      "stats": {
+        "AB": 397,
+        "R": 46,
+        "HR": 11,
+        "RBI": 47,
+        "SB": 8,
+        "OPS": 0.663
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Jake Bauers",
+      "mlb_team": "MIL",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "OF",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 288,
+      "stats": {
+        "AB": 315,
+        "R": 43,
+        "HR": 13,
+        "RBI": 45,
+        "SB": 10,
+        "OPS": 0.734
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Tommy Pham",
+      "mlb_team": "",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 289,
+      "stats": {
+        "AB": 365,
+        "R": 48,
+        "HR": 11,
+        "RBI": 45,
+        "SB": 5,
+        "OPS": 0.723
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Andrew McCutchen",
+      "mlb_team": "",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 290,
+      "stats": {
+        "AB": 367,
+        "R": 51,
+        "HR": 13,
+        "RBI": 47,
+        "SB": 1,
+        "OPS": 0.735
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Casey Schmitt",
+      "mlb_team": "SFG",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "2B",
+        "3B",
+        "MI",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 291,
+      "stats": {
+        "AB": 373,
+        "R": 47,
+        "HR": 12,
+        "RBI": 48,
+        "SB": 3,
+        "OPS": 0.715
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Victor Robles",
+      "mlb_team": "SEA",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 292,
+      "stats": {
+        "AB": 321,
+        "R": 39,
+        "HR": 6,
+        "RBI": 34,
+        "SB": 21,
+        "OPS": 0.669
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Ty France",
+      "mlb_team": "",
+      "position_primary": "1B",
+      "position_eligibility": [
+        "1B",
+        "CI",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 293,
+      "stats": {
+        "AB": 357,
+        "R": 46,
+        "HR": 11,
+        "RBI": 47,
+        "SB": 1,
+        "OPS": 0.747
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Tyrone Taylor",
+      "mlb_team": "NYM",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 294,
+      "stats": {
+        "AB": 374,
+        "R": 44,
+        "HR": 8,
+        "RBI": 43,
+        "SB": 13,
+        "OPS": 0.658
+      }
+    },
+    {
+      "_comment": "POOL HITTER — Tier 6",
+      "player": "Kyle Isbel",
+      "mlb_team": "KCR",
+      "position_primary": "OF",
+      "position_eligibility": [
+        "OF",
+        "UTIL"
+      ],
+      "type": "Hitter",
+      "tier": "6",
+      "projected_value": 0.0,
+      "predicted_value": 0.0,
+      "is_rookie": false,
+      "rank": 295,
+      "stats": {
+        "AB": 440,
+        "R": 51,
+        "HR": 7,
+        "RBI": 46,
+        "SB": 7,
+        "OPS": 0.648
+      }
+    },
+    {
+  "_comment": "PROSPECT STASH — Tier 6",
+  "player": "Walker Jenkins",
+  "mlb_team": "MIN",
+  "position_primary": "OF",
+  "position_eligibility": [
+    "OF",
+    "UTIL"
+  ],
+  "type": "Hitter",
+  "tier": "6",
+  "projected_value": 0.0,
+  "predicted_value": 0.0,
+  "is_rookie": true,
+  "rank": null,
+  "stats": {
+    "G": 18,
+    "AB": 67,
+    "PA": 77,
+    "R": 9,
+    "HR": 2,
+    "RBI": 8,
+    "SB": 2,
+    "AVG": 0.251,
+    "OBP": 0.326,
+    "SLG": 0.391,
+    "OPS": 0.717
+  },
+  "notes": "🌱 Top prospect — #2 overall pick (2024). Minimal 2026 MLB time projected. Dynasty stash, not a production play."
+}
+  ]
+}

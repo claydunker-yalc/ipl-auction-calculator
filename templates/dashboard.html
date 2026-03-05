@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Auction Calculator 2026</title>
+    <link rel="stylesheet" href="/static/css/vintage-theme.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- TOP BAR                                                       -->
+<!-- ============================================================ -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <div>
+            <div class="app-title">IPL Auction Calculator</div>
+            <div class="app-subtitle">Illini Penal League — 2026 Season</div>
+        </div>
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="manual">Manual</button>
+            <button class="mode-btn" data-mode="interactive">AI Interactive</button>
+            <button class="mode-btn" data-mode="batch">Batch Sim</button>
+        </div>
+        <span id="pick-counter" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--mustard)">Pick #0</span>
+        <div class="view-selector">
+            <button class="view-btn active" data-view="dashboard" onclick="switchView('dashboard')">Dashboard</button>
+            <button class="view-btn" data-view="teams" onclick="switchView('teams')">Team View</button>
+        </div>
+        <a href="/standings" class="nav-link">Standings →</a>
+    </div>
+
+    <div class="top-bar-center">
+        <div class="inflation-display">
+            <div class="inflation-badge">
+                <div class="label">Global</div>
+                <div class="value neutral" id="inf-global-value">1.00x</div>
+            </div>
+            <div class="inflation-badge">
+                <div class="label">Hitters</div>
+                <div class="value neutral" id="inf-hitter-value">1.00x</div>
+            </div>
+            <div class="inflation-badge">
+                <div class="label">Pitchers</div>
+                <div class="value neutral" id="inf-pitcher-value">1.00x</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-bar-right">
+        <div class="my-team-summary">
+            <div class="team-name">Waxahatchie Swaps</div>
+            <div class="budget-info" id="my-budget-remaining">Loading...</div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- AI CONTROLS BAR (visible based on mode)                       -->
+<!-- ============================================================ -->
+<div class="ai-controls-bar" id="ai-controls-bar">
+    <!-- Manual Mode: AI Assist -->
+    <div id="ai-assist-controls" class="ai-control-group">
+        <span class="ai-label">AI Assist:</span>
+        <span class="ai-description">Let the AI make picks for other managers</span>
+        <input type="number" id="ai-pick-count" min="1" max="150" value="5" class="ai-input">
+        <span class="ai-label">picks</span>
+        <button class="btn-primary btn-small" id="btn-ai-picks" onclick="runAiPicks()">Run AI Picks</button>
+        <span id="ai-assist-status" class="ai-status"></span>
+    </div>
+
+    <!-- Interactive Mode Controls -->
+    <div id="interactive-controls" class="ai-control-group" style="display:none">
+        <span class="ai-label">Interactive Sim:</span>
+        <span class="ai-description">AI runs the auction — you bid on your players</span>
+        <button class="btn-primary btn-small" id="btn-next-pick" onclick="runInteractiveStep()">Next Pick</button>
+        <button class="btn-primary btn-small" id="btn-auto-run" onclick="toggleAutoRun()">Auto-Run</button>
+        <select id="auto-speed" class="ai-input" style="width:80px">
+            <option value="1000">Slow</option>
+            <option value="500" selected>Medium</option>
+            <option value="200">Fast</option>
+            <option value="50">Instant</option>
+        </select>
+        <span id="interactive-status" class="ai-status"></span>
+    </div>
+
+    <!-- Batch Mode Controls -->
+    <div id="batch-controls" class="ai-control-group" style="display:none">
+        <span class="ai-label">Batch Sim:</span>
+        <span class="ai-description">Run full auction simulations for statistical analysis</span>
+        <input type="number" id="batch-sim-count" min="1" max="200" value="25" class="ai-input">
+        <span class="ai-label">simulations</span>
+        <button class="btn-primary btn-small" id="btn-run-batch" onclick="runBatchSim()">Run Batch</button>
+        <button class="btn-secondary btn-small" id="btn-draft-plan" onclick="toggleDraftPlan()">Draft Plan</button>
+        <button class="btn-secondary btn-small" id="btn-throwback-lab" onclick="openThrowbackLab()">Throw-Back Lab</button>
+        <div class="anchor-toggle" style="margin-left:12px">
+            <button class="anchor-btn active" id="anchor-pred" onclick="setAnchor(false)">Pred $</button>
+            <button class="anchor-btn" id="anchor-proj" onclick="setAnchor(true)">Proj $</button>
+        </div>
+        <input type="hidden" id="use-projected-anchor" value="false">
+        <span id="batch-status" class="ai-status"></span>
+    </div>
+
+    <!-- Draft Plan Panel -->
+    <div id="draft-plan-panel" class="draft-plan-panel" style="display:none">
+        <div class="card" style="margin-top:8px">
+            <div class="card-header" style="padding:8px 12px">
+                <h3 style="margin:0;font-size:0.95rem">Draft Plan — Lock In Picks Before Batch Sim</h3>
+            </div>
+            <div style="padding:10px 12px">
+                <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
+                    <input type="text" id="dp-player" placeholder="Player name" class="ai-input" style="width:200px" list="dp-player-list">
+                    <datalist id="dp-player-list"></datalist>
+                    <span style="font-size:0.85rem">$</span>
+                    <input type="number" id="dp-price" min="1" max="300" value="1" class="ai-input" style="width:60px">
+                    <button class="btn-primary btn-small" onclick="addDraftPlanPick()">Add</button>
+                    <button class="btn-secondary btn-small" onclick="clearDraftPlan()">Clear All</button>
+                    <span id="dp-budget-info" style="font-size:0.82rem;color:var(--text-secondary);margin-left:8px"></span>
+                </div>
+                <div id="dp-picks-list" style="font-size:0.85rem"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- BATCH RESULTS PANEL (hidden until batch runs)                 -->
+<!-- ============================================================ -->
+<div class="batch-results-panel" id="batch-results-panel" style="display:none">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">Batch Simulation Results</div>
+            <button class="btn-secondary btn-small" onclick="closeBatchResults()">Close</button>
+        </div>
+        <div class="card-body">
+            <div id="batch-summary" class="batch-summary"></div>
+
+            <!-- Standings snapshot (Feature 1 & 3) -->
+            <div id="batch-standings-snapshot" class="batch-standings-snapshot"></div>
+
+            <div class="batch-tabs">
+                <button class="batch-tab-btn active" data-btab="player-prices" onclick="switchBatchTab('player-prices')">Player Prices</button>
+                <button class="batch-tab-btn" data-btab="my-team" onclick="switchBatchTab('my-team')">My Avg Team</button>
+                <button class="batch-tab-btn" data-btab="values" onclick="switchBatchTab('values')">Best Values</button>
+                <button class="batch-tab-btn" data-btab="volatile" onclick="switchBatchTab('volatile')">Volatile Players</button>
+                <button class="batch-tab-btn" data-btab="best-outcomes" onclick="switchBatchTab('best-outcomes')">Best Outcomes</button>
+                <button class="batch-tab-btn" data-btab="worst-outcomes" onclick="switchBatchTab('worst-outcomes')">Worst Outcomes</button>
+            </div>
+
+            <div id="btab-player-prices" class="batch-tab-content active">
+                <div class="batch-table-wrapper">
+                    <table class="batch-table">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Pos</th>
+                                <th>Proj $</th>
+                                <th>Pred $</th>
+                                <th>Avg Price</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                                <th>Std Dev</th>
+                                <th>Avg +/-</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batch-player-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="btab-my-team" class="batch-tab-content">
+                <div class="batch-table-wrapper">
+                    <table class="batch-table">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Pos</th>
+                                <th>Freq %</th>
+                                <th>Times Drafted</th>
+                                <th>Avg Price</th>
+                                <th>Tier</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batch-myteam-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="btab-values" class="batch-tab-content">
+                <div class="batch-table-wrapper">
+                    <table class="batch-table">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Pos</th>
+                                <th>Proj $</th>
+                                <th>Avg Price</th>
+                                <th>Savings</th>
+                                <th>Std Dev</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batch-values-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="btab-volatile" class="batch-tab-content">
+                <div class="batch-table-wrapper">
+                    <table class="batch-table">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Pos</th>
+                                <th>Avg Price</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                                <th>Std Dev</th>
+                                <th>Range</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batch-volatile-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Feature 2: Best Outcomes -->
+            <div id="btab-best-outcomes" class="batch-tab-content">
+                <div id="best-outcomes-container" class="outcomes-container"></div>
+            </div>
+
+            <!-- Feature 2: Worst Outcomes -->
+            <div id="btab-worst-outcomes" class="batch-tab-content">
+                <div id="worst-outcomes-container" class="outcomes-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- KEEPER THROWBACK LAB (Feature 4)                              -->
+<!-- ============================================================ -->
+<div class="throwback-lab-panel" id="throwback-lab-panel" style="display:none">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">Keeper Throw-Back Lab</div>
+            <button class="btn-secondary btn-small" onclick="closeThrowbackLab()">Close</button>
+        </div>
+        <div class="card-body">
+            <div class="throwback-description">
+                Select keepers to throw back into the draft pool and see how your team might change.
+            </div>
+            <div class="throwback-mode-toggle">
+                <button class="btn-small throwback-mode-btn active" id="tb-mode-single" onclick="setThrowbackMode('single')">Single</button>
+                <button class="btn-small throwback-mode-btn" id="tb-mode-multi" onclick="setThrowbackMode('multi')">Multiple</button>
+            </div>
+            <div id="throwback-keepers" class="throwback-keepers-grid"></div>
+            <div class="throwback-actions">
+                <input type="number" id="throwback-sim-count" min="1" max="200" value="25" class="ai-input" style="background:var(--cream);border-color:var(--border-medium);color:var(--text-primary);width:60px">
+                <span style="font-size:0.8rem;color:var(--text-secondary)">simulations</span>
+                <button class="btn-primary btn-small" id="btn-run-throwback" onclick="runThrowbackSim()">Run Throw-Back Sim</button>
+                <span id="throwback-status" class="ai-status" style="color:var(--text-secondary)"></span>
+            </div>
+            <!-- Throwback results comparison -->
+            <div id="throwback-results" style="display:none">
+                <div id="throwback-comparison" class="throwback-comparison"></div>
+                <div id="throwback-batch-summary" class="batch-summary"></div>
+
+                <div class="batch-tabs" id="throwback-tabs">
+                    <button class="batch-tab-btn active" data-tbtab="tb-my-team" onclick="switchThrowbackTab('tb-my-team')">My Avg Team</button>
+                    <button class="batch-tab-btn" data-tbtab="tb-best" onclick="switchThrowbackTab('tb-best')">Best Outcomes</button>
+                    <button class="batch-tab-btn" data-tbtab="tb-worst" onclick="switchThrowbackTab('tb-worst')">Worst Outcomes</button>
+                </div>
+
+                <div id="tbtab-tb-my-team" class="throwback-tab-content active">
+                    <div class="batch-table-wrapper">
+                        <table class="batch-table">
+                            <thead><tr><th>Player</th><th>Pos</th><th>Freq %</th><th>Times</th><th>Avg Price</th><th>Tier</th></tr></thead>
+                            <tbody id="tb-myteam-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="tbtab-tb-best" class="throwback-tab-content">
+                    <div id="tb-best-outcomes" class="outcomes-container"></div>
+                </div>
+
+                <div id="tbtab-tb-worst" class="throwback-tab-content">
+                    <div id="tb-worst-outcomes" class="outcomes-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- MAIN DASHBOARD                                                -->
+<!-- ============================================================ -->
+<div class="dashboard-container">
+
+    <!-- LEFT COLUMN: Main content -->
+    <div style="display:flex;flex-direction:column;gap:16px">
+
+        <!-- Panel 1: Available Players -->
+        <div class="card" style="flex:1">
+            <div class="card-header">
+                <div class="card-title">Available Players</div>
+                <span class="card-badge" id="player-count">Loading...</span>
+            </div>
+            <div class="filter-bar">
+                <label>Pos:</label>
+                <select id="filter-position">
+                    <option value="">All</option>
+                    <option value="C">C</option>
+                    <option value="1B">1B</option>
+                    <option value="2B">2B</option>
+                    <option value="SS">SS</option>
+                    <option value="3B">3B</option>
+                    <option value="CI">CI</option>
+                    <option value="MI">MI</option>
+                    <option value="OF">OF</option>
+                    <option value="UTIL">UTIL</option>
+                    <option value="SP">SP</option>
+                    <option value="RP">RP</option>
+                    <option value="P">P</option>
+                </select>
+                <label>Tier:</label>
+                <select id="filter-tier">
+                    <option value="">All</option>
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label>Type:</label>
+                <select id="filter-type">
+                    <option value="">All</option>
+                    <option value="Hitter">Hitter</option>
+                    <option value="Pitcher">Pitcher</option>
+                </select>
+                <label>Search:</label>
+                <input type="text" id="filter-search" placeholder="Player name or team...">
+            </div>
+            <!-- Position Demand Overlay — shows when filtering by position -->
+            <div id="position-demand-overlay" class="position-demand-overlay" style="display:none">
+                <div class="demand-header">
+                    <span id="demand-title" class="demand-title">Managers who can bid on <strong>3B</strong></span>
+                    <button class="btn-secondary btn-small" onclick="closePositionDemand()">✕</button>
+                </div>
+                <div id="demand-body" class="demand-body"></div>
+            </div>
+
+            <div class="player-table-wrapper">
+                <table class="player-table">
+                    <thead>
+                        <tr>
+                            <th style="width:60px"></th>
+                            <th onclick="sortTable('player')" class="sorted">Player <span class="sort-arrow">▼</span></th>
+                            <th onclick="sortTable('position_primary')">Pos</th>
+                            <th onclick="sortTable('mlb_team')">Team</th>
+                            <th onclick="sortTable('base_projected_value')" class="col-group-value col-group-left">Proj $</th>
+                            <th onclick="sortTable('adj_projected_value')" class="col-group-value col-group-right">Target $</th>
+                            <th onclick="sortTable('inflation_adjusted_value')" class="col-group-market col-group-left">Adj $</th>
+                            <th onclick="sortTable('predicted_value')" class="col-group-market col-group-right">Pred $</th>
+                            <th onclick="sortTable('tier')">Tier</th>
+                            <th onclick="sortTable('type')">Type</th>
+                            <th>Scarcity</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="player-tbody">
+                        <tr><td colspan="12" class="loading">Loading players...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Panel 2: Manager Overview -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Manager Overview</div>
+                <span class="card-badge">12 Teams</span>
+            </div>
+            <div class="card-body">
+                <div id="manager-grid" class="manager-grid">
+                    <div class="loading">Loading managers...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 5: Draft Log -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Draft Log</div>
+                <div style="display:flex;gap:6px;align-items:center">
+                    <span id="draft-log-summary" style="font-size:0.75rem;color:var(--text-muted)"></span>
+                </div>
+            </div>
+            <div class="action-bar">
+                <button class="btn-danger btn-small" id="btn-undo">↩ Undo Last</button>
+                <button class="btn-secondary btn-small" id="btn-save">💾 Save</button>
+                <button class="btn-secondary btn-small" id="btn-load">📂 Load</button>
+                <button class="btn-danger btn-small" id="btn-reset">🗑️ Reset</button>
+            </div>
+            <div style="overflow-y:auto;max-height:300px">
+                <table class="draft-log-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Player</th>
+                            <th>Pos</th>
+                            <th>Manager</th>
+                            <th>Price</th>
+                            <th>Proj</th>
+                            <th>+/-</th>
+                        </tr>
+                    </thead>
+                    <tbody id="draft-log-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Sidebar panels -->
+    <div style="display:flex;flex-direction:column;gap:16px">
+
+        <!-- Panel 3: Inflation Tracker -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Inflation Tracker</div>
+            </div>
+            <div class="card-body">
+                <div id="inflation-summary">
+                    <div class="loading">Loading...</div>
+                </div>
+                <div id="scarcity-alerts" style="margin-top:10px"></div>
+            </div>
+        </div>
+
+        <!-- Panel 4: My Draft Board (tabbed) -->
+        <div class="card" style="flex:1">
+            <div class="card-header">
+                <div class="card-title">My Draft Board</div>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="recommendations">Best Value</button>
+                <button class="tab-btn" data-tab="positions">By Position</button>
+                <button class="tab-btn" data-tab="profiles">Profiles</button>
+            </div>
+
+            <!-- Tab: Recommendations / Best Value -->
+            <div id="tab-recommendations" class="tab-content active">
+                <div class="card-body">
+                    <div id="rec-budget" style="margin-bottom:12px"></div>
+                    <div style="font-size:0.75rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">
+                        Best Value Available
+                    </div>
+                    <div id="rec-best-value">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Position Targets -->
+            <div id="tab-positions" class="tab-content">
+                <div class="card-body">
+                    <div id="rec-position-targets">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Manager Profiles -->
+            <div id="tab-profiles" class="tab-content">
+                <div class="card-body" style="overflow-y:auto;max-height:600px">
+                    <div id="profiles-list">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- TEAM VIEW                                                     -->
+<!-- ============================================================ -->
+<div id="team-view-container" class="team-view-container" style="display:none">
+    <div class="team-view-grid" id="team-view-grid">
+        <!-- Populated by JS -->
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DRAFT MODAL                                                   -->
+<!-- ============================================================ -->
+<div class="modal-overlay" id="draft-modal-overlay">
+    <div class="modal">
+        <h3>Draft Player</h3>
+        <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--burgundy);margin-bottom:4px" id="modal-player-name"></div>
+        <div id="modal-projected-hint" style="font-size:0.75rem;color:var(--text-muted);margin-bottom:16px"></div>
+
+        <label>Winning Manager</label>
+        <select id="modal-manager"></select>
+
+        <label>Price ($)</label>
+        <input type="number" id="modal-price" min="1" max="500" value="1">
+
+        <label>Position</label>
+        <select id="modal-position">
+            <option value="C">C</option>
+            <option value="1B">1B</option>
+            <option value="2B">2B</option>
+            <option value="SS">SS</option>
+            <option value="3B">3B</option>
+            <option value="CI">CI</option>
+            <option value="MI">MI</option>
+            <option value="OF">OF</option>
+            <option value="UTIL">UTIL</option>
+            <option value="SP">SP</option>
+            <option value="RP">RP</option>
+            <option value="P">P</option>
+        </select>
+
+        <div class="modal-buttons">
+            <button class="btn-primary" onclick="confirmDraft()">Confirm Draft</button>
+            <button class="btn-secondary" onclick="closeDraftModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

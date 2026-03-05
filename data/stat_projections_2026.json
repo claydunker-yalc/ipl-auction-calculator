@@ -1,0 +1,4630 @@
+{
+  "_README": "PROJECTED STATS for all IPL players (keepers + auction pool). Clay fills in projected stats for each player. Hitters: R, RBI, HR, SB, OPS, PA. Pitchers: SV_HLD, QS, ERA, WHIP, K, IP. PA and IP are used to properly weight rate stats (OPS, ERA, WHIP) when summing across a team.",
+  "players": {
+    "Shohei Ohtani": {
+      "type": "Hitter",
+      "R": 124,
+      "RBI": 117,
+      "HR": 50,
+      "SB": 20,
+      "OPS": 0.99,
+      "PA": 666,
+      "AB": 585
+    },
+    "Aaron Judge": {
+      "type": "Hitter",
+      "R": 120,
+      "RBI": 120,
+      "HR": 51,
+      "SB": 9,
+      "OPS": 1.07,
+      "PA": 624,
+      "AB": 548
+    },
+    "Bobby Witt Jr.": {
+      "type": "Hitter",
+      "R": 98,
+      "RBI": 96,
+      "HR": 29,
+      "SB": 32,
+      "OPS": 0.877,
+      "PA": 687,
+      "AB": 614
+    },
+    "Julio Rodriguez": {
+      "type": "Hitter",
+      "R": 88,
+      "RBI": 91,
+      "HR": 27,
+      "SB": 25,
+      "OPS": 0.796,
+      "PA": 675,
+      "AB": 614
+    },
+    "Kyle Schwarber": {
+      "type": "Hitter",
+      "R": 102,
+      "RBI": 103,
+      "HR": 40,
+      "SB": 7,
+      "OPS": 0.874,
+      "PA": 642,
+      "AB": 574
+    },
+    "Francisco Lindor": {
+      "type": "Hitter",
+      "R": 97,
+      "RBI": 85,
+      "HR": 27,
+      "SB": 26,
+      "OPS": 0.799,
+      "PA": 673,
+      "AB": 612
+    },
+    "Kyle Tucker": {
+      "type": "Hitter",
+      "R": 93,
+      "RBI": 84,
+      "HR": 25,
+      "SB": 22,
+      "OPS": 0.856,
+      "PA": 594,
+      "AB": 531
+    },
+    "Chris Sale": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.11,
+      "WHIP": 1.11,
+      "K": 192,
+      "IP": 158
+    },
+    "Logan Gilbert": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 3.36,
+      "WHIP": 1.09,
+      "K": 184,
+      "IP": 160
+    },
+    "Jazz Chisholm Jr.": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 83,
+      "HR": 28,
+      "SB": 30,
+      "OPS": 0.776,
+      "PA": 578,
+      "AB": 526
+    },
+    "Zack Wheeler": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 3.24,
+      "WHIP": 1.09,
+      "K": 157,
+      "IP": 133
+    },
+    "Freddie Freeman": {
+      "type": "Hitter",
+      "R": 91,
+      "RBI": 92,
+      "HR": 25,
+      "SB": 6,
+      "OPS": 0.838,
+      "PA": 638,
+      "AB": 570
+    },
+    "Seiya Suzuki": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 85,
+      "HR": 25,
+      "SB": 7,
+      "OPS": 0.806,
+      "PA": 624,
+      "AB": 547
+    },
+    "Christian Yelich": {
+      "type": "Hitter",
+      "R": 75,
+      "RBI": 78,
+      "HR": 22,
+      "SB": 16,
+      "OPS": 0.781,
+      "PA": 581,
+      "AB": 529
+    },
+    "Corey Seager": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 79,
+      "HR": 28,
+      "SB": 2,
+      "OPS": 0.895,
+      "PA": 527,
+      "AB": 471
+    },
+    "Jakob Marsee": {
+      "type": "Hitter",
+      "R": 72,
+      "RBI": 66,
+      "HR": 16,
+      "SB": 33,
+      "OPS": 0.748,
+      "PA": 591,
+      "AB": 518
+    },
+    "Jeremy Pena": {
+      "type": "Hitter",
+      "R": 80,
+      "RBI": 71,
+      "HR": 17,
+      "SB": 18,
+      "OPS": 0.755,
+      "PA": 639,
+      "AB": 581
+    },
+    "Luis Robert Jr.": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 70,
+      "HR": 21,
+      "SB": 33,
+      "OPS": 0.727,
+      "PA": 544,
+      "AB": 495
+    },
+    "Devin Williams": {
+      "type": "Pitcher",
+      "SV_HLD": 35,
+      "QS": 0,
+      "ERA": 2.87,
+      "WHIP": 1.12,
+      "K": 90,
+      "IP": 66
+    },
+    "Austin Riley": {
+      "type": "Hitter",
+      "R": 83,
+      "RBI": 86,
+      "HR": 26,
+      "SB": 3,
+      "OPS": 0.786,
+      "PA": 614,
+      "AB": 559
+    },
+    "Cody Bellinger": {
+      "type": "Hitter",
+      "R": 78,
+      "RBI": 81,
+      "HR": 21,
+      "SB": 11,
+      "OPS": 0.77,
+      "PA": 627,
+      "AB": 570
+    },
+    "Jhoan Duran": {
+      "type": "Pitcher",
+      "SV_HLD": 35,
+      "QS": 0,
+      "ERA": 3.11,
+      "WHIP": 1.15,
+      "K": 83,
+      "IP": 74
+    },
+    "Munetaka Murakami": {
+      "type": "Hitter",
+      "R": 76,
+      "RBI": 79,
+      "HR": 31,
+      "SB": 11,
+      "OPS": 0.795,
+      "PA": 542,
+      "AB": 493
+    },
+    "Nico Hoerner": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 65,
+      "HR": 9,
+      "SB": 27,
+      "OPS": 0.723,
+      "PA": 647,
+      "AB": 589
+    },
+    "Sal Stewart": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 78,
+      "HR": 28,
+      "SB": 6,
+      "OPS": 0.824,
+      "PA": 555,
+      "AB": 496
+    },
+    "Yordan Alvarez": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 77,
+      "HR": 24,
+      "SB": 3,
+      "OPS": 0.906,
+      "PA": 514,
+      "AB": 451
+    },
+    "Ian Happ": {
+      "type": "Hitter",
+      "R": 88,
+      "RBI": 76,
+      "HR": 23,
+      "SB": 7,
+      "OPS": 0.773,
+      "PA": 620,
+      "AB": 564
+    },
+    "Ceddanne Rafaela": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 72,
+      "HR": 18,
+      "SB": 19,
+      "OPS": 0.716,
+      "PA": 611,
+      "AB": 556
+    },
+    "Heliot Ramos": {
+      "type": "Hitter",
+      "R": 81,
+      "RBI": 77,
+      "HR": 23,
+      "SB": 6,
+      "OPS": 0.759,
+      "PA": 636,
+      "AB": 579
+    },
+    "Matt Chapman": {
+      "type": "Hitter",
+      "R": 78,
+      "RBI": 81,
+      "HR": 23,
+      "SB": 10,
+      "OPS": 0.762,
+      "PA": 611,
+      "AB": 556
+    },
+    "Adolis Garcia": {
+      "type": "Hitter",
+      "R": 70,
+      "RBI": 80,
+      "HR": 23,
+      "SB": 13,
+      "OPS": 0.725,
+      "PA": 590,
+      "AB": 537
+    },
+    "Agustin Ramirez": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 72,
+      "HR": 19,
+      "SB": 15,
+      "OPS": 0.795,
+      "PA": 526,
+      "AB": 479
+    },
+    "Brandon Nimmo": {
+      "type": "Hitter",
+      "R": 76,
+      "RBI": 75,
+      "HR": 21,
+      "SB": 11,
+      "OPS": 0.753,
+      "PA": 612,
+      "AB": 557
+    },
+    "Colson Montgomery": {
+      "type": "Hitter",
+      "R": 72,
+      "RBI": 82,
+      "HR": 31,
+      "SB": 3,
+      "OPS": 0.787,
+      "PA": 559,
+      "AB": 509
+    },
+    "Oneil Cruz": {
+      "type": "Hitter",
+      "R": 64,
+      "RBI": 64,
+      "HR": 21,
+      "SB": 29,
+      "OPS": 0.737,
+      "PA": 512,
+      "AB": 466
+    },
+    "Blake Snell": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 3.47,
+      "WHIP": 1.25,
+      "K": 163,
+      "IP": 131
+    },
+    "Drew Rasmussen": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 3.78,
+      "WHIP": 1.19,
+      "K": 145,
+      "IP": 153
+    },
+    "Luis Castillo": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 4.08,
+      "WHIP": 1.22,
+      "K": 168,
+      "IP": 177
+    },
+    "Spencer Schwellenbach": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 3.55,
+      "WHIP": 1.15,
+      "K": 153,
+      "IP": 153
+    },
+    "Alec Burleson": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 76,
+      "HR": 20,
+      "SB": 5,
+      "OPS": 0.777,
+      "PA": 597,
+      "AB": 543
+    },
+    "Ivan Herrera": {
+      "type": "Hitter",
+      "R": 72,
+      "RBI": 68,
+      "HR": 20,
+      "SB": 8,
+      "OPS": 0.822,
+      "PA": 548,
+      "AB": 490
+    },
+    "Christian Walker": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 84,
+      "HR": 25,
+      "SB": 2,
+      "OPS": 0.75,
+      "PA": 608,
+      "AB": 553
+    },
+    "Marcus Semien": {
+      "type": "Hitter",
+      "R": 76,
+      "RBI": 74,
+      "HR": 19,
+      "SB": 11,
+      "OPS": 0.729,
+      "PA": 611,
+      "AB": 556
+    },
+    "Xander Bogaerts": {
+      "type": "Hitter",
+      "R": 68,
+      "RBI": 67,
+      "HR": 14,
+      "SB": 17,
+      "OPS": 0.746,
+      "PA": 572,
+      "AB": 520
+    },
+    "David Bednar": {
+      "type": "Pitcher",
+      "SV_HLD": 35,
+      "QS": 0,
+      "ERA": 3.39,
+      "WHIP": 1.14,
+      "K": 81,
+      "IP": 69
+    },
+    "Andrew Vaughn": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 80,
+      "HR": 21,
+      "SB": 1,
+      "OPS": 0.772,
+      "PA": 580,
+      "AB": 528
+    },
+    "Ezequiel Tovar": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 73,
+      "HR": 18,
+      "SB": 8,
+      "OPS": 0.739,
+      "PA": 629,
+      "AB": 572
+    },
+    "Ramon Laureano": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 73,
+      "HR": 22,
+      "SB": 8,
+      "OPS": 0.779,
+      "PA": 528,
+      "AB": 480
+    },
+    "Brandon Lowe": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 73,
+      "HR": 26,
+      "SB": 4,
+      "OPS": 0.775,
+      "PA": 537,
+      "AB": 489
+    },
+    "Daylen Lile": {
+      "type": "Hitter",
+      "R": 64,
+      "RBI": 64,
+      "HR": 14,
+      "SB": 13,
+      "OPS": 0.783,
+      "PA": 542,
+      "AB": 493
+    },
+    "Kazuma Okamoto": {
+      "type": "Hitter",
+      "R": 72,
+      "RBI": 73,
+      "HR": 23,
+      "SB": 2,
+      "OPS": 0.794,
+      "PA": 551,
+      "AB": 501
+    },
+    "Ozzie Albies": {
+      "type": "Hitter",
+      "R": 70,
+      "RBI": 72,
+      "HR": 16,
+      "SB": 11,
+      "OPS": 0.711,
+      "PA": 608,
+      "AB": 553
+    },
+    "Ernie Clement": {
+      "type": "Hitter",
+      "R": 70,
+      "RBI": 69,
+      "HR": 12,
+      "SB": 9,
+      "OPS": 0.713,
+      "PA": 639,
+      "AB": 581
+    },
+    "Jorge Polanco": {
+      "type": "Hitter",
+      "R": 68,
+      "RBI": 70,
+      "HR": 20,
+      "SB": 6,
+      "OPS": 0.78,
+      "PA": 519,
+      "AB": 472
+    },
+    "Xavier Edwards": {
+      "type": "Hitter",
+      "R": 70,
+      "RBI": 50,
+      "HR": 8,
+      "SB": 26,
+      "OPS": 0.701,
+      "PA": 585,
+      "AB": 526
+    },
+    "Yainer Diaz": {
+      "type": "Hitter",
+      "R": 66,
+      "RBI": 73,
+      "HR": 20,
+      "SB": 1,
+      "OPS": 0.763,
+      "PA": 568,
+      "AB": 517
+    },
+    "Alec Bohm": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 70,
+      "HR": 15,
+      "SB": 2,
+      "OPS": 0.754,
+      "PA": 587,
+      "AB": 534
+    },
+    "Carlos Rodon": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.06,
+      "WHIP": 1.24,
+      "K": 179,
+      "IP": 167
+    },
+    "Daniel Palencia": {
+      "type": "Pitcher",
+      "SV_HLD": 34,
+      "QS": 0,
+      "ERA": 3.52,
+      "WHIP": 1.21,
+      "K": 76,
+      "IP": 65
+    },
+    "Griffin Jax": {
+      "type": "Pitcher",
+      "SV_HLD": 26,
+      "QS": 0,
+      "ERA": 2.83,
+      "WHIP": 1.11,
+      "K": 91,
+      "IP": 73
+    },
+    "Mike Trout": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 67,
+      "HR": 25,
+      "SB": 4,
+      "OPS": 0.819,
+      "PA": 500,
+      "AB": 447
+    },
+    "Ryan Helsley": {
+      "type": "Pitcher",
+      "SV_HLD": 31,
+      "QS": 0,
+      "ERA": 3.51,
+      "WHIP": 1.19,
+      "K": 77,
+      "IP": 68
+    },
+    "Aaron Nola": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.09,
+      "WHIP": 1.25,
+      "K": 164,
+      "IP": 165
+    },
+    "Trevor Rogers": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.02,
+      "WHIP": 1.24,
+      "K": 148,
+      "IP": 160
+    },
+    "Matt McLain": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 64,
+      "HR": 16,
+      "SB": 16,
+      "OPS": 0.711,
+      "PA": 579,
+      "AB": 527
+    },
+    "Ryan Walker": {
+      "type": "Pitcher",
+      "SV_HLD": 33,
+      "QS": 0,
+      "ERA": 3.63,
+      "WHIP": 1.22,
+      "K": 70,
+      "IP": 68
+    },
+    "Abner Uribe": {
+      "type": "Pitcher",
+      "SV_HLD": 31,
+      "QS": 0,
+      "ERA": 3.4,
+      "WHIP": 1.21,
+      "K": 82,
+      "IP": 74
+    },
+    "Josh Bell": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 71,
+      "HR": 21,
+      "SB": 1,
+      "OPS": 0.776,
+      "PA": 544,
+      "AB": 495
+    },
+    "Jurickson Profar": {
+      "type": "Hitter",
+      "R": 78,
+      "RBI": 63,
+      "HR": 17,
+      "SB": 11,
+      "OPS": 0.716,
+      "PA": 584,
+      "AB": 531
+    },
+    "Carlos Estevez": {
+      "type": "Pitcher",
+      "SV_HLD": 35,
+      "QS": 0,
+      "ERA": 4.3,
+      "WHIP": 1.25,
+      "K": 65,
+      "IP": 69
+    },
+    "Dylan Crews": {
+      "type": "Hitter",
+      "R": 56,
+      "RBI": 58,
+      "HR": 15,
+      "SB": 26,
+      "OPS": 0.672,
+      "PA": 525,
+      "AB": 487
+    },
+    "Grayson Rodriguez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 3.72,
+      "WHIP": 1.22,
+      "K": 136,
+      "IP": 125
+    },
+    "Joe Musgrove": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 3.91,
+      "WHIP": 1.22,
+      "K": 138,
+      "IP": 141
+    },
+    "Jordan Beck": {
+      "type": "Hitter",
+      "R": 62,
+      "RBI": 61,
+      "HR": 16,
+      "SB": 17,
+      "OPS": 0.714,
+      "PA": 552,
+      "AB": 502
+    },
+    "Paul Goldschmidt": {
+      "type": "Hitter",
+      "R": 66,
+      "RBI": 65,
+      "HR": 18,
+      "SB": 5,
+      "OPS": 0.766,
+      "PA": 523,
+      "AB": 476
+    },
+    "Reid Detmers": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 3.55,
+      "WHIP": 1.23,
+      "K": 156,
+      "IP": 130
+    },
+    "Royce Lewis": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 63,
+      "HR": 18,
+      "SB": 14,
+      "OPS": 0.73,
+      "PA": 517,
+      "AB": 470
+    },
+    "Sean Manaea": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 3.97,
+      "WHIP": 1.21,
+      "K": 139,
+      "IP": 133
+    },
+    "Alejandro Kirk": {
+      "type": "Hitter",
+      "R": 66,
+      "RBI": 65,
+      "HR": 16,
+      "SB": 1,
+      "OPS": 0.799,
+      "PA": 509,
+      "AB": 463
+    },
+    "Carlos Correa": {
+      "type": "Hitter",
+      "R": 68,
+      "RBI": 67,
+      "HR": 17,
+      "SB": 1,
+      "OPS": 0.77,
+      "PA": 545,
+      "AB": 496
+    },
+    "Jake Burger": {
+      "type": "Hitter",
+      "R": 63,
+      "RBI": 72,
+      "HR": 22,
+      "SB": 2,
+      "OPS": 0.726,
+      "PA": 555,
+      "AB": 505
+    },
+    "Jesus Sanchez": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 60,
+      "HR": 18,
+      "SB": 11,
+      "OPS": 0.765,
+      "PA": 476,
+      "AB": 433
+    },
+    "Mickey Moniak": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 62,
+      "HR": 20,
+      "SB": 9,
+      "OPS": 0.763,
+      "PA": 488,
+      "AB": 444
+    },
+    "Andrew Abbott": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.36,
+      "WHIP": 1.25,
+      "K": 151,
+      "IP": 163
+    },
+    "Clay Holmes": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 7,
+      "ERA": 4.1,
+      "WHIP": 1.31,
+      "K": 148,
+      "IP": 173
+    },
+    "Jeremiah Estrada": {
+      "type": "Pitcher",
+      "SV_HLD": 22,
+      "QS": 0,
+      "ERA": 3.21,
+      "WHIP": 1.12,
+      "K": 101,
+      "IP": 75
+    },
+    "Jose Soriano": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.06,
+      "WHIP": 1.34,
+      "K": 150,
+      "IP": 167
+    },
+    "Ryne Nelson": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.3,
+      "WHIP": 1.27,
+      "K": 143,
+      "IP": 160
+    },
+    "Shane Smith": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.26,
+      "WHIP": 1.27,
+      "K": 154,
+      "IP": 161
+    },
+    "Braxton Garrett": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 6,
+      "ERA": 3.91,
+      "WHIP": 1.24,
+      "K": 114,
+      "IP": 125
+    },
+    "Casey Mize": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.2,
+      "WHIP": 1.28,
+      "K": 135,
+      "IP": 153
+    },
+    "David Peterson": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 4.15,
+      "WHIP": 1.34,
+      "K": 151,
+      "IP": 171
+    },
+    "Kyle Bradish": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 7,
+      "ERA": 3.65,
+      "WHIP": 1.15,
+      "K": 103,
+      "IP": 90
+    },
+    "Shane Bieber": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 3.85,
+      "WHIP": 1.23,
+      "K": 112,
+      "IP": 112
+    },
+    "Adley Rutschman": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 65,
+      "HR": 16,
+      "SB": 1,
+      "OPS": 0.735,
+      "PA": 565,
+      "AB": 514
+    },
+    "Austin Wells": {
+      "type": "Hitter",
+      "R": 65,
+      "RBI": 66,
+      "HR": 20,
+      "SB": 5,
+      "OPS": 0.737,
+      "PA": 508,
+      "AB": 462
+    },
+    "Brady Singer": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.34,
+      "WHIP": 1.32,
+      "K": 161,
+      "IP": 172
+    },
+    "Brandon Marsh": {
+      "type": "Hitter",
+      "R": 62,
+      "RBI": 60,
+      "HR": 16,
+      "SB": 9,
+      "OPS": 0.755,
+      "PA": 487,
+      "AB": 443
+    },
+    "Brandon Pfaadt": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.38,
+      "WHIP": 1.3,
+      "K": 150,
+      "IP": 173
+    },
+    "Brenton Doyle": {
+      "type": "Hitter",
+      "R": 65,
+      "RBI": 66,
+      "HR": 20,
+      "SB": 21,
+      "OPS": 0.713,
+      "PA": 587,
+      "AB": 534
+    },
+    "Caleb Durbin": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 64,
+      "HR": 11,
+      "SB": 21,
+      "OPS": 0.729,
+      "PA": 577,
+      "AB": 525
+    },
+    "Cody Ponce": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Dennis Santana": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Edward Cabrera": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Edwin Uceta": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Emilio Pagan": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Garrett Cleavinger": {
+      "type": "Pitcher",
+      "SV_HLD": 24,
+      "QS": 0,
+      "ERA": 3.46,
+      "WHIP": 1.16,
+      "K": 85,
+      "IP": 70
+    },
+    "Grant Taylor": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "J.P. Crawford": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 58,
+      "HR": 13,
+      "SB": 6,
+      "OPS": 0.711,
+      "PA": 590,
+      "AB": 537
+    },
+    "Jarren Duran": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Joey Ortiz": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Josh Jung": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 65,
+      "HR": 17,
+      "SB": 5,
+      "OPS": 0.732,
+      "PA": 534,
+      "AB": 486
+    },
+    "Max Muncy (LAD)": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Merrill Kelly": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Michael Harris II": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Nolan Arenado": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 65,
+      "HR": 14,
+      "SB": 3,
+      "OPS": 0.704,
+      "PA": 566,
+      "AB": 515
+    },
+    "Pablo Lopez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Quinn Priester": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Robert Garcia": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Ryan O'Hearn": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Sonny Gray": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Tanner Bibee": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Colt Keith": {
+      "type": "Hitter",
+      "R": 64,
+      "RBI": 58,
+      "HR": 14,
+      "SB": 2,
+      "OPS": 0.776,
+      "PA": 497,
+      "AB": 452
+    },
+    "Owen Caissie": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Brent Honeywell": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Davis Schneider": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Jonah Bride": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Kyle Freeland": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Nolan Jones": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Tanner Houck": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Alex Cobb": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Jake Woodford": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Jordan Hicks": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Randal Grichuk": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Ben Rice": {
+      "type": "Hitter",
+      "R": 82,
+      "RBI": 81,
+      "HR": 26,
+      "SB": 4,
+      "OPS": 0.827,
+      "PA": 573,
+      "AB": 500
+    },
+    "Josh Naylor": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 80,
+      "HR": 21,
+      "SB": 19,
+      "OPS": 0.773,
+      "PA": 610,
+      "AB": 553
+    },
+    "Ketel Marte": {
+      "type": "Hitter",
+      "R": 89,
+      "RBI": 83,
+      "HR": 28,
+      "SB": 5,
+      "OPS": 0.866,
+      "PA": 617,
+      "AB": 539
+    },
+    "Eugenio Suarez": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 89,
+      "HR": 31,
+      "SB": 3,
+      "OPS": 0.767,
+      "PA": 626,
+      "AB": 557
+    },
+    "Bo Bichette": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 77,
+      "HR": 18,
+      "SB": 5,
+      "OPS": 0.793,
+      "PA": 624,
+      "AB": 575
+    },
+    "Jackson Holliday": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Vinnie Pasquantino": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 86,
+      "HR": 23,
+      "SB": 1,
+      "OPS": 0.791,
+      "PA": 627,
+      "AB": 568
+    },
+    "Jo Adell": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 85,
+      "HR": 31,
+      "SB": 7,
+      "OPS": 0.797,
+      "PA": 585,
+      "AB": 526
+    },
+    "Trent Grisham": {
+      "type": "Hitter",
+      "R": 78,
+      "RBI": 67,
+      "HR": 24,
+      "SB": 4,
+      "OPS": 0.776,
+      "PA": 554,
+      "AB": 473
+    },
+    "Dylan Cease": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 16,
+      "ERA": 3.63,
+      "WHIP": 1.23,
+      "K": 217,
+      "IP": 181
+    },
+    "Zac Gallen": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 17,
+      "ERA": 4.26,
+      "WHIP": 1.3,
+      "K": 181,
+      "IP": 188
+    },
+    "Tyler Glasnow": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 3.63,
+      "WHIP": 1.17,
+      "K": 146,
+      "IP": 127
+    },
+    "Emmet Sheehan": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 0,
+      "ERA": 3.59,
+      "WHIP": 1.16,
+      "K": 163,
+      "IP": 139
+    },
+    "Masyn Winn": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 61,
+      "HR": 12,
+      "SB": 10,
+      "OPS": 0.684,
+      "PA": 605,
+      "AB": 551
+    },
+    "Vladimir Guerrero Jr.": {
+      "type": "Hitter",
+      "R": 98,
+      "RBI": 92,
+      "HR": 26,
+      "SB": 5,
+      "OPS": 0.886,
+      "PA": 680,
+      "AB": 594
+    },
+    "Randy Arozarena": {
+      "type": "Hitter",
+      "R": 81,
+      "RBI": 80,
+      "HR": 23,
+      "SB": 24,
+      "OPS": 0.741,
+      "PA": 666,
+      "AB": 577
+    },
+    "Riley Greene": {
+      "type": "Hitter",
+      "R": 83,
+      "RBI": 93,
+      "HR": 32,
+      "SB": 3,
+      "OPS": 0.808,
+      "PA": 637,
+      "AB": 570
+    },
+    "George Springer": {
+      "type": "Hitter",
+      "R": 85,
+      "RBI": 81,
+      "HR": 26,
+      "SB": 15,
+      "OPS": 0.847,
+      "PA": 600,
+      "AB": 521
+    },
+    "Matt Olson": {
+      "type": "Hitter",
+      "R": 97,
+      "RBI": 96,
+      "HR": 30,
+      "SB": 1,
+      "OPS": 0.834,
+      "PA": 687,
+      "AB": 595
+    },
+    "Hunter Brown": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 16,
+      "ERA": 3.74,
+      "WHIP": 1.21,
+      "K": 194,
+      "IP": 181
+    },
+    "Michael King": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 3.91,
+      "WHIP": 1.22,
+      "K": 163,
+      "IP": 155
+    },
+    "Framber Valdez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 18,
+      "ERA": 3.72,
+      "WHIP": 1.25,
+      "K": 175,
+      "IP": 185
+    },
+    "Andrew Painter": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 4.29,
+      "WHIP": 1.26,
+      "K": 130,
+      "IP": 135
+    },
+    "Hunter Goodman": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 81,
+      "HR": 26,
+      "SB": 2,
+      "OPS": 0.763,
+      "PA": 593,
+      "AB": 548
+    },
+    "Tyler Soderstrom": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 77,
+      "HR": 22,
+      "SB": 6,
+      "OPS": 0.787,
+      "PA": 579,
+      "AB": 518
+    },
+    "Gleyber Torres": {
+      "type": "Hitter",
+      "R": 87,
+      "RBI": 73,
+      "HR": 21,
+      "SB": 4,
+      "OPS": 0.79,
+      "PA": 660,
+      "AB": 571
+    },
+    "Zachary Neto": {
+      "type": "Hitter",
+      "R": 85,
+      "RBI": 81,
+      "HR": 28,
+      "SB": 26,
+      "OPS": 0.78,
+      "PA": 645,
+      "AB": 581
+    },
+    "Wilyer Abreu": {
+      "type": "Hitter",
+      "R": 64,
+      "RBI": 68,
+      "HR": 23,
+      "SB": 8,
+      "OPS": 0.783,
+      "PA": 510,
+      "AB": 452
+    },
+    "Jose Altuve": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 73,
+      "HR": 19,
+      "SB": 11,
+      "OPS": 0.739,
+      "PA": 628,
+      "AB": 571
+    },
+    "Lawrence Butler": {
+      "type": "Hitter",
+      "R": 76,
+      "RBI": 68,
+      "HR": 20,
+      "SB": 20,
+      "OPS": 0.729,
+      "PA": 598,
+      "AB": 538
+    },
+    "Colton Cowser": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 62,
+      "HR": 20,
+      "SB": 17,
+      "OPS": 0.715,
+      "PA": 513,
+      "AB": 455
+    },
+    "Noelvi Marte": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 59,
+      "HR": 15,
+      "SB": 13,
+      "OPS": 0.692,
+      "PA": 523,
+      "AB": 484
+    },
+    "Jack Flaherty": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 3.87,
+      "WHIP": 1.26,
+      "K": 182,
+      "IP": 162
+    },
+    "Kevin Gausman": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 17,
+      "ERA": 3.96,
+      "WHIP": 1.23,
+      "K": 185,
+      "IP": 183
+    },
+    "Cameron Schlittler": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 3.98,
+      "WHIP": 1.26,
+      "K": 121,
+      "IP": 111
+    },
+    "Josh Hader": {
+      "type": "Pitcher",
+      "SV_HLD": 35,
+      "QS": 0,
+      "ERA": 2.88,
+      "WHIP": 1.05,
+      "K": 99,
+      "IP": 69
+    },
+    "Yusei Kikuchi": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.15,
+      "WHIP": 1.28,
+      "K": 177,
+      "IP": 174
+    },
+    "Tarik Skubal": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 20,
+      "ERA": 2.82,
+      "WHIP": 1.02,
+      "K": 232,
+      "IP": 197
+    },
+    "Bryan Abreu": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Jeff Hoffman": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Salvador Perez": {
+      "type": "Hitter",
+      "R": 81,
+      "RBI": 97,
+      "HR": 30,
+      "SB": 1,
+      "OPS": 0.796,
+      "PA": 644,
+      "AB": 595
+    },
+    "Rafael Devers": {
+      "type": "Hitter",
+      "R": 94,
+      "RBI": 90,
+      "HR": 32,
+      "SB": 1,
+      "OPS": 0.834,
+      "PA": 679,
+      "AB": 583
+    },
+    "Luke Keaschall": {
+      "type": "Hitter",
+      "R": 57,
+      "RBI": 54,
+      "HR": 10,
+      "SB": 25,
+      "OPS": 0.743,
+      "PA": 494,
+      "AB": 436
+    },
+    "Jordan Westburg": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Junior Caminero": {
+      "type": "Hitter",
+      "R": 80,
+      "RBI": 94,
+      "HR": 30,
+      "SB": 6,
+      "OPS": 0.807,
+      "PA": 631,
+      "AB": 574
+    },
+    "Jackson Chourio": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 79,
+      "HR": 20,
+      "SB": 21,
+      "OPS": 0.755,
+      "PA": 620,
+      "AB": 574
+    },
+    "Pete Crow-Armstrong": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 90,
+      "HR": 27,
+      "SB": 35,
+      "OPS": 0.744,
+      "PA": 627,
+      "AB": 582
+    },
+    "Kyle Stowers": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 79,
+      "HR": 24,
+      "SB": 4,
+      "OPS": 0.797,
+      "PA": 574,
+      "AB": 511
+    },
+    "Kyle Manzardo": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Bryson Stott": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Giancarlo Stanton": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 68,
+      "HR": 23,
+      "SB": 1,
+      "OPS": 0.794,
+      "PA": 445,
+      "AB": 396
+    },
+    "JJ Wetherholt": {
+      "type": "Hitter",
+      "R": 0,
+      "RBI": 0,
+      "HR": 0,
+      "SB": 0,
+      "OPS": 0.0,
+      "PA": 0
+    },
+    "Garrett Crochet": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 19,
+      "ERA": 3.09,
+      "WHIP": 1.08,
+      "K": 228,
+      "IP": 193
+    },
+    "Nathan Eovaldi": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.64,
+      "WHIP": 1.15,
+      "K": 162,
+      "IP": 165
+    },
+    "Joe Ryan": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.66,
+      "WHIP": 1.1,
+      "K": 190,
+      "IP": 173
+    },
+    "Brandon Woodruff": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 3.54,
+      "WHIP": 1.05,
+      "K": 145,
+      "IP": 134
+    },
+    "Aroldis Chapman": {
+      "type": "Pitcher",
+      "SV_HLD": 34,
+      "QS": 0,
+      "ERA": 2.72,
+      "WHIP": 1.1,
+      "K": 96,
+      "IP": 67
+    },
+    "Pete Fairbanks": {
+      "type": "Pitcher",
+      "SV_HLD": 31,
+      "QS": 0,
+      "ERA": 3.74,
+      "WHIP": 1.17,
+      "K": 66,
+      "IP": 65
+    },
+    "Kenley Jansen": {
+      "type": "Pitcher",
+      "SV_HLD": 28,
+      "QS": 0,
+      "ERA": 3.96,
+      "WHIP": 1.15,
+      "K": 68,
+      "IP": 64
+    },
+    "Nick Pivetta": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 16,
+      "ERA": 3.92,
+      "WHIP": 1.16,
+      "K": 190,
+      "IP": 178
+    },
+    "Gavin Williams": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.11,
+      "WHIP": 1.3,
+      "K": 172,
+      "IP": 165
+    },
+    "Spencer Torkelson": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 83,
+      "HR": 26,
+      "SB": 2,
+      "OPS": 0.759,
+      "PA": 641,
+      "AB": 559
+    },
+    "Manny Machado": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 90,
+      "HR": 26,
+      "SB": 11,
+      "OPS": 0.808,
+      "PA": 641,
+      "AB": 579
+    },
+    "Willy Adames": {
+      "type": "Hitter",
+      "R": 85,
+      "RBI": 84,
+      "HR": 28,
+      "SB": 11,
+      "OPS": 0.765,
+      "PA": 670,
+      "AB": 587
+    },
+    "Roman Anthony": {
+      "type": "Hitter",
+      "R": 81,
+      "RBI": 72,
+      "HR": 23,
+      "SB": 7,
+      "OPS": 0.799,
+      "PA": 610,
+      "AB": 527
+    },
+    "Byron Buxton": {
+      "type": "Hitter",
+      "R": 76,
+      "RBI": 76,
+      "HR": 29,
+      "SB": 19,
+      "OPS": 0.816,
+      "PA": 543,
+      "AB": 487
+    },
+    "Corbin Carroll": {
+      "type": "Hitter",
+      "R": 91,
+      "RBI": 88,
+      "HR": 28,
+      "SB": 33,
+      "OPS": 0.82,
+      "PA": 656,
+      "AB": 577
+    },
+    "Hunter Greene": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.41,
+      "WHIP": 1.1,
+      "K": 203,
+      "IP": 166
+    },
+    "George Kirby": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 3.69,
+      "WHIP": 1.18,
+      "K": 167,
+      "IP": 169
+    },
+    "Jesus Luzardo": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.63,
+      "WHIP": 1.21,
+      "K": 184,
+      "IP": 168
+    },
+    "Eury Perez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 3.84,
+      "WHIP": 1.16,
+      "K": 153,
+      "IP": 138
+    },
+    "Edwin Diaz": {
+      "type": "Pitcher",
+      "SV_HLD": 40,
+      "QS": 0,
+      "ERA": 3.44,
+      "WHIP": 1.09,
+      "K": 96,
+      "IP": 70
+    },
+    "Cade Smith": {
+      "type": "Pitcher",
+      "SV_HLD": 36,
+      "QS": 0,
+      "ERA": 2.84,
+      "WHIP": 1.07,
+      "K": 100,
+      "IP": 76
+    },
+    "Nick Lodolo": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.01,
+      "WHIP": 1.23,
+      "K": 150,
+      "IP": 149
+    },
+    "Cal Raleigh": {
+      "type": "Hitter",
+      "R": 95,
+      "RBI": 104,
+      "HR": 41,
+      "SB": 10,
+      "OPS": 0.848,
+      "PA": 677,
+      "AB": 584
+    },
+    "Brendan Donovan": {
+      "type": "Hitter",
+      "R": 72,
+      "RBI": 65,
+      "HR": 15,
+      "SB": 4,
+      "OPS": 0.797,
+      "PA": 566,
+      "AB": 505
+    },
+    "Luis Arraez": {
+      "type": "Hitter",
+      "R": 75,
+      "RBI": 61,
+      "HR": 8,
+      "SB": 9,
+      "OPS": 0.732,
+      "PA": 628,
+      "AB": 586
+    },
+    "Andy Pages": {
+      "type": "Hitter",
+      "R": 75,
+      "RBI": 79,
+      "HR": 20,
+      "SB": 10,
+      "OPS": 0.753,
+      "PA": 594,
+      "AB": 542
+    },
+    "Fernando Tatis Jr.": {
+      "type": "Hitter",
+      "R": 94,
+      "RBI": 82,
+      "HR": 27,
+      "SB": 23,
+      "OPS": 0.839,
+      "PA": 649,
+      "AB": 566
+    },
+    "James Wood": {
+      "type": "Hitter",
+      "R": 81,
+      "RBI": 77,
+      "HR": 25,
+      "SB": 13,
+      "OPS": 0.785,
+      "PA": 638,
+      "AB": 561
+    },
+    "Corbin Burnes": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 22,
+      "ERA": 2.9,
+      "WHIP": 1.05,
+      "K": 210,
+      "IP": 190
+    },
+    "Tyler Mahle": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 4.3,
+      "WHIP": 1.27,
+      "K": 109,
+      "IP": 124
+    },
+    "Shane McClanahan": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 3.66,
+      "WHIP": 1.2,
+      "K": 151,
+      "IP": 137
+    },
+    "Raisel Iglesias": {
+      "type": "Pitcher",
+      "SV_HLD": 32,
+      "QS": 0,
+      "ERA": 3.69,
+      "WHIP": 1.15,
+      "K": 76,
+      "IP": 72
+    },
+    "Robert Suarez": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.6,
+      "WHIP": 1.16,
+      "K": 78,
+      "IP": 72
+    },
+    "Parker Messick": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 0,
+      "ERA": 0.0,
+      "WHIP": 0.0,
+      "K": 0,
+      "IP": 0
+    },
+    "Bryce Miller": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 4.37,
+      "WHIP": 1.27,
+      "K": 123,
+      "IP": 136
+    },
+    "Shea Langeliers": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 81,
+      "HR": 25,
+      "SB": 6,
+      "OPS": 0.798,
+      "PA": 559,
+      "AB": 509
+    },
+    "Michael Busch": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 85,
+      "HR": 29,
+      "SB": 3,
+      "OPS": 0.819,
+      "PA": 603,
+      "AB": 527
+    },
+    "Brice Turang": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 70,
+      "HR": 16,
+      "SB": 25,
+      "OPS": 0.731,
+      "PA": 647,
+      "AB": 578
+    },
+    "Alex Bregman": {
+      "type": "Hitter",
+      "R": 83,
+      "RBI": 78,
+      "HR": 20,
+      "SB": 2,
+      "OPS": 0.773,
+      "PA": 642,
+      "AB": 566
+    },
+    "Jacob Wilson": {
+      "type": "Hitter",
+      "R": 70,
+      "RBI": 60,
+      "HR": 11,
+      "SB": 5,
+      "OPS": 0.754,
+      "PA": 574,
+      "AB": 527
+    },
+    "Maikel Garcia": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 75,
+      "HR": 15,
+      "SB": 25,
+      "OPS": 0.758,
+      "PA": 659,
+      "AB": 592
+    },
+    "Bryan Reynolds": {
+      "type": "Hitter",
+      "R": 78,
+      "RBI": 78,
+      "HR": 22,
+      "SB": 4,
+      "OPS": 0.77,
+      "PA": 634,
+      "AB": 565
+    },
+    "Chandler Simpson": {
+      "type": "Hitter",
+      "R": 51,
+      "RBI": 40,
+      "HR": 4,
+      "SB": 40,
+      "OPS": 0.681,
+      "PA": 464,
+      "AB": 433
+    },
+    "Matthew Boyd": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.08,
+      "WHIP": 1.19,
+      "K": 147,
+      "IP": 160
+    },
+    "Cade Horton": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 4.05,
+      "WHIP": 1.22,
+      "K": 115,
+      "IP": 129
+    },
+    "Mitch Keller": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.36,
+      "WHIP": 1.3,
+      "K": 154,
+      "IP": 176
+    },
+    "Freddy Peralta": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.8,
+      "WHIP": 1.19,
+      "K": 202,
+      "IP": 176
+    },
+    "Gerrit Cole": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 3.76,
+      "WHIP": 1.17,
+      "K": 142,
+      "IP": 132
+    },
+    "Bryce Harper": {
+      "type": "Hitter",
+      "R": 90,
+      "RBI": 91,
+      "HR": 29,
+      "SB": 10,
+      "OPS": 0.852,
+      "PA": 642,
+      "AB": 560
+    },
+    "Jose Ramirez": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 85,
+      "HR": 23,
+      "SB": 33,
+      "OPS": 0.803,
+      "PA": 665,
+      "AB": 594
+    },
+    "Trevor Story": {
+      "type": "Hitter",
+      "R": 68,
+      "RBI": 73,
+      "HR": 19,
+      "SB": 24,
+      "OPS": 0.717,
+      "PA": 600,
+      "AB": 552
+    },
+    "Dansby Swanson": {
+      "type": "Hitter",
+      "R": 81,
+      "RBI": 84,
+      "HR": 25,
+      "SB": 19,
+      "OPS": 0.743,
+      "PA": 660,
+      "AB": 594
+    },
+    "Brent Rooker": {
+      "type": "Hitter",
+      "R": 94,
+      "RBI": 97,
+      "HR": 33,
+      "SB": 6,
+      "OPS": 0.852,
+      "PA": 664,
+      "AB": 590
+    },
+    "Daulton Varsho": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 74,
+      "HR": 22,
+      "SB": 6,
+      "OPS": 0.734,
+      "PA": 550,
+      "AB": 494
+    },
+    "Taylor Ward": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 85,
+      "HR": 27,
+      "SB": 4,
+      "OPS": 0.784,
+      "PA": 645,
+      "AB": 564
+    },
+    "Ryan Pepiot": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.11,
+      "WHIP": 1.22,
+      "K": 176,
+      "IP": 168
+    },
+    "Cristopher Sanchez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 19,
+      "ERA": 3.36,
+      "WHIP": 1.17,
+      "K": 190,
+      "IP": 196
+    },
+    "Logan Webb": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 20,
+      "ERA": 3.48,
+      "WHIP": 1.24,
+      "K": 195,
+      "IP": 199
+    },
+    "Andres Munoz": {
+      "type": "Pitcher",
+      "SV_HLD": 35,
+      "QS": 0,
+      "ERA": 3.18,
+      "WHIP": 1.17,
+      "K": 86,
+      "IP": 69
+    },
+    "Ranger Suarez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.92,
+      "WHIP": 1.23,
+      "K": 148,
+      "IP": 166
+    },
+    "Sandy Alcantara": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 16,
+      "ERA": 4.22,
+      "WHIP": 1.27,
+      "K": 153,
+      "IP": 182
+    },
+    "Will Smith": {
+      "type": "Hitter",
+      "R": 73,
+      "RBI": 73,
+      "HR": 20,
+      "SB": 3,
+      "OPS": 0.821,
+      "PA": 530,
+      "AB": 456
+    },
+    "Pete Alonso": {
+      "type": "Hitter",
+      "R": 95,
+      "RBI": 103,
+      "HR": 35,
+      "SB": 2,
+      "OPS": 0.865,
+      "PA": 673,
+      "AB": 588
+    },
+    "Elly De La Cruz": {
+      "type": "Hitter",
+      "R": 80,
+      "RBI": 83,
+      "HR": 23,
+      "SB": 30,
+      "OPS": 0.761,
+      "PA": 661,
+      "AB": 591
+    },
+    "C.J. Abrams": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 69,
+      "HR": 19,
+      "SB": 27,
+      "OPS": 0.726,
+      "PA": 622,
+      "AB": 567
+    },
+    "Nick Kurtz": {
+      "type": "Hitter",
+      "R": 93,
+      "RBI": 94,
+      "HR": 35,
+      "SB": 3,
+      "OPS": 0.913,
+      "PA": 609,
+      "AB": 524
+    },
+    "Wyatt Langford": {
+      "type": "Hitter",
+      "R": 80,
+      "RBI": 77,
+      "HR": 22,
+      "SB": 21,
+      "OPS": 0.783,
+      "PA": 624,
+      "AB": 550
+    },
+    "Juan Soto": {
+      "type": "Hitter",
+      "R": 110,
+      "RBI": 101,
+      "HR": 39,
+      "SB": 25,
+      "OPS": 0.95,
+      "PA": 692,
+      "AB": 567
+    },
+    "Konnor Griffin": {
+      "type": "Hitter",
+      "R": 44,
+      "RBI": 44,
+      "HR": 10,
+      "SB": 18,
+      "OPS": 0.731,
+      "PA": 397,
+      "AB": 361
+    },
+    "Chase Burns": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 7,
+      "ERA": 3.24,
+      "WHIP": 1.15,
+      "K": 173,
+      "IP": 136
+    },
+    "Bubba Chandler": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 3.76,
+      "WHIP": 1.23,
+      "K": 133,
+      "IP": 129
+    },
+    "MacKenzie Gore": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 3.97,
+      "WHIP": 1.3,
+      "K": 189,
+      "IP": 170
+    },
+    "Paul Skenes": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 18,
+      "ERA": 3.06,
+      "WHIP": 1.08,
+      "K": 217,
+      "IP": 186
+    },
+    "Nolan McLean": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 3.55,
+      "WHIP": 1.2,
+      "K": 144,
+      "IP": 134
+    },
+    "Drake Baldwin": {
+      "type": "Hitter",
+      "R": 73,
+      "RBI": 75,
+      "HR": 20,
+      "SB": 1,
+      "OPS": 0.828,
+      "PA": 539,
+      "AB": 484
+    },
+    "Gunnar Henderson": {
+      "type": "Hitter",
+      "R": 88,
+      "RBI": 84,
+      "HR": 22,
+      "SB": 24,
+      "OPS": 0.797,
+      "PA": 669,
+      "AB": 593
+    },
+    "Jasson Dominguez": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 57,
+      "HR": 13,
+      "SB": 25,
+      "OPS": 0.723,
+      "PA": 501,
+      "AB": 452
+    },
+    "Jackson Merrill": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 87,
+      "HR": 24,
+      "SB": 4,
+      "OPS": 0.81,
+      "PA": 594,
+      "AB": 549
+    },
+    "Ronald Acuna Jr.": {
+      "type": "Hitter",
+      "R": 88,
+      "RBI": 79,
+      "HR": 27,
+      "SB": 18,
+      "OPS": 0.877,
+      "PA": 591,
+      "AB": 499
+    },
+    "Bryan Woo": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 18,
+      "ERA": 3.62,
+      "WHIP": 1.09,
+      "K": 190,
+      "IP": 188
+    },
+    "Yoshinobu Yamamoto": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 3.31,
+      "WHIP": 1.15,
+      "K": 171,
+      "IP": 151
+    },
+    "Mason Miller": {
+      "type": "Pitcher",
+      "SV_HLD": 36,
+      "QS": 0,
+      "ERA": 2.51,
+      "WHIP": 1.02,
+      "K": 104,
+      "IP": 69
+    },
+    "Kris Bubic": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 3.65,
+      "WHIP": 1.24,
+      "K": 145,
+      "IP": 143
+    },
+    "Jacob Misiorowski": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 3.55,
+      "WHIP": 1.21,
+      "K": 163,
+      "IP": 131
+    },
+    "Trea Turner": {
+      "type": "Hitter",
+      "R": 84,
+      "RBI": 71,
+      "HR": 18,
+      "SB": 28,
+      "OPS": 0.767,
+      "PA": 630,
+      "AB": 576
+    },
+    "Yandy Diaz": {
+      "type": "Hitter",
+      "R": 85,
+      "RBI": 76,
+      "HR": 20,
+      "SB": 3,
+      "OPS": 0.815,
+      "PA": 642,
+      "AB": 571
+    },
+    "Willson Contreras": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 78,
+      "HR": 24,
+      "SB": 5,
+      "OPS": 0.81,
+      "PA": 563,
+      "AB": 503
+    },
+    "Otto Lopez": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 69,
+      "HR": 17,
+      "SB": 16,
+      "OPS": 0.729,
+      "PA": 595,
+      "AB": 541
+    },
+    "Steven Kwan": {
+      "type": "Hitter",
+      "R": 77,
+      "RBI": 57,
+      "HR": 11,
+      "SB": 17,
+      "OPS": 0.724,
+      "PA": 651,
+      "AB": 584
+    },
+    "Jonathan Aranda": {
+      "type": "Hitter",
+      "R": 70,
+      "RBI": 75,
+      "HR": 21,
+      "SB": 1,
+      "OPS": 0.82,
+      "PA": 552,
+      "AB": 487
+    },
+    "Nolan Schanuel": {
+      "type": "Hitter",
+      "R": 71,
+      "RBI": 58,
+      "HR": 13,
+      "SB": 5,
+      "OPS": 0.749,
+      "PA": 573,
+      "AB": 521
+    },
+    "TJ Friedl": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 52,
+      "HR": 10,
+      "SB": 9,
+      "OPS": 0.689,
+      "PA": 573,
+      "AB": 531
+    },
+    "Zach Neto": {
+      "type": "Hitter",
+      "R": 85,
+      "RBI": 81,
+      "HR": 28,
+      "SB": 26,
+      "OPS": 0.78,
+      "PA": 639,
+      "AB": 581
+    },
+    "CJ Abrams": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 69,
+      "HR": 19,
+      "SB": 27,
+      "OPS": 0.726,
+      "PA": 623,
+      "AB": 567
+    },
+    "Luis Garc\u00eda Jr.": {
+      "type": "Hitter",
+      "R": 62,
+      "RBI": 68,
+      "HR": 18,
+      "SB": 15,
+      "OPS": 0.764,
+      "PA": 547,
+      "AB": 498
+    },
+    "Josh Lowe": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 53,
+      "HR": 14,
+      "SB": 21,
+      "OPS": 0.707,
+      "PA": 479,
+      "AB": 436
+    },
+    "Andr\u00e9s Gim\u00e9nez": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 58,
+      "HR": 11,
+      "SB": 17,
+      "OPS": 0.67,
+      "PA": 550,
+      "AB": 510
+    },
+    "Lars Nootbaar": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 59,
+      "HR": 15,
+      "SB": 5,
+      "OPS": 0.748,
+      "PA": 535,
+      "AB": 487
+    },
+    "Miguel Vargas": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 65,
+      "HR": 16,
+      "SB": 6,
+      "OPS": 0.732,
+      "PA": 551,
+      "AB": 501
+    },
+    "Matt Wallner": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 63,
+      "HR": 21,
+      "SB": 6,
+      "OPS": 0.772,
+      "PA": 449,
+      "AB": 409
+    },
+    "Addison Barger": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 65,
+      "HR": 18,
+      "SB": 4,
+      "OPS": 0.737,
+      "PA": 502,
+      "AB": 458
+    },
+    "Cedric Mullins": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 53,
+      "HR": 13,
+      "SB": 23,
+      "OPS": 0.689,
+      "PA": 460,
+      "AB": 426
+    },
+    "Ha-Seong Kim": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 54,
+      "HR": 11,
+      "SB": 18,
+      "OPS": 0.692,
+      "PA": 507,
+      "AB": 470
+    },
+    "Gavin Sheets": {
+      "type": "Hitter",
+      "R": 63,
+      "RBI": 66,
+      "HR": 16,
+      "SB": 2,
+      "OPS": 0.728,
+      "PA": 541,
+      "AB": 492
+    },
+    "Carter Jensen": {
+      "type": "Hitter",
+      "R": 59,
+      "RBI": 58,
+      "HR": 17,
+      "SB": 4,
+      "OPS": 0.803,
+      "PA": 444,
+      "AB": 397
+    },
+    "Jeff McNeil": {
+      "type": "Hitter",
+      "R": 65,
+      "RBI": 62,
+      "HR": 13,
+      "SB": 4,
+      "OPS": 0.734,
+      "PA": 548,
+      "AB": 499
+    },
+    "Harrison Bader": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 58,
+      "HR": 15,
+      "SB": 12,
+      "OPS": 0.697,
+      "PA": 505,
+      "AB": 468
+    },
+    "Ryan Jeffers": {
+      "type": "Hitter",
+      "R": 65,
+      "RBI": 62,
+      "HR": 16,
+      "SB": 2,
+      "OPS": 0.752,
+      "PA": 518,
+      "AB": 471
+    },
+    "Dominic Canzone": {
+      "type": "Hitter",
+      "R": 55,
+      "RBI": 59,
+      "HR": 17,
+      "SB": 4,
+      "OPS": 0.777,
+      "PA": 448,
+      "AB": 408
+    },
+    "Sal Frelick": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 52,
+      "HR": 9,
+      "SB": 15,
+      "OPS": 0.687,
+      "PA": 528,
+      "AB": 489
+    },
+    "Spencer Steer": {
+      "type": "Hitter",
+      "R": 62,
+      "RBI": 62,
+      "HR": 16,
+      "SB": 7,
+      "OPS": 0.707,
+      "PA": 547,
+      "AB": 498
+    },
+    "Austin Hays": {
+      "type": "Hitter",
+      "R": 56,
+      "RBI": 63,
+      "HR": 16,
+      "SB": 6,
+      "OPS": 0.718,
+      "PA": 501,
+      "AB": 456
+    },
+    "Jac Caglianone": {
+      "type": "Hitter",
+      "R": 59,
+      "RBI": 63,
+      "HR": 17,
+      "SB": 3,
+      "OPS": 0.736,
+      "PA": 513,
+      "AB": 467
+    },
+    "Max Muncy": {
+      "type": "Hitter",
+      "R": 61,
+      "RBI": 62,
+      "HR": 19,
+      "SB": 3,
+      "OPS": 0.803,
+      "PA": 405,
+      "AB": 362
+    },
+    "Jake Cronenworth": {
+      "type": "Hitter",
+      "R": 68,
+      "RBI": 63,
+      "HR": 14,
+      "SB": 4,
+      "OPS": 0.714,
+      "PA": 566,
+      "AB": 515
+    },
+    "Mike Yastrzemski": {
+      "type": "Hitter",
+      "R": 64,
+      "RBI": 58,
+      "HR": 16,
+      "SB": 5,
+      "OPS": 0.743,
+      "PA": 475,
+      "AB": 432
+    },
+    "Ke'Bryan Hayes": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 56,
+      "HR": 11,
+      "SB": 12,
+      "OPS": 0.668,
+      "PA": 570,
+      "AB": 528
+    },
+    "Andrew Benintendi": {
+      "type": "Hitter",
+      "R": 59,
+      "RBI": 61,
+      "HR": 18,
+      "SB": 2,
+      "OPS": 0.737,
+      "PA": 495,
+      "AB": 450
+    },
+    "Ryan McMahon": {
+      "type": "Hitter",
+      "R": 64,
+      "RBI": 63,
+      "HR": 19,
+      "SB": 3,
+      "OPS": 0.716,
+      "PA": 503,
+      "AB": 458
+    },
+    "Willi Castro": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 55,
+      "HR": 13,
+      "SB": 13,
+      "OPS": 0.692,
+      "PA": 522,
+      "AB": 484
+    },
+    "Jared Triolo": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 51,
+      "HR": 12,
+      "SB": 16,
+      "OPS": 0.683,
+      "PA": 508,
+      "AB": 471
+    },
+    "Jonathan India": {
+      "type": "Hitter",
+      "R": 69,
+      "RBI": 56,
+      "HR": 14,
+      "SB": 3,
+      "OPS": 0.73,
+      "PA": 535,
+      "AB": 487
+    },
+    "Chase Meidroth": {
+      "type": "Hitter",
+      "R": 63,
+      "RBI": 48,
+      "HR": 8,
+      "SB": 13,
+      "OPS": 0.688,
+      "PA": 543,
+      "AB": 503
+    },
+    "Victor Scott II": {
+      "type": "Hitter",
+      "R": 52,
+      "RBI": 47,
+      "HR": 8,
+      "SB": 29,
+      "OPS": 0.606,
+      "PA": 520,
+      "AB": 482
+    },
+    "Brooks Lee": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 61,
+      "HR": 15,
+      "SB": 5,
+      "OPS": 0.675,
+      "PA": 556,
+      "AB": 515
+    },
+    "Brady House": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 56,
+      "HR": 12,
+      "SB": 10,
+      "OPS": 0.69,
+      "PA": 522,
+      "AB": 484
+    },
+    "Nasim Nu\u00f1ez": {
+      "type": "Hitter",
+      "R": 43,
+      "RBI": 37,
+      "HR": 8,
+      "SB": 33,
+      "OPS": 0.678,
+      "PA": 376,
+      "AB": 349
+    },
+    "Jake Meyers": {
+      "type": "Hitter",
+      "R": 53,
+      "RBI": 49,
+      "HR": 10,
+      "SB": 14,
+      "OPS": 0.719,
+      "PA": 460,
+      "AB": 419
+    },
+    "Nolan Gorman": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 63,
+      "HR": 21,
+      "SB": 3,
+      "OPS": 0.71,
+      "PA": 499,
+      "AB": 454
+    },
+    "Brett Baty": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 54,
+      "HR": 16,
+      "SB": 6,
+      "OPS": 0.748,
+      "PA": 430,
+      "AB": 391
+    },
+    "Mark Vientos": {
+      "type": "Hitter",
+      "R": 56,
+      "RBI": 61,
+      "HR": 17,
+      "SB": 1,
+      "OPS": 0.754,
+      "PA": 438,
+      "AB": 399
+    },
+    "Connor Norby": {
+      "type": "Hitter",
+      "R": 53,
+      "RBI": 57,
+      "HR": 14,
+      "SB": 9,
+      "OPS": 0.697,
+      "PA": 474,
+      "AB": 439
+    },
+    "Jordan Walker": {
+      "type": "Hitter",
+      "R": 55,
+      "RBI": 57,
+      "HR": 14,
+      "SB": 10,
+      "OPS": 0.675,
+      "PA": 510,
+      "AB": 473
+    },
+    "Tommy Edman": {
+      "type": "Hitter",
+      "R": 59,
+      "RBI": 57,
+      "HR": 12,
+      "SB": 7,
+      "OPS": 0.685,
+      "PA": 496,
+      "AB": 460
+    },
+    "Justin Crawford": {
+      "type": "Hitter",
+      "R": 51,
+      "RBI": 43,
+      "HR": 6,
+      "SB": 21,
+      "OPS": 0.688,
+      "PA": 435,
+      "AB": 403
+    },
+    "Lourdes Gurriel Jr.": {
+      "type": "Hitter",
+      "R": 49,
+      "RBI": 53,
+      "HR": 13,
+      "SB": 8,
+      "OPS": 0.749,
+      "PA": 423,
+      "AB": 385
+    },
+    "Jos\u00e9 Caballero": {
+      "type": "Hitter",
+      "R": 40,
+      "RBI": 36,
+      "HR": 7,
+      "SB": 36,
+      "OPS": 0.661,
+      "PA": 345,
+      "AB": 320
+    },
+    "Anthony Santander": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 64,
+      "HR": 17,
+      "SB": 2,
+      "OPS": 0.693,
+      "PA": 509,
+      "AB": 472
+    },
+    "Spencer Horwitz": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 55,
+      "HR": 14,
+      "SB": 1,
+      "OPS": 0.753,
+      "PA": 482,
+      "AB": 439
+    },
+    "Kyle Teel": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 54,
+      "HR": 16,
+      "SB": 4,
+      "OPS": 0.737,
+      "PA": 474,
+      "AB": 431
+    },
+    "Romy Gonzalez": {
+      "type": "Hitter",
+      "R": 48,
+      "RBI": 50,
+      "HR": 13,
+      "SB": 9,
+      "OPS": 0.772,
+      "PA": 396,
+      "AB": 360
+    },
+    "Zach Cole": {
+      "type": "Hitter",
+      "R": 46,
+      "RBI": 48,
+      "HR": 17,
+      "SB": 15,
+      "OPS": 0.723,
+      "PA": 378,
+      "AB": 344
+    },
+    "Jorge Soler": {
+      "type": "Hitter",
+      "R": 60,
+      "RBI": 61,
+      "HR": 18,
+      "SB": 1,
+      "OPS": 0.728,
+      "PA": 495,
+      "AB": 450
+    },
+    "Logan O'Hoppe": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 58,
+      "HR": 19,
+      "SB": 2,
+      "OPS": 0.718,
+      "PA": 475,
+      "AB": 432
+    },
+    "Josh Smith": {
+      "type": "Hitter",
+      "R": 59,
+      "RBI": 48,
+      "HR": 11,
+      "SB": 10,
+      "OPS": 0.703,
+      "PA": 488,
+      "AB": 444
+    },
+    "Gabriel Moreno": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 52,
+      "HR": 12,
+      "SB": 3,
+      "OPS": 0.764,
+      "PA": 443,
+      "AB": 403
+    },
+    "Trevor Larnach": {
+      "type": "Hitter",
+      "R": 55,
+      "RBI": 53,
+      "HR": 14,
+      "SB": 4,
+      "OPS": 0.744,
+      "PA": 446,
+      "AB": 406
+    },
+    "Francisco Alvarez": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 58,
+      "HR": 15,
+      "SB": 1,
+      "OPS": 0.742,
+      "PA": 455,
+      "AB": 414
+    },
+    "Wenceel P\u00e9rez": {
+      "type": "Hitter",
+      "R": 53,
+      "RBI": 54,
+      "HR": 12,
+      "SB": 9,
+      "OPS": 0.683,
+      "PA": 478,
+      "AB": 443
+    },
+    "Zach McKinstry": {
+      "type": "Hitter",
+      "R": 50,
+      "RBI": 47,
+      "HR": 9,
+      "SB": 16,
+      "OPS": 0.689,
+      "PA": 439,
+      "AB": 407
+    },
+    "Evan Carter": {
+      "type": "Hitter",
+      "R": 46,
+      "RBI": 43,
+      "HR": 9,
+      "SB": 20,
+      "OPS": 0.701,
+      "PA": 403,
+      "AB": 367
+    },
+    "Tyler O'Neill": {
+      "type": "Hitter",
+      "R": 48,
+      "RBI": 51,
+      "HR": 18,
+      "SB": 6,
+      "OPS": 0.773,
+      "PA": 364,
+      "AB": 331
+    },
+    "Dillon Dingler": {
+      "type": "Hitter",
+      "R": 53,
+      "RBI": 55,
+      "HR": 14,
+      "SB": 1,
+      "OPS": 0.73,
+      "PA": 465,
+      "AB": 423
+    },
+    "Brayan Rocchio": {
+      "type": "Hitter",
+      "R": 56,
+      "RBI": 51,
+      "HR": 9,
+      "SB": 11,
+      "OPS": 0.663,
+      "PA": 518,
+      "AB": 480
+    },
+    "Dylan Beavers": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 50,
+      "HR": 16,
+      "SB": 7,
+      "OPS": 0.734,
+      "PA": 420,
+      "AB": 382
+    },
+    "C.J. Kayfus": {
+      "type": "Hitter",
+      "R": 49,
+      "RBI": 50,
+      "HR": 14,
+      "SB": 11,
+      "OPS": 0.71,
+      "PA": 430,
+      "AB": 391
+    },
+    "Gabriel Arias": {
+      "type": "Hitter",
+      "R": 50,
+      "RBI": 54,
+      "HR": 15,
+      "SB": 9,
+      "OPS": 0.672,
+      "PA": 469,
+      "AB": 435
+    },
+    "Bryce Eldridge": {
+      "type": "Hitter",
+      "R": 53,
+      "RBI": 55,
+      "HR": 16,
+      "SB": 2,
+      "OPS": 0.719,
+      "PA": 455,
+      "AB": 414
+    },
+    "Christian Moore": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 52,
+      "HR": 15,
+      "SB": 7,
+      "OPS": 0.682,
+      "PA": 465,
+      "AB": 431
+    },
+    "Carson Benge": {
+      "type": "Hitter",
+      "R": 55,
+      "RBI": 50,
+      "HR": 11,
+      "SB": 8,
+      "OPS": 0.678,
+      "PA": 465,
+      "AB": 431
+    },
+    "Parker Meadows": {
+      "type": "Hitter",
+      "R": 56,
+      "RBI": 49,
+      "HR": 11,
+      "SB": 9,
+      "OPS": 0.679,
+      "PA": 467,
+      "AB": 433
+    },
+    "Jake Mangum": {
+      "type": "Hitter",
+      "R": 41,
+      "RBI": 41,
+      "HR": 6,
+      "SB": 18,
+      "OPS": 0.67,
+      "PA": 412,
+      "AB": 382
+    },
+    "Bo Naylor": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 55,
+      "HR": 16,
+      "SB": 3,
+      "OPS": 0.698,
+      "PA": 465,
+      "AB": 431
+    },
+    "Chase DeLauter": {
+      "type": "Hitter",
+      "R": 54,
+      "RBI": 53,
+      "HR": 13,
+      "SB": 3,
+      "OPS": 0.685,
+      "PA": 477,
+      "AB": 442
+    },
+    "Samuel Basallo": {
+      "type": "Hitter",
+      "R": 50,
+      "RBI": 54,
+      "HR": 15,
+      "SB": 3,
+      "OPS": 0.699,
+      "PA": 439,
+      "AB": 407
+    },
+    "Pavin Smith": {
+      "type": "Hitter",
+      "R": 52,
+      "RBI": 51,
+      "HR": 14,
+      "SB": 3,
+      "OPS": 0.749,
+      "PA": 409,
+      "AB": 372
+    },
+    "Isaac Collins": {
+      "type": "Hitter",
+      "R": 49,
+      "RBI": 43,
+      "HR": 8,
+      "SB": 14,
+      "OPS": 0.704,
+      "PA": 422,
+      "AB": 384
+    },
+    "Carlos Narv\u00e1ez": {
+      "type": "Hitter",
+      "R": 52,
+      "RBI": 52,
+      "HR": 14,
+      "SB": 2,
+      "OPS": 0.716,
+      "PA": 446,
+      "AB": 406
+    },
+    "Joc Pederson": {
+      "type": "Hitter",
+      "R": 52,
+      "RBI": 53,
+      "HR": 14,
+      "SB": 3,
+      "OPS": 0.742,
+      "PA": 415,
+      "AB": 378
+    },
+    "Lenyn Sosa": {
+      "type": "Hitter",
+      "R": 46,
+      "RBI": 51,
+      "HR": 14,
+      "SB": 1,
+      "OPS": 0.723,
+      "PA": 423,
+      "AB": 385
+    },
+    "Marcelo Mayer": {
+      "type": "Hitter",
+      "R": 51,
+      "RBI": 53,
+      "HR": 13,
+      "SB": 4,
+      "OPS": 0.68,
+      "PA": 467,
+      "AB": 433
+    },
+    "Cam Smith": {
+      "type": "Hitter",
+      "R": 52,
+      "RBI": 49,
+      "HR": 11,
+      "SB": 6,
+      "OPS": 0.707,
+      "PA": 442,
+      "AB": 402
+    },
+    "Carson Williams": {
+      "type": "Hitter",
+      "R": 48,
+      "RBI": 52,
+      "HR": 16,
+      "SB": 11,
+      "OPS": 0.641,
+      "PA": 437,
+      "AB": 405
+    },
+    "Luis Rengifo": {
+      "type": "Hitter",
+      "R": 47,
+      "RBI": 44,
+      "HR": 9,
+      "SB": 10,
+      "OPS": 0.686,
+      "PA": 425,
+      "AB": 394
+    },
+    "Mois\u00e9s Ballesteros": {
+      "type": "Hitter",
+      "R": 50,
+      "RBI": 50,
+      "HR": 12,
+      "SB": 2,
+      "OPS": 0.736,
+      "PA": 418,
+      "AB": 380
+    },
+    "Tyler Stephenson": {
+      "type": "Hitter",
+      "R": 52,
+      "RBI": 53,
+      "HR": 15,
+      "SB": 1,
+      "OPS": 0.72,
+      "PA": 449,
+      "AB": 409
+    },
+    "Patrick Bailey": {
+      "type": "Hitter",
+      "R": 58,
+      "RBI": 54,
+      "HR": 12,
+      "SB": 2,
+      "OPS": 0.647,
+      "PA": 530,
+      "AB": 491
+    },
+    "Carson Kelly": {
+      "type": "Hitter",
+      "R": 49,
+      "RBI": 49,
+      "HR": 13,
+      "SB": 2,
+      "OPS": 0.738,
+      "PA": 396,
+      "AB": 360
+    },
+    "Alek Thomas": {
+      "type": "Hitter",
+      "R": 46,
+      "RBI": 47,
+      "HR": 11,
+      "SB": 8,
+      "OPS": 0.663,
+      "PA": 428,
+      "AB": 397
+    },
+    "Jake Bauers": {
+      "type": "Hitter",
+      "R": 43,
+      "RBI": 45,
+      "HR": 13,
+      "SB": 10,
+      "OPS": 0.734,
+      "PA": 346,
+      "AB": 315
+    },
+    "Tommy Pham": {
+      "type": "Hitter",
+      "R": 48,
+      "RBI": 45,
+      "HR": 11,
+      "SB": 5,
+      "OPS": 0.723,
+      "PA": 401,
+      "AB": 365
+    },
+    "Andrew McCutchen": {
+      "type": "Hitter",
+      "R": 51,
+      "RBI": 47,
+      "HR": 13,
+      "SB": 1,
+      "OPS": 0.735,
+      "PA": 403,
+      "AB": 367
+    },
+    "Casey Schmitt": {
+      "type": "Hitter",
+      "R": 47,
+      "RBI": 48,
+      "HR": 12,
+      "SB": 3,
+      "OPS": 0.715,
+      "PA": 410,
+      "AB": 373
+    },
+    "Victor Robles": {
+      "type": "Hitter",
+      "R": 39,
+      "RBI": 34,
+      "HR": 6,
+      "SB": 21,
+      "OPS": 0.669,
+      "PA": 346,
+      "AB": 321
+    },
+    "Ty France": {
+      "type": "Hitter",
+      "R": 46,
+      "RBI": 47,
+      "HR": 11,
+      "SB": 1,
+      "OPS": 0.747,
+      "PA": 392,
+      "AB": 357
+    },
+    "Tyrone Taylor": {
+      "type": "Hitter",
+      "R": 44,
+      "RBI": 43,
+      "HR": 8,
+      "SB": 13,
+      "OPS": 0.658,
+      "PA": 403,
+      "AB": 374
+    },
+    "Kyle Isbel": {
+      "type": "Hitter",
+      "R": 51,
+      "RBI": 46,
+      "HR": 7,
+      "SB": 7,
+      "OPS": 0.648,
+      "PA": 475,
+      "AB": 440
+    },
+    "Cole Ragans": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 3.29,
+      "WHIP": 1.14,
+      "K": 188,
+      "IP": 151
+    },
+    "Max Fried": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 18,
+      "ERA": 3.7,
+      "WHIP": 1.22,
+      "K": 175,
+      "IP": 186
+    },
+    "Shota Imanaga": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.13,
+      "WHIP": 1.16,
+      "K": 138,
+      "IP": 150
+    },
+    "Jacob deGrom": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 3.37,
+      "WHIP": 1.09,
+      "K": 188,
+      "IP": 165
+    },
+    "Robbie Ray": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.25,
+      "WHIP": 1.28,
+      "K": 176,
+      "IP": 163
+    },
+    "Shane Baz": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.12,
+      "WHIP": 1.25,
+      "K": 159,
+      "IP": 157
+    },
+    "Trevor Megill": {
+      "type": "Pitcher",
+      "SV_HLD": 22,
+      "QS": 0,
+      "ERA": 3.13,
+      "WHIP": 1.15,
+      "K": 84,
+      "IP": 66
+    },
+    "Chris Bassitt": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.28,
+      "WHIP": 1.31,
+      "K": 149,
+      "IP": 163
+    },
+    "Chad Patrick": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 4.13,
+      "WHIP": 1.28,
+      "K": 134,
+      "IP": 136
+    },
+    "Noah Cameron": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.32,
+      "WHIP": 1.26,
+      "K": 127,
+      "IP": 143
+    },
+    "Logan Henderson": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 3.77,
+      "WHIP": 1.14,
+      "K": 105,
+      "IP": 95
+    },
+    "Cam Schlittler": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 3.98,
+      "WHIP": 1.26,
+      "K": 121,
+      "IP": 111
+    },
+    "Zack Littell": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 15,
+      "ERA": 4.8,
+      "WHIP": 1.22,
+      "K": 137,
+      "IP": 178
+    },
+    "Michael McGreevy": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 6,
+      "ERA": 4.12,
+      "WHIP": 1.27,
+      "K": 102,
+      "IP": 153
+    },
+    "Bailey Ober": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 6,
+      "ERA": 4.41,
+      "WHIP": 1.23,
+      "K": 132,
+      "IP": 145
+    },
+    "Michael Wacha": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.46,
+      "WHIP": 1.28,
+      "K": 134,
+      "IP": 167
+    },
+    "Jared Jones": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 8,
+      "ERA": 3.94,
+      "WHIP": 1.21,
+      "K": 107,
+      "IP": 98
+    },
+    "Jordan Leasure": {
+      "type": "Pitcher",
+      "SV_HLD": 27,
+      "QS": 0,
+      "ERA": 4.25,
+      "WHIP": 1.27,
+      "K": 77,
+      "IP": 68
+    },
+    "Trey Yesavage": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 3.95,
+      "WHIP": 1.28,
+      "K": 125,
+      "IP": 117
+    },
+    "Zach Eflin": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 4.43,
+      "WHIP": 1.22,
+      "K": 102,
+      "IP": 140
+    },
+    "Gabe Speier": {
+      "type": "Pitcher",
+      "SV_HLD": 16,
+      "QS": 0,
+      "ERA": 3.09,
+      "WHIP": 1.08,
+      "K": 74,
+      "IP": 61
+    },
+    "Will Vest": {
+      "type": "Pitcher",
+      "SV_HLD": 18,
+      "QS": 0,
+      "ERA": 3.47,
+      "WHIP": 1.22,
+      "K": 76,
+      "IP": 73
+    },
+    "Reese Olson": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 6,
+      "ERA": 4.07,
+      "WHIP": 1.31,
+      "K": 126,
+      "IP": 130
+    },
+    "Joey Cantillo": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.04,
+      "WHIP": 1.29,
+      "K": 143,
+      "IP": 133
+    },
+    "Braxton Ashcraft": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 3.91,
+      "WHIP": 1.27,
+      "K": 119,
+      "IP": 124
+    },
+    "Alex Vesia": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.45,
+      "WHIP": 1.09,
+      "K": 85,
+      "IP": 66
+    },
+    "Kutter Crawford": {
+      "type": "Pitcher",
+      "SV_HLD": 5,
+      "QS": 0,
+      "ERA": 4.23,
+      "WHIP": 1.2,
+      "K": 118,
+      "IP": 121
+    },
+    "Jeffrey Springs": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.55,
+      "WHIP": 1.29,
+      "K": 145,
+      "IP": 158
+    },
+    "Nick Martinez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 7,
+      "ERA": 4.5,
+      "WHIP": 1.27,
+      "K": 123,
+      "IP": 158
+    },
+    "Matt Strahm": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.59,
+      "WHIP": 1.11,
+      "K": 80,
+      "IP": 71
+    },
+    "Tanner Scott": {
+      "type": "Pitcher",
+      "SV_HLD": 18,
+      "QS": 0,
+      "ERA": 3.36,
+      "WHIP": 1.19,
+      "K": 80,
+      "IP": 67
+    },
+    "Slade Cecconi": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.47,
+      "WHIP": 1.3,
+      "K": 128,
+      "IP": 158
+    },
+    "Garrett Whitlock": {
+      "type": "Pitcher",
+      "SV_HLD": 20,
+      "QS": 0,
+      "ERA": 3.39,
+      "WHIP": 1.18,
+      "K": 78,
+      "IP": 70
+    },
+    "Max Scherzer": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 4.39,
+      "WHIP": 1.22,
+      "K": 113,
+      "IP": 115
+    },
+    "Andrew Kittredge": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.59,
+      "WHIP": 1.18,
+      "K": 74,
+      "IP": 71
+    },
+    "Lucas Giolito": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.46,
+      "WHIP": 1.32,
+      "K": 141,
+      "IP": 158
+    },
+    "Zebby Matthews": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.06,
+      "WHIP": 1.27,
+      "K": 125,
+      "IP": 123
+    },
+    "Phil Maton": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.54,
+      "WHIP": 1.19,
+      "K": 80,
+      "IP": 70
+    },
+    "Jack Leiter": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.42,
+      "WHIP": 1.32,
+      "K": 145,
+      "IP": 147
+    },
+    "Adrian Morejon": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.49,
+      "WHIP": 1.18,
+      "K": 72,
+      "IP": 73
+    },
+    "Matt Svanson": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.68,
+      "WHIP": 1.19,
+      "K": 72,
+      "IP": 69
+    },
+    "Dean Kremer": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.5,
+      "WHIP": 1.3,
+      "K": 134,
+      "IP": 153
+    },
+    "Dylan Lee": {
+      "type": "Pitcher",
+      "SV_HLD": 20,
+      "QS": 0,
+      "ERA": 3.5,
+      "WHIP": 1.14,
+      "K": 81,
+      "IP": 70
+    },
+    "Clayton Beeter": {
+      "type": "Pitcher",
+      "SV_HLD": 26,
+      "QS": 0,
+      "ERA": 3.98,
+      "WHIP": 1.29,
+      "K": 66,
+      "IP": 57
+    },
+    "Justin Verlander": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 4.43,
+      "WHIP": 1.29,
+      "K": 122,
+      "IP": 138
+    },
+    "Robert Stephenson": {
+      "type": "Pitcher",
+      "SV_HLD": 22,
+      "QS": 0,
+      "ERA": 3.91,
+      "WHIP": 1.21,
+      "K": 54,
+      "IP": 52
+    },
+    "Mike Burrows": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 4.24,
+      "WHIP": 1.26,
+      "K": 121,
+      "IP": 122
+    },
+    "Riley O'Brien": {
+      "type": "Pitcher",
+      "SV_HLD": 27,
+      "QS": 0,
+      "ERA": 4.07,
+      "WHIP": 1.3,
+      "K": 60,
+      "IP": 61
+    },
+    "Jacob Lopez": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 4.24,
+      "WHIP": 1.29,
+      "K": 120,
+      "IP": 114
+    },
+    "Max Meyer": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 6,
+      "ERA": 4.38,
+      "WHIP": 1.3,
+      "K": 132,
+      "IP": 145
+    },
+    "Michael Soroka": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.34,
+      "WHIP": 1.26,
+      "K": 133,
+      "IP": 134
+    },
+    "Foster Griffin": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 4.27,
+      "WHIP": 1.29,
+      "K": 120,
+      "IP": 138
+    },
+    "JoJo Romero": {
+      "type": "Pitcher",
+      "SV_HLD": 25,
+      "QS": 0,
+      "ERA": 4.02,
+      "WHIP": 1.3,
+      "K": 63,
+      "IP": 69
+    },
+    "Tyler Wells": {
+      "type": "Pitcher",
+      "SV_HLD": 3,
+      "QS": 0,
+      "ERA": 4.23,
+      "WHIP": 1.2,
+      "K": 100,
+      "IP": 108
+    },
+    "Ryan Weathers": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 7,
+      "ERA": 4.19,
+      "WHIP": 1.29,
+      "K": 105,
+      "IP": 108
+    },
+    "Louis Varland": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.6,
+      "WHIP": 1.22,
+      "K": 74,
+      "IP": 70
+    },
+    "Fernando Cruz": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.39,
+      "WHIP": 1.22,
+      "K": 86,
+      "IP": 63
+    },
+    "Reynaldo L\u00f3pez": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.19,
+      "WHIP": 1.29,
+      "K": 124,
+      "IP": 123
+    },
+    "Cody Bradford": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.08,
+      "WHIP": 1.21,
+      "K": 90,
+      "IP": 99
+    },
+    "Jose A. Ferrer": {
+      "type": "Pitcher",
+      "SV_HLD": 22,
+      "QS": 0,
+      "ERA": 3.6,
+      "WHIP": 1.23,
+      "K": 65,
+      "IP": 74
+    },
+    "Victor Vodnik": {
+      "type": "Pitcher",
+      "SV_HLD": 27,
+      "QS": 0,
+      "ERA": 4.34,
+      "WHIP": 1.45,
+      "K": 65,
+      "IP": 66
+    },
+    "Orion Kerkering": {
+      "type": "Pitcher",
+      "SV_HLD": 17,
+      "QS": 0,
+      "ERA": 3.5,
+      "WHIP": 1.2,
+      "K": 74,
+      "IP": 67
+    },
+    "Luke Weaver": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.92,
+      "WHIP": 1.21,
+      "K": 80,
+      "IP": 71
+    },
+    "Chris Martin": {
+      "type": "Pitcher",
+      "SV_HLD": 18,
+      "QS": 0,
+      "ERA": 3.49,
+      "WHIP": 1.14,
+      "K": 54,
+      "IP": 56
+    },
+    "Taj Bradley": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.35,
+      "WHIP": 1.29,
+      "K": 130,
+      "IP": 134
+    },
+    "Matt Brash": {
+      "type": "Pitcher",
+      "SV_HLD": 18,
+      "QS": 0,
+      "ERA": 3.52,
+      "WHIP": 1.23,
+      "K": 73,
+      "IP": 64
+    },
+    "Justin Sterner": {
+      "type": "Pitcher",
+      "SV_HLD": 20,
+      "QS": 0,
+      "ERA": 4.04,
+      "WHIP": 1.24,
+      "K": 70,
+      "IP": 65
+    },
+    "Roki Sasaki": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.13,
+      "WHIP": 1.32,
+      "K": 122,
+      "IP": 127
+    },
+    "Bryan Baker": {
+      "type": "Pitcher",
+      "SV_HLD": 17,
+      "QS": 0,
+      "ERA": 3.67,
+      "WHIP": 1.18,
+      "K": 74,
+      "IP": 65
+    },
+    "Cade Cavalli": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 4.24,
+      "WHIP": 1.33,
+      "K": 106,
+      "IP": 123
+    },
+    "Eduard Bazardo": {
+      "type": "Pitcher",
+      "SV_HLD": 17,
+      "QS": 0,
+      "ERA": 3.77,
+      "WHIP": 1.17,
+      "K": 74,
+      "IP": 71
+    },
+    "Cole Sands": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.98,
+      "WHIP": 1.22,
+      "K": 71,
+      "IP": 74
+    },
+    "Kirby Yates": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.82,
+      "WHIP": 1.24,
+      "K": 71,
+      "IP": 58
+    },
+    "Shawn Armstrong": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.92,
+      "WHIP": 1.2,
+      "K": 74,
+      "IP": 75
+    },
+    "Tyler Rogers": {
+      "type": "Pitcher",
+      "SV_HLD": 23,
+      "QS": 0,
+      "ERA": 3.82,
+      "WHIP": 1.19,
+      "K": 58,
+      "IP": 81
+    },
+    "Will Warren": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.21,
+      "WHIP": 1.34,
+      "K": 138,
+      "IP": 137
+    },
+    "Steven Okert": {
+      "type": "Pitcher",
+      "SV_HLD": 14,
+      "QS": 0,
+      "ERA": 3.75,
+      "WHIP": 1.16,
+      "K": 78,
+      "IP": 68
+    },
+    "Hunter Gaddis": {
+      "type": "Pitcher",
+      "SV_HLD": 21,
+      "QS": 0,
+      "ERA": 3.95,
+      "WHIP": 1.21,
+      "K": 74,
+      "IP": 72
+    },
+    "Yimi Garc\u00eda": {
+      "type": "Pitcher",
+      "SV_HLD": 17,
+      "QS": 0,
+      "ERA": 3.68,
+      "WHIP": 1.17,
+      "K": 64,
+      "IP": 57
+    },
+    "Jameson Taillon": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.69,
+      "WHIP": 1.31,
+      "K": 128,
+      "IP": 159
+    },
+    "Brayan Bello": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 13,
+      "ERA": 4.48,
+      "WHIP": 1.36,
+      "K": 129,
+      "IP": 157
+    },
+    "Andrew Nardi": {
+      "type": "Pitcher",
+      "SV_HLD": 8,
+      "QS": 0,
+      "ERA": 3.32,
+      "WHIP": 1.17,
+      "K": 73,
+      "IP": 57
+    },
+    "Kodai Senga": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.18,
+      "WHIP": 1.3,
+      "K": 119,
+      "IP": 116
+    },
+    "Steven Matz": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.21,
+      "WHIP": 1.28,
+      "K": 101,
+      "IP": 121
+    },
+    "Caleb Thielbar": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.8,
+      "WHIP": 1.18,
+      "K": 72,
+      "IP": 69
+    },
+    "Ian Seymour": {
+      "type": "Pitcher",
+      "SV_HLD": 2,
+      "QS": 0,
+      "ERA": 4.07,
+      "WHIP": 1.24,
+      "K": 95,
+      "IP": 94
+    },
+    "Drew Pomeranz": {
+      "type": "Pitcher",
+      "SV_HLD": 16,
+      "QS": 0,
+      "ERA": 3.78,
+      "WHIP": 1.17,
+      "K": 67,
+      "IP": 61
+    },
+    "Jon Gray": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 4.48,
+      "WHIP": 1.28,
+      "K": 98,
+      "IP": 119
+    },
+    "Justin Steele": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 6,
+      "ERA": 4.06,
+      "WHIP": 1.21,
+      "K": 71,
+      "IP": 78
+    },
+    "Dustin May": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 4.44,
+      "WHIP": 1.35,
+      "K": 138,
+      "IP": 149
+    },
+    "A.J. Minter": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.5,
+      "WHIP": 1.16,
+      "K": 62,
+      "IP": 55
+    },
+    "Robby Snelling": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 10,
+      "ERA": 4.15,
+      "WHIP": 1.37,
+      "K": 102,
+      "IP": 119
+    },
+    "Andrew Saalfrank": {
+      "type": "Pitcher",
+      "SV_HLD": 26,
+      "QS": 0,
+      "ERA": 4.07,
+      "WHIP": 1.41,
+      "K": 53,
+      "IP": 63
+    },
+    "Camilo Doval": {
+      "type": "Pitcher",
+      "SV_HLD": 17,
+      "QS": 0,
+      "ERA": 3.67,
+      "WHIP": 1.28,
+      "K": 77,
+      "IP": 69
+    },
+    "Kyle Finnegan": {
+      "type": "Pitcher",
+      "SV_HLD": 17,
+      "QS": 0,
+      "ERA": 3.86,
+      "WHIP": 1.24,
+      "K": 68,
+      "IP": 68
+    },
+    "Matthew Liberatore": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 12,
+      "ERA": 4.78,
+      "WHIP": 1.31,
+      "K": 125,
+      "IP": 156
+    },
+    "Bryan King": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.84,
+      "WHIP": 1.19,
+      "K": 69,
+      "IP": 68
+    },
+    "Landen Roupp": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 5,
+      "ERA": 4.11,
+      "WHIP": 1.37,
+      "K": 115,
+      "IP": 123
+    },
+    "Jos\u00e9 Alvarado": {
+      "type": "Pitcher",
+      "SV_HLD": 15,
+      "QS": 0,
+      "ERA": 3.71,
+      "WHIP": 1.24,
+      "K": 68,
+      "IP": 62
+    },
+    "JP Sears": {
+      "type": "Pitcher",
+      "SV_HLD": 1,
+      "QS": 6,
+      "ERA": 4.72,
+      "WHIP": 1.26,
+      "K": 114,
+      "IP": 135
+    },
+    "Joe Jim\u00e9nez": {
+      "type": "Pitcher",
+      "SV_HLD": 5,
+      "QS": 0,
+      "ERA": 3.42,
+      "WHIP": 1.15,
+      "K": 64,
+      "IP": 54
+    },
+    "Hurston Waldrep": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 9,
+      "ERA": 4.28,
+      "WHIP": 1.36,
+      "K": 110,
+      "IP": 117
+    },
+    "Adrian Houser": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 14,
+      "ERA": 4.46,
+      "WHIP": 1.37,
+      "K": 112,
+      "IP": 152
+    },
+    "Hunter Harvey": {
+      "type": "Pitcher",
+      "SV_HLD": 19,
+      "QS": 0,
+      "ERA": 3.66,
+      "WHIP": 1.17,
+      "K": 52,
+      "IP": 48
+    },
+    "Geraldo Perdomo": {
+      "type": "Hitter",
+      "R": 83,
+      "RBI": 67,
+      "HR": 14,
+      "SB": 21,
+      "OPS": 0.765,
+      "PA": 661,
+      "AB": 573
+    },
+    "Jung Hoo Lee": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 61,
+      "HR": 11,
+      "SB": 9,
+      "OPS": 0.748,
+      "PA": 567,
+      "AB": 512
+    },
+    "Kerry Carpenter": {
+      "type": "Hitter",
+      "R": 67,
+      "RBI": 72,
+      "HR": 26,
+      "SB": 2,
+      "OPS": 0.803,
+      "PA": 498,
+      "AB": 457
+    },
+    "Marcell Ozuna": {
+      "type": "Hitter",
+      "R": 74,
+      "RBI": 75,
+      "HR": 25,
+      "SB": 1,
+      "OPS": 0.834,
+      "PA": 547,
+      "AB": 469
+    },
+    "Teoscar Hernandez": {
+      "type": "Hitter",
+      "R": 79,
+      "RBI": 88,
+      "HR": 26,
+      "SB": 6,
+      "OPS": 0.779,
+      "PA": 592,
+      "AB": 541
+    },
+    "William Contreras": {
+      "type": "Hitter",
+      "R": 82,
+      "RBI": 80,
+      "HR": 19,
+      "SB": 6,
+      "OPS": 0.794,
+      "PA": 647,
+      "AB": 564
+    },
+    "Max Clark": {
+      "type": "Hitter",
+      "R": 15,
+      "RBI": 12,
+      "HR": 4,
+      "SB": 5,
+      "OPS": 0.68,
+      "PA": 150,
+      "AB": 130
+    },
+    "Walker Jenkins": {
+      "type": "Hitter",
+      "R": 15,
+      "RBI": 12,
+      "HR": 4,
+      "SB": 5,
+      "OPS": 0.68,
+      "PA": 150,
+      "AB": 130
+    },
+    "Spencer Strider": {
+      "type": "Pitcher",
+      "SV_HLD": 0,
+      "QS": 11,
+      "ERA": 4.06,
+      "WHIP": 1.26,
+      "K": 155,
+      "IP": 138
+    }
+  }
+}

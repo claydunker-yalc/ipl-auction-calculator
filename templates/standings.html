@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Standings — Projected Power Rankings</title>
+    <link rel="stylesheet" href="/static/css/vintage-theme.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- TOP BAR                                                       -->
+<!-- ============================================================ -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <div>
+            <div class="app-title">IPL Power Rankings</div>
+            <div class="app-subtitle">Illini Penal League — 2026 Projected Standings</div>
+        </div>
+        <a href="/" class="nav-link">← Back to Draft Board</a>
+    </div>
+    <div class="top-bar-right">
+        <div class="standings-controls">
+            <button class="mode-btn active" id="btn-source-draft" onclick="setSource('draft')">Current Draft</button>
+            <button class="mode-btn" id="btn-source-batch" onclick="setSource('batch')">Last Batch Sim</button>
+        </div>
+        <div class="standings-controls" style="margin-left:1rem">
+            <button class="mode-btn active" id="btn-view-ranks" onclick="setView('ranks')">Ranks</button>
+            <button class="mode-btn" id="btn-view-stats" onclick="setView('stats')">Raw Stats</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STATUS BAR                                                     -->
+<!-- ============================================================ -->
+<div class="standings-status-bar">
+    <span id="standings-source">Showing: Current Draft</span>
+    <span id="standings-info"></span>
+</div>
+
+<!-- ============================================================ -->
+<!-- MAIN CONTENT                                                   -->
+<!-- ============================================================ -->
+<div class="standings-container">
+
+    <!-- No Stats Warning -->
+    <div id="no-stats-warning" class="card standings-warning" style="display:none">
+        <div class="card-content" style="padding:2rem;text-align:center">
+            <h3 style="margin:0 0 0.5rem 0;color:var(--burgundy)">No Stat Projections Found</h3>
+            <p style="margin:0;color:var(--navy-light)">
+                Fill in player stat projections in <code>data/stat_projections_2026.json</code> to see power rankings.
+                <br>Hitters need: R, RBI, HR, SB, OPS, PA  |  Pitchers need: SV_HLD, QS, ERA, WHIP, K, IP
+            </p>
+        </div>
+    </div>
+
+    <!-- Power Rankings Table -->
+    <div class="card" id="rankings-card">
+        <div class="card-header">
+            <h2 class="card-title" id="rankings-title">Power Rankings</h2>
+        </div>
+        <div class="card-content">
+            <table class="standings-table" id="rankings-table">
+                <thead id="rankings-thead">
+                    <!-- Populated by JS -->
+                </thead>
+                <tbody id="rankings-tbody">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Team Detail (expandable) -->
+    <div class="card" id="team-detail-card" style="display:none">
+        <div class="card-header">
+            <h2 class="card-title" id="team-detail-title">Team Roster</h2>
+            <button class="btn-small" onclick="closeTeamDetail()">Close</button>
+        </div>
+        <div class="card-content" id="team-detail-body">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/js/standings.js"></script>
+</body>
+</html>

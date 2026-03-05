@@ -1,0 +1,45 @@
+{
+  "_README": "LEAGUE SETTINGS — Your league's structure and rules. Fill this in once. The rookie_keeper_premium_dollars is tunable — adjust it if the default doesn't feel right for your league.",
+
+  "league_name": "Illini Penal League",
+  "season": 2026,
+  "num_teams": 12,
+  "total_base_budget_per_team": 260,
+
+  "roster_positions": {
+    "_comment": "How many of each position each team must roster. Adjust to match your league. These labels must be consistent across all JSON files. CI can be either 1B or 3B player. MI can be either 2B or SS player.",
+    "C": 1,
+    "1B": 1,
+    "2B": 1,
+    "SS": 1,
+    "3B": 1,
+    "CI": 1,
+    "MI": 1,
+    "OF": 5,
+    "UTIL": 1,
+    "SP": 4,
+    "RP": 3,
+    "P": 2
+  },
+
+  "total_roster_size": 22,
+
+  "auction_rules": {
+    "min_bid": 1,
+    "nomination_order": "irrelevant",
+    "_max_bid_note": "Max bid for any manager = their auction_budget - (roster_spots_to_fill - 1). The app calculates this automatically so every remaining spot can be filled at $1."
+  },
+
+  "rookie_keeper_premium": {
+    "_comment": "Flat dollar bump added to projected value for true rookies (0 MLB service time). This reflects auction psychology where managers pay a few extra dollars for keeper-eligible young players.",
+    "enabled": true,
+    "premium_dollars": 3,
+    "_tuning_note": "Start at $3. If rookies in your league typically go for $2-3 over projection, keep it. If they go higher, bump to $4-5. You can adjust this in the app UI too."
+  },
+
+  "keeper_rules": {
+    "max_keepers": 13,
+    "keeper_price_increase_per_year": "irrelevant",
+    "min_keeper_price": 1
+  }
+}
