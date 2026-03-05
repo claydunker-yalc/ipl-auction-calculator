@@ -147,7 +147,7 @@
             position: sticky;
             left: 0;
             z-index: 10;
-            background: var(--navy);
+            background: #1B2A4A;
             color: var(--cream);
             font-family: var(--font-display);
             font-size: 0.7rem;
@@ -158,22 +158,26 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
             min-width: 42px;
             white-space: nowrap;
+            /* Prevent bleed-through on sticky overlap */
+            box-shadow: 4px 0 0 0 #1B2A4A;
         }
 
         .ss-pos-label.section-hitting {
-            background: var(--navy-light);
+            background: #2C3E6B;
             color: var(--mustard);
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
+            box-shadow: 4px 0 0 0 #2C3E6B;
         }
 
         .ss-pos-label.section-pitching {
-            background: var(--burgundy-dark);
+            background: #6B0F0F;
             color: var(--mustard);
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
+            box-shadow: 4px 0 0 0 #6B0F0F;
         }
 
         /* Team column header */
@@ -225,11 +229,13 @@
         }
 
         .ss-section-cell.hitting-section {
-            background: rgba(27, 42, 74, 0.06);
+            background: rgba(27, 42, 74, 0.35);
+            border-bottom: 1px solid rgba(27, 42, 74, 0.5);
         }
 
         .ss-section-cell.pitching-section {
-            background: rgba(139, 26, 26, 0.06);
+            background: rgba(139, 26, 26, 0.35);
+            border-bottom: 1px solid rgba(139, 26, 26, 0.5);
         }
 
         /* Regular player cells */
@@ -268,25 +274,29 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
             min-width: 42px;
             white-space: nowrap;
+            /* Prevent bleed-through on sticky overlap */
+            box-shadow: -4px 0 0 0 var(--navy);
         }
 
-        .ss-pos-label-right.row-even { background: var(--navy); color: var(--cream); }
-        .ss-pos-label-right.row-odd  { background: var(--navy); color: var(--cream); }
+        .ss-pos-label-right.row-even { background: #1B2A4A; color: var(--cream); box-shadow: -4px 0 0 0 #1B2A4A; }
+        .ss-pos-label-right.row-odd  { background: #2C3E6B; color: var(--cream); box-shadow: -4px 0 0 0 #2C3E6B; }
 
         .ss-pos-label-right.section-hitting {
-            background: var(--navy-light);
+            background: #2C3E6B;
             color: var(--mustard);
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
+            box-shadow: -4px 0 0 0 #2C3E6B;
         }
 
         .ss-pos-label-right.section-pitching {
-            background: var(--burgundy-dark);
+            background: #6B0F0F;
             color: var(--mustard);
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
+            box-shadow: -4px 0 0 0 #6B0F0F;
         }
 
         /* Right corner (top-right) */
@@ -294,15 +304,16 @@
             position: sticky;
             right: 0;
             z-index: 20;
-            background: var(--navy);
+            background: #1B2A4A;
             border-left: 2px solid var(--mustard);
             border-bottom: 2px solid var(--mustard);
             min-width: 42px;
+            box-shadow: -4px 0 0 0 #1B2A4A;
         }
 
         /* Row-based banding on left labels too */
-        .ss-pos-label.row-even { background: var(--navy); }
-        .ss-pos-label.row-odd  { background: var(--navy-light); }
+        .ss-pos-label.row-even { background: #1B2A4A; box-shadow: 4px 0 0 0 #1B2A4A; }
+        .ss-pos-label.row-odd  { background: #2C3E6B; box-shadow: 4px 0 0 0 #2C3E6B; }
 
         .ss-cell .player-name {
             font-weight: 600;
@@ -366,10 +377,11 @@
             position: sticky;
             left: 0;
             z-index: 20;
-            background: var(--navy);
+            background: #1B2A4A;
             border-right: 2px solid var(--mustard);
             border-bottom: 2px solid var(--mustard);
             min-width: 42px;
+            box-shadow: 4px 0 0 0 #1B2A4A;
         }
 
         /* ---- Footer ---- */
