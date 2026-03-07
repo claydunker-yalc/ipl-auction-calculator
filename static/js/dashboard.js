@@ -440,7 +440,7 @@ function renderPlayerTable() {
         <tr class="${rowClass}">
             <td>
                 <button class="draft-btn" onclick="openDraftModal('${escapeHtml(p.player)}', '${escapeHtml(p.position_primary)}')">
-                    Draft
+                    Auction
                 </button>
             </td>
             <td><strong class="player-name-link" onclick="showPlayerStats('${escapeHtml(p.player).replace(/'/g, "\\'")}')">${escapeHtml(p.player)}</strong> ${p.scott_white_tag ? `<span class="sw-tag" title="${escapeHtml(p.scott_white_tag)}">${p.scott_white_tag.split(' ')[0]}</span>` : ''} ${p.is_rookie ? '<span class="rookie-badge">R</span>' : ''} ${badgeHtml}</td>
@@ -1014,6 +1014,82 @@ function openDraftModal(playerName, position) {
         .map(t => `<option value="${escapeHtml(t.manager)}" ${t.manager === appState.my_manager ? 'selected' : ''}>${escapeHtml(t.manager)} ($${t.budget_remaining})</option>`)
         .join('');
 
+    // === Bidder Intel ===
+    const intelEl = document.getElementById('modal-bidder-intel');
+    if (intelEl && player) {
+        const eligibility = player.position_eligibility || [player.position_primary || position];
+        // Collect all roster slots this player can fill
+        const allSlots = new Set();
+        for (const pos of eligibility) {
+            for (const slot of getSlotsThatCanUse(pos)) {
+                allSlots.add(slot);
+            }
+        }
+
+        // Find managers who need any of those slots
+        const bidders = [];
+        for (const team of appState.teams) {
+            const needs = team.needs || {};
+            const matchingSlots = [];
+            for (const slot of allSlots) {
+                const count = needs[slot] || 0;
+                if (count > 0) {
+                    matchingSlots.push({ slot, count });
+                }
+            }
+            if (matchingSlots.length > 0 && team.spots_remaining > 0 && team.budget_remaining > 0) {
+                bidders.push({
+                    manager: team.manager,
+                    max_bid: team.max_bid,
+                    slots: matchingSlots,
+                    isMe: team.manager === appState.my_manager,
+                });
+            }
+        }
+
+        // Sort: direct position first, then flex, then UTIL-only. Clay first in tier. Then by max_bid desc.
+        const primaryPos = player.position_primary || position;
+        const flexPositions = new Set(['CI', 'MI', 'P']);
+        function bidderTier(b) {
+            if (b.slots.some(s => s.slot === primaryPos)) return 0;
+            if (b.slots.some(s => flexPositions.has(s.slot))) return 1;
+            return 2;
+        }
+        bidders.sort((a, b) => {
+            const tierA = bidderTier(a);
+            const tierB = bidderTier(b);
+            if (tierA !== tierB) return tierA - tierB;
+            if (a.isMe && !b.isMe) return -1;
+            if (!a.isMe && b.isMe) return 1;
+            return b.max_bid - a.max_bid;
+        });
+
+        if (bidders.length === 0) {
+            intelEl.innerHTML = '<div class="bidder-intel"><div class="bidder-empty">No managers need this position.</div></div>';
+        } else {
+            intelEl.innerHTML = `
+                <div class="bidder-intel">
+                    <div class="bidder-header">${bidders.length} potential bidder${bidders.length !== 1 ? 's' : ''}</div>
+                    ${bidders.map(b => `
+                        <div class="bidder-row ${b.isMe ? 'bidder-me' : ''}">
+                            <span class="bidder-name">${b.isMe ? '⭐ ' : ''}${escapeHtml(b.manager)}</span>
+                            <span class="bidder-slots">${b.slots.map(s => {
+                                let icons = '';
+                                for (let i = 0; i < s.count; i++) {
+                                    icons += `<span class="need-badge need-${s.slot === 'UTIL' ? 'U' : s.slot}">${s.slot === 'UTIL' ? 'U' : s.slot}</span>`;
+                                }
+                                return icons;
+                            }).join('')}</span>
+                            <span class="bidder-max">$${b.max_bid}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+    } else if (intelEl) {
+        intelEl.innerHTML = '';
+    }
+
     overlay.classList.add('active');
     document.getElementById('modal-price').focus();
     document.getElementById('modal-price').select();
@@ -1040,6 +1116,10 @@ function openManualDraftModal() {
         })
         .map(t => `<option value="${escapeHtml(t.manager)}" ${t.manager === appState.my_manager ? 'selected' : ''}>${escapeHtml(t.manager)} ($${t.budget_remaining})</option>`)
         .join('');
+
+    // Clear bidder intel for manual entries
+    const intelEl = document.getElementById('modal-bidder-intel');
+    if (intelEl) intelEl.innerHTML = '';
 
     overlay.classList.add('active');
     setTimeout(() => document.getElementById('modal-manual-name')?.focus(), 50);

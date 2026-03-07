@@ -2738,3 +2738,67 @@ thead .cat-divider {
     vertical-align: middle;
     cursor: help;
 }
+
+/* Bidder Intel in Auction Modal */
+.bidder-intel {
+    margin: 8px 0 12px;
+    padding: 8px 10px;
+    background: var(--paper-cream, #f5f0e1);
+    border: 1px solid var(--border-light, #d4c9a8);
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+.bidder-header {
+    font-family: var(--font-display, Georgia, serif);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted, #8b7d6b);
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border-light, #d4c9a8);
+}
+.bidder-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 4px;
+    border-radius: 3px;
+}
+.bidder-row:hover {
+    background: rgba(200, 169, 81, 0.1);
+}
+.bidder-me {
+    background: rgba(200, 169, 81, 0.15);
+    font-weight: 600;
+}
+.bidder-name {
+    min-width: 100px;
+    font-weight: 500;
+    color: var(--text-dark, #2c1810);
+    white-space: nowrap;
+}
+.bidder-slots {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.bidder-slots .need-badge {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+}
+.bidder-max {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-weight: 700;
+    color: var(--burgundy, #800000);
+    min-width: 40px;
+    text-align: right;
+}
+.bidder-empty {
+    color: var(--text-muted, #8b7d6b);
+    font-style: italic;
+    text-align: center;
+    padding: 4px;
+}
