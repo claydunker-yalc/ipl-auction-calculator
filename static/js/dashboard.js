@@ -165,6 +165,38 @@ async function loadDraft() {
     }
 }
 
+function downloadDraftBackup() {
+    window.location.href = '/api/download_draft';
+    showToast('Downloading backup...');
+}
+
+async function uploadDraftBackup(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    if (!confirm(`Restore draft from "${file.name}"? This will replace the current draft state.`)) {
+        event.target.value = '';
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+        const res = await fetch('/api/upload_draft', { method: 'POST', body: formData });
+        const data = await res.json();
+        if (data.success) {
+            showToast(`Restored ${data.picks_loaded} picks from backup`);
+            await fetchState();
+        } else {
+            showToast(data.error || 'Restore failed', true);
+        }
+    } catch (err) {
+        showToast('Restore failed', true);
+    }
+    event.target.value = '';
+}
+
 async function resetDraft() {
     const res = await fetch('/api/reset_draft', { method: 'POST' });
     const data = await res.json();
@@ -281,6 +313,59 @@ function renderTopBar() {
 }
 
 // ============================================================
+// Target / Fade / Steal Classification
+// ============================================================
+function playerFillsClayNeed(player, clayNeeds) {
+    const flexMap = {
+        "1B": ["CI", "UTIL"], "3B": ["CI", "UTIL"],
+        "2B": ["MI", "UTIL"], "SS": ["MI", "UTIL"],
+        "OF": ["UTIL"], "C": ["UTIL"], "DH": ["UTIL"],
+        "SP": ["P"], "RP": ["P"],
+    };
+    const eligibility = player.position_eligibility || [player.position_primary || ""];
+    for (const pos of eligibility) {
+        if (clayNeeds[pos] > 0) return true;
+        const flexes = flexMap[pos] || [];
+        for (const flex of flexes) {
+            if (clayNeeds[flex] > 0) return true;
+        }
+    }
+    return false;
+}
+
+function classifyPlayer(player, clayNeeds, prodFloor) {
+    const base = player.base_projected_value || 0;
+    const inflAdj = player.inflation_adjusted_value || 0;
+    const pred = player.predicted_value || 0;
+    const fillsNeed = playerFillsClayNeed(player, clayNeeds);
+    const surplus = base - inflAdj;
+    const overpay = inflAdj - base;
+
+    // $1 STEAL: predicted $1, projection >= $3, fills need
+    // Steals bypass the production floor — that's the whole point of endgame steals
+    if (pred === 1 && base >= 3 && fillsNeed) {
+        return { category: 'steal', badge: 'STEAL' };
+    }
+    // TARGET: surplus >= $3 and fills need AND meets production floor
+    if (surplus >= 3 && fillsNeed && base >= prodFloor) {
+        return { category: 'target', badge: 'TARGET' };
+    }
+    // FADE: overpay >= $4 (any player)
+    if (overpay >= 4) {
+        return { category: 'fade', badge: null };
+    }
+    // VALUE: surplus >= $3 but no need (or below production floor)
+    if (surplus >= 3) {
+        return { category: 'value', badge: null };
+    }
+    // OVERPAY: mild $2-3
+    if (overpay >= 2) {
+        return { category: 'overpay', badge: null };
+    }
+    return { category: null, badge: null };
+}
+
+// ============================================================
 // Player Table
 // ============================================================
 function renderPlayerTable() {
@@ -335,14 +420,30 @@ function renderPlayerTable() {
     const tbody = document.getElementById('player-tbody');
     if (!tbody) return;
 
-    tbody.innerHTML = players.map(p => `
-        <tr>
+    // Get Clay's position needs and budget for classification
+    const clayTeam = appState.teams.find(t => t.manager === appState.my_manager);
+    const clayNeeds = clayTeam?.needs || {};
+    const clayBudgetLeft = clayTeam ? clayTeam.budget_remaining : 0;
+    const claySpotsLeft = clayTeam ? clayTeam.spots_remaining : 1;
+    // Reserve $1 for ~1/3 of remaining spots (endgame filler picks)
+    const dollarOneReserve = Math.round(claySpotsLeft / 3);
+    const realSpendSpots = Math.max(1, claySpotsLeft - dollarOneReserve);
+    const realAvgPerSpot = (clayBudgetLeft - dollarOneReserve) / realSpendSpots;
+    // Production floor = 30% of real avg $/spot, minimum $3
+    const prodFloor = Math.max(3, Math.round(realAvgPerSpot * 0.3));
+
+    tbody.innerHTML = players.map(p => {
+        const cls = classifyPlayer(p, clayNeeds, prodFloor);
+        const rowClass = cls.category ? `player-row-${cls.category}` : '';
+        const badgeHtml = cls.badge ? `<span class="value-badge badge-${cls.category}">${cls.badge}</span>` : '';
+        return `
+        <tr class="${rowClass}">
             <td>
                 <button class="draft-btn" onclick="openDraftModal('${escapeHtml(p.player)}', '${escapeHtml(p.position_primary)}')">
                     Draft
                 </button>
             </td>
-            <td><strong class="player-name-link" onclick="showPlayerStats('${escapeHtml(p.player).replace(/'/g, "\\'")}')">${escapeHtml(p.player)}</strong> ${p.is_rookie ? '<span class="rookie-badge">R</span>' : ''}</td>
+            <td><strong class="player-name-link" onclick="showPlayerStats('${escapeHtml(p.player).replace(/'/g, "\\'")}')">${escapeHtml(p.player)}</strong> ${p.is_rookie ? '<span class="rookie-badge">R</span>' : ''} ${badgeHtml}</td>
             <td>${escapeHtml(p.position_primary)}</td>
             <td>${escapeHtml(p.mlb_team)}</td>
             <td class="price-cell col-group-value col-group-left">$${p.base_projected_value}</td>
@@ -353,8 +454,8 @@ function renderPlayerTable() {
             <td class="${p.type === 'Hitter' ? 'type-hitter' : 'type-pitcher'}">${p.type}</td>
             <td>${p.scarcity_bump_applied > 0 ? '+$' + p.scarcity_bump_applied : ''}</td>
             <td style="font-size:0.7rem;color:var(--text-muted);max-width:120px;overflow:hidden;text-overflow:ellipsis">${escapeHtml(p.notes || '')}</td>
-        </tr>
-    `).join('');
+        </tr>`;
+    }).join('');
 
     // Update count
     const countEl = document.getElementById('player-count');
@@ -918,12 +1019,45 @@ function openDraftModal(playerName, position) {
     document.getElementById('modal-price').select();
 }
 
+function openManualDraftModal() {
+    const overlay = document.getElementById('draft-modal-overlay');
+    if (!overlay || !appState) return;
+
+    // Replace the player name with an editable input
+    const nameEl = document.getElementById('modal-player-name');
+    nameEl.innerHTML = '<input type="text" id="modal-manual-name" placeholder="Type player name..." style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--burgundy);border:1px solid var(--border-medium);border-radius:4px;padding:4px 8px;width:100%;background:var(--cream)">';
+    document.getElementById('modal-projected-hint').textContent = 'Manual entry — player not in projections ($0 value)';
+    document.getElementById('modal-price').value = 1;
+    document.getElementById('modal-position').value = 'UTIL';
+
+    // Populate manager dropdown
+    const select = document.getElementById('modal-manager');
+    select.innerHTML = appState.teams
+        .sort((a, b) => {
+            if (a.manager === appState.my_manager) return -1;
+            if (b.manager === appState.my_manager) return 1;
+            return a.manager.localeCompare(b.manager);
+        })
+        .map(t => `<option value="${escapeHtml(t.manager)}" ${t.manager === appState.my_manager ? 'selected' : ''}>${escapeHtml(t.manager)} ($${t.budget_remaining})</option>`)
+        .join('');
+
+    overlay.classList.add('active');
+    setTimeout(() => document.getElementById('modal-manual-name')?.focus(), 50);
+}
+
 function closeDraftModal() {
     document.getElementById('draft-modal-overlay')?.classList.remove('active');
+    // Restore the player name element to plain text (in case it was a manual input)
+    const nameEl = document.getElementById('modal-player-name');
+    if (nameEl && nameEl.querySelector('input')) {
+        nameEl.innerHTML = '';
+    }
 }
 
 function confirmDraft() {
-    const playerName = document.getElementById('modal-player-name').textContent;
+    // Check if this is a manual entry (input field) or a normal draft (text)
+    const manualInput = document.getElementById('modal-manual-name');
+    const playerName = manualInput ? manualInput.value.trim() : document.getElementById('modal-player-name').textContent;
     const manager = document.getElementById('modal-manager').value;
     const price = document.getElementById('modal-price').value;
     const position = document.getElementById('modal-position').value;

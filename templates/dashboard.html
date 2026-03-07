@@ -32,7 +32,7 @@
             <button class="view-btn active" data-view="dashboard" onclick="switchView('dashboard')">Dashboard</button>
             <button class="view-btn" data-view="teams" onclick="switchView('teams')">Team View</button>
         </div>
-        <a href="/standings" class="nav-link">Standings →</a>
+        <a href="/standings" class="nav-link">Standings</a>
     </div>
 
     <div class="top-bar-center">
@@ -403,9 +403,13 @@
                 </div>
             </div>
             <div class="action-bar">
+                <button class="btn-primary btn-small" onclick="openManualDraftModal()">+ Manual Draft</button>
                 <button class="btn-danger btn-small" id="btn-undo">↩ Undo Last</button>
                 <button class="btn-secondary btn-small" id="btn-save">💾 Save</button>
                 <button class="btn-secondary btn-small" id="btn-load">📂 Load</button>
+                <button class="btn-secondary btn-small" id="btn-download" onclick="downloadDraftBackup()">⬇ Backup</button>
+                <button class="btn-secondary btn-small" id="btn-upload" onclick="document.getElementById('upload-draft-file').click()">⬆ Restore</button>
+                <input type="file" id="upload-draft-file" accept=".json" style="display:none" onchange="uploadDraftBackup(event)">
                 <button class="btn-danger btn-small" id="btn-reset">🗑️ Reset</button>
             </div>
             <div style="overflow-y:auto;max-height:300px">

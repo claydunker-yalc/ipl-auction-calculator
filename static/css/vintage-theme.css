@@ -2684,3 +2684,46 @@ thead .cat-divider {
     0%, 100% { box-shadow: 0 0 4px rgba(143, 212, 96, 0.4); }
     50% { box-shadow: 0 0 10px rgba(143, 212, 96, 0.8); }
 }
+
+/* ============================================================
+   TARGET / FADE / STEAL ROW INDICATORS
+   ============================================================ */
+.player-row-steal {
+    border-left: 3px solid var(--mustard);
+    background: linear-gradient(90deg, rgba(200, 169, 81, 0.14) 0%, transparent 25%) !important;
+}
+.player-row-target {
+    border-left: 3px solid #3D6B20;
+    background: linear-gradient(90deg, rgba(61, 107, 32, 0.10) 0%, transparent 25%) !important;
+}
+.player-row-fade {
+    border-left: 3px solid var(--burgundy);
+    background: linear-gradient(90deg, rgba(128, 0, 0, 0.08) 0%, transparent 25%) !important;
+}
+.player-row-value {
+    border-left: 2px solid rgba(61, 107, 32, 0.5);
+}
+.player-row-overpay {
+    border-left: 2px solid rgba(128, 0, 0, 0.35);
+}
+
+/* Inline badges next to player name */
+.value-badge {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.badge-steal {
+    background: var(--mustard);
+    color: var(--navy);
+}
+.badge-target {
+    background: #3D6B20;
+    color: #fff;
+}

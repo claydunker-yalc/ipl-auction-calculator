@@ -4,10 +4,10 @@
     {
       "manager": "Brad Garrett",
       "team_name": "",
-      "total_budget": 253,
-      "keeper_count": 13,
-      "keeper_cost": 172,
-      "auction_budget": 81,
+      "total_budget": 247,
+      "keeper_count": 11,
+      "keeper_cost": 139,
+      "auction_budget": 108,
       "keepers": [
         {
           "player": "Ben Rice",
@@ -36,7 +36,7 @@
         },
         {
           "player": "Vinnie Pasquantino",
-          "position": "1B",
+          "position": "CI",
           "price": 13
         },
         {
@@ -50,22 +50,7 @@
           "price": 10
         },
         {
-          "player": "Jakob Marsee",
-          "position": "OF",
-          "price": 10
-        },
-        {
           "player": "Dylan Cease",
-          "position": "SP",
-          "price": 15
-        },
-        {
-          "player": "Zac Gallen",
-          "position": "SP",
-          "price": 9
-        },
-        {
-          "player": "Tyler Glasnow",
           "position": "SP",
           "price": 15
         },
@@ -73,6 +58,11 @@
           "player": "Emmet Sheehan",
           "position": "SP",
           "price": 10
+        },
+        {
+          "player": "Wilyer Abreu",
+          "position": "OF",
+          "price": 1
         }
       ]
     },
@@ -144,16 +134,11 @@
     {
       "manager": "Casey Crowhurst",
       "team_name": "",
-      "total_budget": 170,
-      "keeper_count": 13,
-      "keeper_cost": 117,
-      "auction_budget": 53,
+      "total_budget": 176,
+      "keeper_count": 9,
+      "keeper_cost": 57,
+      "auction_budget": 119,
       "keepers": [
-        {
-          "player": "Hunter Goodman",
-          "position": "C",
-          "price": 10
-        },
         {
           "player": "Tyler Soderstrom",
           "position": "1B",
@@ -168,16 +153,6 @@
           "player": "Zachary Neto",
           "position": "SS",
           "price": 15
-        },
-        {
-          "player": "Wilyer Abreu",
-          "position": "OF",
-          "price": 1
-        },
-        {
-          "player": "Jose Altuve",
-          "position": "2B",
-          "price": 31
         },
         {
           "player": "Lawrence Butler",
@@ -208,11 +183,6 @@
           "player": "Cameron Schlittler",
           "position": "SP",
           "price": 10
-        },
-        {
-          "player": "Josh Hader",
-          "position": "RP",
-          "price": 18
         }
       ]
     },
@@ -220,9 +190,9 @@
       "manager": "Clay Dunker",
       "team_name": "",
       "total_budget": 236,
-      "keeper_count": 13,
-      "keeper_cost": 165,
-      "auction_budget": 71,
+      "keeper_count": 10,
+      "keeper_cost": 105,
+      "auction_budget": 131,
       "keepers": [
         {
           "player": "Jonathan Aranda",
@@ -230,19 +200,9 @@
           "price": 1
         },
         {
-          "player": "Trea Turner",
-          "position": "SS",
-          "price": 40
-        },
-        {
           "player": "Yandy Diaz",
-          "position": "1B",
+          "position": "CI",
           "price": 13
-        },
-        {
-          "player": "Addison Barger",
-          "position": "OF",
-          "price": 10
         },
         {
           "player": "Steven Kwan",
@@ -253,11 +213,6 @@
           "player": "Seiya Suzuki",
           "position": "OF",
           "price": 25
-        },
-        {
-          "player": "Xavier Edwards",
-          "position": "2B",
-          "price": 10
         },
         {
           "player": "Max Fried",
@@ -281,12 +236,12 @@
         },
         {
           "player": "Kyle Bradish",
-          "position": "SP",
+          "position": "P",
           "price": 10
         },
         {
           "player": "Cole Ragans",
-          "position": "SP",
+          "position": "P",
           "price": 30
         }
       ]
@@ -370,15 +325,10 @@
       "manager": "Chris Elston",
       "team_name": "",
       "total_budget": 148,
-      "keeper_count": 12,
-      "keeper_cost": 85,
-      "auction_budget": 63,
+      "keeper_count": 9,
+      "keeper_cost": 55,
+      "auction_budget": 93,
       "keepers": [
-        {
-          "player": "William Contreras",
-          "position": "C",
-          "price": 12
-        },
         {
           "player": "Geraldo Perdomo",
           "position": "SS",
@@ -400,11 +350,6 @@
           "price": 3
         },
         {
-          "player": "Joe Ryan",
-          "position": "SP",
-          "price": 15
-        },
-        {
           "player": "Brandon Woodruff",
           "position": "SP",
           "price": 6
@@ -415,23 +360,18 @@
           "price": 10
         },
         {
-          "player": "Pete Fairbanks",
-          "position": "RP",
-          "price": 3
-        },
-        {
           "player": "Kenley Jansen",
           "position": "RP",
           "price": 1
         },
         {
           "player": "Nick Pivetta",
-          "position": "SP",
+          "position": "P",
           "price": 9
         },
         {
           "player": "Gavin Williams",
-          "position": "SP",
+          "position": "P",
           "price": 3
         }
       ]
@@ -440,9 +380,9 @@
       "manager": "Eric Henkel",
       "team_name": "",
       "total_budget": 252,
-      "keeper_count": 13,
-      "keeper_cost": 148,
-      "auction_budget": 104,
+      "keeper_count": 12,
+      "keeper_cost": 130,
+      "auction_budget": 122,
       "keepers": [
         {
           "player": "Spencer Torkelson",
@@ -475,11 +415,6 @@
           "price": 30
         },
         {
-          "player": "Hunter Greene",
-          "position": "SP",
-          "price": 18
-        },
-        {
           "player": "George Kirby",
           "position": "SP",
           "price": 17
@@ -506,7 +441,7 @@
         },
         {
           "player": "Nick Lodolo",
-          "position": "SP",
+          "position": "P",
           "price": 1
         }
       ]
@@ -582,12 +517,12 @@
       ]
     },
     {
-      "manager": "Kurt Halwedel",
+      "manager": "Kurt Hollwedel",
       "team_name": "",
       "total_budget": 343,
-      "keeper_count": 13,
-      "keeper_cost": 108,
-      "auction_budget": 235,
+      "keeper_count": 11,
+      "keeper_cost": 85,
+      "auction_budget": 258,
       "keepers": [
         {
           "player": "Shea Langeliers",
@@ -616,16 +551,11 @@
         },
         {
           "player": "Maikel Garcia",
-          "position": "3B",
+          "position": "CI",
           "price": 4
         },
         {
           "player": "Bryan Reynolds",
-          "position": "OF",
-          "price": 10
-        },
-        {
-          "player": "Chandler Simpson",
           "position": "OF",
           "price": 10
         },
@@ -648,11 +578,6 @@
           "player": "Freddy Peralta",
           "position": "SP",
           "price": 10
-        },
-        {
-          "player": "Gerrit Cole",
-          "position": "SP",
-          "price": 13
         }
       ]
     },
@@ -681,7 +606,7 @@
         },
         {
           "player": "Dansby Swanson",
-          "position": "SS",
+          "position": "MI",
           "price": 6
         },
         {
@@ -726,7 +651,7 @@
         },
         {
           "player": "Ranger Suarez",
-          "position": "SP",
+          "position": "P",
           "price": 10
         }
       ]
@@ -756,12 +681,12 @@
         },
         {
           "player": "C.J. Abrams",
-          "position": "SS",
+          "position": "MI",
           "price": 20
         },
         {
           "player": "Nick Kurtz",
-          "position": "1B",
+          "position": "CI",
           "price": 10
         },
         {
@@ -776,7 +701,7 @@
         },
         {
           "player": "Konnor Griffin",
-          "position": "SS",
+          "position": "UTIL",
           "price": 10
         },
         {
@@ -801,7 +726,7 @@
         },
         {
           "player": "Nolan McLean",
-          "position": "SP",
+          "position": "P",
           "price": 10
         }
       ]
@@ -810,15 +735,10 @@
       "manager": "Tim Peasley",
       "team_name": "",
       "total_budget": 376,
-      "keeper_count": 12,
-      "keeper_cost": 153,
-      "auction_budget": 223,
+      "keeper_count": 9,
+      "keeper_cost": 123,
+      "auction_budget": 253,
       "keepers": [
-        {
-          "player": "Drake Baldwin",
-          "position": "C",
-          "price": 10
-        },
         {
           "player": "Gunnar Henderson",
           "position": "SS",
@@ -838,16 +758,6 @@
           "player": "Ronald Acuna Jr.",
           "position": "OF",
           "price": 54
-        },
-        {
-          "player": "Max Clark",
-          "position": "OF",
-          "price": 10
-        },
-        {
-          "player": "Walker Jenkins",
-          "position": "OF",
-          "price": 10
         },
         {
           "player": "Bryan Woo",

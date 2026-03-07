@@ -414,38 +414,36 @@ def api_draft():
     if player_name in drafted_names:
         return safe_jsonify({"error": f"{player_name} is already drafted"}), 400
 
-    # Find player in projections
+    # Find player in projections (may be None for manual entries)
     player_data = None
     for p in state["player_projections"]:
         if p["player"] == player_name:
             player_data = p
             break
 
-    if not player_data:
-        return safe_jsonify({"error": f"Player '{player_name}' not found in projections"}), 400
-
     # Find the current inflation-adjusted value for over/under calc
-    inflation, _ = get_current_inflation()
     adjusted_value = price  # default
-    for ap in inflation["player_adjusted_prices"]:
-        if ap["player"] == player_name:
-            adjusted_value = ap["inflation_adjusted_value"]
-            break
+    if player_data:
+        inflation, _ = get_current_inflation()
+        for ap in inflation["player_adjusted_prices"]:
+            if ap["player"] == player_name:
+                adjusted_value = ap["inflation_adjusted_value"]
+                break
 
     # Add to draft log
     pick = {
         "pick_num": len(state["draft_log"]) + 1,
         "player": player_name,
-        "position": position or player_data.get("position_primary", ""),
+        "position": position or (player_data.get("position_primary", "") if player_data else "UTIL"),
         "manager": manager_name,
         "price": price,
-        "projected_value": player_data.get("projected_value", 0),
-        "predicted_value": player_data.get("predicted_value", 0),
+        "projected_value": player_data.get("projected_value", 0) if player_data else 0,
+        "predicted_value": player_data.get("predicted_value", 0) if player_data else 0,
         "inflation_adjusted_value": adjusted_value,
-        "over_under": round(price - player_data.get("projected_value", 0), 1),
-        "tier": player_data.get("tier", ""),
-        "type": player_data.get("type", ""),
-        "is_rookie": player_data.get("is_rookie", False),
+        "over_under": round(price - (player_data.get("projected_value", 0) if player_data else 0), 1),
+        "tier": player_data.get("tier", "") if player_data else "",
+        "type": player_data.get("type", "") if player_data else "",
+        "is_rookie": player_data.get("is_rookie", False) if player_data else False,
     }
     state["draft_log"].append(pick)
     auto_save_draft()
@@ -636,6 +634,42 @@ def api_save_draft():
         "draft_active": state["draft_active"],
     })
     return safe_jsonify({"success": True, "path": save_path})
+
+
+@app.route("/api/download_draft")
+def api_download_draft():
+    """Download the current draft state as a JSON file for local backup."""
+    backup = {
+        "draft_log": state["draft_log"],
+        "mode": state["mode"],
+        "draft_active": state["draft_active"],
+        "backup_picks": len(state["draft_log"]),
+    }
+    resp = Response(
+        json.dumps(backup, indent=2),
+        mimetype="application/json",
+        headers={"Content-Disposition": "attachment; filename=draft_backup.json"},
+    )
+    return resp
+
+
+@app.route("/api/upload_draft", methods=["POST"])
+def api_upload_draft():
+    """Restore draft state from an uploaded JSON backup file."""
+    if "file" not in request.files:
+        return safe_jsonify({"error": "No file uploaded"}), 400
+
+    f = request.files["file"]
+    try:
+        saved = json.load(f)
+    except Exception as e:
+        return safe_jsonify({"error": f"Invalid JSON: {e}"}), 400
+
+    state["draft_log"] = saved.get("draft_log", [])
+    state["mode"] = saved.get("mode", "manual")
+    state["draft_active"] = saved.get("draft_active", False)
+    auto_save_draft()
+    return safe_jsonify({"success": True, "picks_loaded": len(state["draft_log"])})
 
 
 @app.route("/api/load_draft", methods=["POST"])
