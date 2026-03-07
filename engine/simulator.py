@@ -15,8 +15,8 @@ import random
 import statistics
 from typing import List, Dict, Optional, Tuple
 
-from engine.manager_ai import ManagerAI, run_auction_pick, choose_nominator
-from engine.inflation import calculate_inflation, calculate_team_needs, calculate_max_bid, find_best_position
+from engine.manager_ai import ManagerAI, run_auction_pick, run_auction_pick_lite, choose_nominator
+from engine.inflation import calculate_inflation, calculate_inflation_lite, calculate_team_needs, calculate_max_bid, find_best_position
 from engine.standings import (
     calculate_team_stats,
     calculate_power_rankings,
@@ -225,29 +225,49 @@ def run_single_simulation(
         )
         remaining_roster_spots = total_roster * len(sim_teams) - filled_total
 
-        inflation = calculate_inflation(
-            remaining_dollars=remaining_dollars,
-            remaining_players=remaining_players,
-            remaining_roster_spots=remaining_roster_spots,
-            league_settings=league_settings,
-            team_needs=team_needs,
-            draft_log=draft_log,
-            all_players=sim_players,
-        )
-
-        # Run the auction for this player
-        winner, price = run_auction_pick(
-            nominated_player=nominated,
-            ai_managers=ai_managers,
-            teams=sim_teams,
-            team_needs=team_needs,
-            inflation_data=inflation,
-            draft_log=draft_log,
-            league_settings=league_settings,
-            human_manager=human_manager if human_manager else None,
-            human_bid=None,  # In batch mode, even human is AI-controlled
-            use_projected_anchor=use_projected_anchor,
-        )
+        # Use lite inflation + lite auction for batch mode (no human)
+        if human_manager is None:
+            inflation = calculate_inflation_lite(
+                remaining_dollars=remaining_dollars,
+                remaining_players=remaining_players,
+                remaining_roster_spots=remaining_roster_spots,
+                league_settings=league_settings,
+                team_needs=team_needs,
+                draft_log=draft_log,
+                all_players=sim_players,
+            )
+            winner, price = run_auction_pick_lite(
+                nominated_player=nominated,
+                ai_managers=ai_managers,
+                teams=sim_teams,
+                team_needs=team_needs,
+                inflation_data=inflation,
+                draft_log=draft_log,
+                league_settings=league_settings,
+                use_projected_anchor=use_projected_anchor,
+            )
+        else:
+            inflation = calculate_inflation(
+                remaining_dollars=remaining_dollars,
+                remaining_players=remaining_players,
+                remaining_roster_spots=remaining_roster_spots,
+                league_settings=league_settings,
+                team_needs=team_needs,
+                draft_log=draft_log,
+                all_players=sim_players,
+            )
+            winner, price = run_auction_pick(
+                nominated_player=nominated,
+                ai_managers=ai_managers,
+                teams=sim_teams,
+                team_needs=team_needs,
+                inflation_data=inflation,
+                draft_log=draft_log,
+                league_settings=league_settings,
+                human_manager=human_manager,
+                human_bid=None,
+                use_projected_anchor=use_projected_anchor,
+            )
 
         # Skip if nobody could legally roster this player
         if winner is None:

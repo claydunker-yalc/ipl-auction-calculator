@@ -390,6 +390,108 @@ class ManagerAI:
             self.pitcher_spent += price
 
 
+def run_auction_pick_lite(
+    nominated_player: dict,
+    ai_managers: Dict[str, ManagerAI],
+    teams: List[dict],
+    team_needs: Dict[str, Dict[str, int]],
+    inflation_data: dict,
+    draft_log: List[dict],
+    league_settings: dict,
+    use_projected_anchor: bool = False,
+) -> Tuple[str, int]:
+    """
+    Lightweight auction pick for batch simulations.
+    Calculates adjusted values inline instead of looking up from
+    the expensive player_adjusted_prices list.
+    """
+    total_roster = league_settings.get("total_roster_size", 22)
+
+    # Calculate adjusted value inline from inflation rate
+    blended = inflation_data.get("blended_inflation_raw", 0.0)
+    predicted_value = nominated_player.get("predicted_value", 0)
+    projected_value = nominated_player.get("projected_value", 0)
+
+    if predicted_value > 1:
+        adjusted_value = predicted_value * (1.0 + blended)
+    else:
+        adjusted_value = 1.0
+
+    if use_projected_anchor:
+        predicted_value = projected_value
+
+    position_scarcity = inflation_data.get("position_scarcity", {})
+
+    # Collect bids from all managers
+    bids = {}
+    for team in teams:
+        manager_name = team["manager"]
+        spent = sum(p["price"] for p in draft_log if p["manager"] == manager_name)
+        budget_remaining = team["auction_budget"] - spent
+        filled = team.get("keeper_count", 0) + sum(
+            1 for p in draft_log if p["manager"] == manager_name
+        )
+        spots_remaining = total_roster - filled
+
+        if spots_remaining <= 0 or budget_remaining <= 0:
+            continue
+
+        max_bid = max(1, budget_remaining - (spots_remaining - 1))
+        needs = team_needs.get(manager_name, {})
+
+        ai = ai_managers.get(manager_name)
+        if ai is None:
+            continue
+
+        bid = ai.decide_bid(
+            player=nominated_player,
+            predicted_value=predicted_value,
+            inflation_adjusted_value=adjusted_value,
+            my_needs=needs,
+            my_budget_remaining=budget_remaining,
+            my_max_bid=max_bid,
+            my_spots_remaining=spots_remaining,
+            position_scarcity=position_scarcity,
+            all_remaining_players=[],  # Not used by decide_bid
+        )
+
+        if bid > 0:
+            bids[manager_name] = bid
+
+    if not bids:
+        for team in teams:
+            manager_name = team["manager"]
+            spent = sum(p["price"] for p in draft_log if p["manager"] == manager_name)
+            filled = team.get("keeper_count", 0) + sum(
+                1 for p in draft_log if p["manager"] == manager_name
+            )
+            if total_roster - filled > 0 and team["auction_budget"] - spent > 0:
+                needs = team_needs.get(manager_name, {})
+                ai = ai_managers.get(manager_name)
+                if ai and ai._fills_position_need(nominated_player, needs):
+                    return (manager_name, 1)
+        return (None, 0)
+
+    # SECOND-PRICE AUCTION
+    sorted_bids = sorted(bids.items(), key=lambda x: x[1], reverse=True)
+    max_bid_value = sorted_bids[0][1]
+    top_bidders = [m for m, b in sorted_bids if b == max_bid_value]
+    winner = random.choice(top_bidders)
+
+    if len(sorted_bids) >= 2:
+        second_highest = sorted_bids[1][1]
+        final_price = min(second_highest + 1, max_bid_value)
+    else:
+        final_price = 1
+
+    final_price = max(1, final_price)
+
+    if winner in ai_managers:
+        ai_managers[winner].record_pick(nominated_player, final_price)
+
+    return (winner, final_price)
+
+
 def run_auction_pick(
     nominated_player: dict,
     ai_managers: Dict[str, ManagerAI],

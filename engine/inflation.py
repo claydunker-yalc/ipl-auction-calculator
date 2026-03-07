@@ -15,6 +15,106 @@ The "Adj $" column = predicted_value adjusted by current deviation + scarcity bu
 from typing import Dict, List, Optional
 
 
+def calculate_inflation_lite(
+    remaining_dollars: float,
+    remaining_players: List[dict],
+    remaining_roster_spots: int,
+    league_settings: dict,
+    team_needs: Optional[Dict[str, Dict[str, int]]] = None,
+    draft_log: Optional[List[dict]] = None,
+    all_players: Optional[List[dict]] = None,
+) -> dict:
+    """
+    Lightweight inflation calculation for batch simulation.
+    Returns inflation numbers and position scarcity WITHOUT building
+    the expensive per-player adjusted prices list.
+    ~3-5x faster than full calculate_inflation.
+    """
+    player_predicted = {}
+    if all_players:
+        for p in all_players:
+            player_predicted[p.get("player", "")] = p.get("predicted_value", 0)
+
+    total_actual_spent = 0
+    total_predicted_spent = 0
+    if draft_log:
+        for pick in draft_log:
+            total_actual_spent += pick.get("price", 0)
+            pred = player_predicted.get(pick.get("player", ""), 0)
+            total_predicted_spent += max(pred, 1)
+
+    if total_predicted_spent > 0:
+        global_deviation = (total_actual_spent / total_predicted_spent) - 1.0
+    else:
+        global_deviation = 0.0
+
+    value_players = [p for p in remaining_players if p.get("predicted_value", 0) > 1]
+    remaining_predicted_value = sum(p.get("predicted_value", 0) for p in value_players)
+    estimated_filler_spots = max(0, remaining_roster_spots - len(value_players))
+    available_dollars = max(0, remaining_dollars - estimated_filler_spots)
+
+    if remaining_predicted_value > 0:
+        forward_pressure = (available_dollars / remaining_predicted_value) - 1.0
+    else:
+        forward_pressure = 0.0
+
+    picks_made = len(draft_log) if draft_log else 0
+    blended_inflation = forward_pressure if picks_made > 0 else 0.0
+
+    # Position scarcity (same logic as full version)
+    position_scarcity = {}
+    if team_needs:
+        position_demand = {}
+        for manager, needs in team_needs.items():
+            for pos, count in needs.items():
+                if count > 0:
+                    position_demand[pos] = position_demand.get(pos, 0) + count
+
+        flex_supply_map = {
+            "P": ["SP", "RP"],
+            "CI": ["1B", "3B"],
+            "MI": ["2B", "SS"],
+        }
+
+        position_supply = {}
+        for p in remaining_players:
+            for pos in p.get("position_eligibility", []):
+                position_supply[pos] = position_supply.get(pos, 0) + 1
+
+        for flex_pos, specific_positions in flex_supply_map.items():
+            if flex_pos in position_demand:
+                flex_eligible = set()
+                for p in remaining_players:
+                    elig = p.get("position_eligibility", [])
+                    if flex_pos in elig or any(sp in elig for sp in specific_positions):
+                        flex_eligible.add(p.get("player", ""))
+                position_supply[flex_pos] = len(flex_eligible)
+
+        for pos, demand in position_demand.items():
+            supply = position_supply.get(pos, 0)
+            if supply > 0:
+                ratio = demand / supply
+                if ratio > 1.0:
+                    position_scarcity[pos] = {
+                        "demand": demand, "supply": supply,
+                        "ratio": round(ratio, 2),
+                        "bump_dollars": min(3, int(ratio)),
+                        "is_scarce": True,
+                    }
+            elif demand > 0:
+                position_scarcity[pos] = {
+                    "demand": demand, "supply": 0,
+                    "ratio": 999, "bump_dollars": 5, "is_scarce": True,
+                }
+
+    return {
+        "global_inflation": round(blended_inflation * 100, 1),
+        "blended_inflation_raw": blended_inflation,
+        "position_scarcity": position_scarcity,
+        "is_lite": True,
+    }
+
+
 def calculate_inflation(
     remaining_dollars: float,
     remaining_players: List[dict],
