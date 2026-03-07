@@ -379,6 +379,7 @@ def calculate_inflation(
                 "mlb_team": p.get("mlb_team", ""),
                 "notes": p.get("notes", ""),
                 "stats": p.get("stats", {}),
+                "scott_white_tag": p.get("scott_white_tag", ""),
             }
         )
 

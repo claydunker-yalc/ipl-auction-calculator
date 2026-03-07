@@ -2689,22 +2689,24 @@ thead .cat-divider {
    TARGET / FADE / STEAL ROW INDICATORS
    ============================================================ */
 .player-row-steal {
-    border-left: 3px solid var(--mustard);
-    background: linear-gradient(90deg, rgba(200, 169, 81, 0.14) 0%, transparent 25%) !important;
+    border-left: 4px solid var(--mustard);
+    background: linear-gradient(90deg, rgba(200, 169, 81, 0.28) 0%, rgba(200, 169, 81, 0.08) 40%, transparent 70%) !important;
 }
 .player-row-target {
-    border-left: 3px solid #3D6B20;
-    background: linear-gradient(90deg, rgba(61, 107, 32, 0.10) 0%, transparent 25%) !important;
+    border-left: 4px solid #3D6B20;
+    background: linear-gradient(90deg, rgba(61, 107, 32, 0.22) 0%, rgba(61, 107, 32, 0.06) 40%, transparent 70%) !important;
 }
 .player-row-fade {
-    border-left: 3px solid var(--burgundy);
-    background: linear-gradient(90deg, rgba(128, 0, 0, 0.08) 0%, transparent 25%) !important;
+    border-left: 4px solid var(--burgundy);
+    background: linear-gradient(90deg, rgba(128, 0, 0, 0.20) 0%, rgba(128, 0, 0, 0.06) 40%, transparent 70%) !important;
 }
 .player-row-value {
-    border-left: 2px solid rgba(61, 107, 32, 0.5);
+    border-left: 3px solid rgba(61, 107, 32, 0.7);
+    background: linear-gradient(90deg, rgba(61, 107, 32, 0.08) 0%, transparent 20%) !important;
 }
 .player-row-overpay {
-    border-left: 2px solid rgba(128, 0, 0, 0.35);
+    border-left: 3px solid rgba(128, 0, 0, 0.55);
+    background: linear-gradient(90deg, rgba(128, 0, 0, 0.08) 0%, transparent 20%) !important;
 }
 
 /* Inline badges next to player name */
@@ -2726,4 +2728,13 @@ thead .cat-divider {
 .badge-target {
     background: #3D6B20;
     color: #fff;
+}
+
+/* Scott White emoji tags */
+.sw-tag {
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.85rem;
+    vertical-align: middle;
+    cursor: help;
 }

@@ -443,7 +443,7 @@ function renderPlayerTable() {
                     Draft
                 </button>
             </td>
-            <td><strong class="player-name-link" onclick="showPlayerStats('${escapeHtml(p.player).replace(/'/g, "\\'")}')">${escapeHtml(p.player)}</strong> ${p.is_rookie ? '<span class="rookie-badge">R</span>' : ''} ${badgeHtml}</td>
+            <td><strong class="player-name-link" onclick="showPlayerStats('${escapeHtml(p.player).replace(/'/g, "\\'")}')">${escapeHtml(p.player)}</strong> ${p.scott_white_tag ? `<span class="sw-tag" title="${escapeHtml(p.scott_white_tag)}">${p.scott_white_tag.split(' ')[0]}</span>` : ''} ${p.is_rookie ? '<span class="rookie-badge">R</span>' : ''} ${badgeHtml}</td>
             <td>${escapeHtml(p.position_primary)}</td>
             <td>${escapeHtml(p.mlb_team)}</td>
             <td class="price-cell col-group-value col-group-left">$${p.base_projected_value}</td>
