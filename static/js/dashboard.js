@@ -928,6 +928,9 @@ function showPlayerStats(playerName) {
         <div class="stats-grid">${statRows}</div>
         ${priceRow}
         ${player.notes ? '<div class="stats-popup-notes">' + escapeHtml(player.notes) + '</div>' : ''}
+        <div class="stats-popup-links">
+            <a href="https://pitcherlist.com/player/${player.player.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\./g, '').replace(/'/g, '').replace(/\s+/g, '-')}/" target="_blank" rel="noopener" class="pl-link-btn">PL ⚾</a>
+        </div>
     `;
 
     popup.style.display = 'block';

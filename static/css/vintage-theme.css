@@ -2730,6 +2730,29 @@ thead .cat-divider {
     color: #fff;
 }
 
+/* PitcherList link in stats popup */
+.stats-popup-links {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border-light, #d4c9a8);
+    text-align: right;
+}
+.pl-link-btn {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    background: var(--burgundy, #800000);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.15s;
+}
+.pl-link-btn:hover {
+    background: #a00000;
+}
+
 /* Scott White emoji tags */
 .sw-tag {
     display: inline-block;
