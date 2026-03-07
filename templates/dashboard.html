@@ -64,11 +64,29 @@
 <!-- ============================================================ -->
 <!-- NOMINATION ORDER STRIP                                        -->
 <!-- ============================================================ -->
+<div id="nomination-strip-setup" class="nomination-strip nom-setup" style="display:none">
+    <span class="nom-label">Nomination order not set</span>
+    <button class="nom-setup-btn" onclick="openNominationSetup()">Set Order</button>
+</div>
 <div id="nomination-strip" class="nomination-strip" style="display:none">
     <button class="nom-arrow" onclick="nominationNav(-1)" title="Previous">◀</button>
     <span class="nom-label">On the clock:</span>
     <div id="nomination-names" class="nom-names"></div>
     <button class="nom-arrow" onclick="nominationNav(1)" title="Next">▶</button>
+    <button class="nom-arrow" onclick="openNominationSetup()" title="Edit order">⚙</button>
+</div>
+
+<!-- Nomination Setup Modal -->
+<div id="nom-setup-overlay" class="modal-overlay">
+    <div class="modal-content" style="max-width:400px">
+        <h3 style="font-family:var(--font-display);color:var(--burgundy);margin:0 0 8px">Set Nomination Order</h3>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin:0 0 10px">Drag to reorder, or type numbers to set position. First name nominates first.</p>
+        <div id="nom-setup-list" class="nom-setup-list"></div>
+        <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
+            <button class="btn-secondary btn-small" onclick="closeNominationSetup()">Cancel</button>
+            <button class="btn-primary btn-small" onclick="saveNominationOrder()">Save Order</button>
+        </div>
+    </div>
 </div>
 
 <!-- ============================================================ -->

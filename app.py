@@ -447,6 +447,18 @@ def api_nomination_nav():
     })
 
 
+@app.route("/api/set_nomination_order", methods=["POST"])
+def api_set_nomination_order():
+    """Set the nomination order. Body: {order: ["Manager1", "Manager2", ...]}"""
+    data = request.json
+    order = data.get("order", [])
+    if not order:
+        return safe_jsonify({"error": "Order list is required"}), 400
+    state["nomination_order"] = order
+    state["nomination_index"] = 0
+    return safe_jsonify({"success": True, "nomination_order": order, "nomination_index": 0})
+
+
 @app.route("/api/draft", methods=["POST"])
 def api_draft():
     """Draft a player. Body: {player, manager, price, position}"""

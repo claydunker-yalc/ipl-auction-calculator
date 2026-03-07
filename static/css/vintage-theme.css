@@ -2778,13 +2778,10 @@ thead .cat-divider {
     font-size: 0.8rem;
     padding: 3px 12px;
 }
-.nom-name.nom-me {
-    color: var(--mustard, #c8a951);
-}
 .nom-name.nom-me.nom-current {
     color: #fff;
-    background: linear-gradient(135deg, var(--burgundy, #800000), #4a0e0e);
-    box-shadow: 0 0 12px rgba(200, 169, 81, 0.6);
+    background: var(--burgundy, #800000);
+    box-shadow: 0 0 8px rgba(200, 169, 81, 0.4);
 }
 .nom-name.nom-full {
     opacity: 0.3;
@@ -2804,6 +2801,78 @@ thead .cat-divider {
 .nom-arrow:hover {
     background: rgba(200, 169, 81, 0.15);
     border-color: var(--mustard, #c8a951);
+}
+.nom-setup {
+    justify-content: center;
+    gap: 12px;
+}
+.nom-setup-btn {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    background: var(--mustard, #c8a951);
+    color: var(--navy, #1e2d4a);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.nom-setup-btn:hover {
+    background: #d4b85c;
+}
+.nom-setup-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+.nom-setup-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border-light, #d4c9a8);
+    cursor: grab;
+    transition: background 0.1s;
+}
+.nom-setup-row:hover {
+    background: rgba(200, 169, 81, 0.08);
+}
+.nom-setup-row.nom-dragging {
+    opacity: 0.4;
+    background: rgba(200, 169, 81, 0.15);
+}
+.nom-setup-num {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--burgundy, #800000);
+    min-width: 20px;
+    text-align: center;
+}
+.nom-setup-handle {
+    color: var(--text-muted, #8b7d6b);
+    font-size: 0.8rem;
+    cursor: grab;
+}
+.nom-setup-name {
+    flex: 1;
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark, #2c1810);
+}
+.nom-move-btn {
+    background: none;
+    border: 1px solid var(--border-light, #d4c9a8);
+    color: var(--text-muted, #8b7d6b);
+    font-size: 0.6rem;
+    padding: 1px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    line-height: 1;
+}
+.nom-move-btn:hover {
+    background: var(--border-light, #d4c9a8);
+    color: var(--text-dark, #2c1810);
 }
 
 /* PitcherList link in stats popup */

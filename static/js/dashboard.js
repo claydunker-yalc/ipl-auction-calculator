@@ -227,29 +227,30 @@ async function setMode(mode) {
 // ============================================================
 function renderNominationStrip() {
     const strip = document.getElementById('nomination-strip');
+    const setupStrip = document.getElementById('nomination-strip-setup');
     const container = document.getElementById('nomination-names');
     if (!strip || !container || !appState) return;
 
     const order = appState.nomination_order || [];
     if (order.length === 0) {
         strip.style.display = 'none';
+        if (setupStrip) setupStrip.style.display = 'flex';
         return;
     }
 
+    if (setupStrip) setupStrip.style.display = 'none';
     strip.style.display = 'flex';
     const idx = appState.nomination_index || 0;
 
     container.innerHTML = order.map((name, i) => {
         const isCurrent = i === idx;
         const isMe = name === appState.my_manager;
-        // Check if this manager's roster is full
         const team = appState.teams.find(t => t.manager === name);
         const isFull = team && team.spots_remaining <= 0;
         const displayName = name.split(' ')[0];
         return `<span class="nom-name ${isCurrent ? 'nom-current' : ''} ${isMe ? 'nom-me' : ''} ${isFull ? 'nom-full' : ''}">${displayName}${isFull ? ' ✓' : ''}</span>`;
     }).join('');
 
-    // Scroll the current nominator into view
     const currentEl = container.querySelector('.nom-current');
     if (currentEl) {
         currentEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -270,6 +271,104 @@ async function nominationNav(direction) {
         }
     } catch (err) {
         console.error('Nomination nav error:', err);
+    }
+}
+
+function openNominationSetup() {
+    const overlay = document.getElementById('nom-setup-overlay');
+    const list = document.getElementById('nom-setup-list');
+    if (!overlay || !list || !appState) return;
+
+    // Use current order if set, otherwise use team list
+    const currentOrder = (appState.nomination_order && appState.nomination_order.length > 0)
+        ? appState.nomination_order
+        : appState.teams.map(t => t.manager);
+
+    list.innerHTML = currentOrder.map((name, i) => `
+        <div class="nom-setup-row" draggable="true" data-name="${escapeHtml(name)}">
+            <span class="nom-setup-num">${i + 1}</span>
+            <span class="nom-setup-handle">☰</span>
+            <span class="nom-setup-name">${escapeHtml(name)}</span>
+            <button class="nom-move-btn" onclick="moveNomRow(this, -1)" title="Move up">▲</button>
+            <button class="nom-move-btn" onclick="moveNomRow(this, 1)" title="Move down">▼</button>
+        </div>
+    `).join('');
+
+    // Drag and drop reordering
+    let dragEl = null;
+    list.querySelectorAll('.nom-setup-row').forEach(row => {
+        row.addEventListener('dragstart', e => {
+            dragEl = row;
+            row.classList.add('nom-dragging');
+        });
+        row.addEventListener('dragend', () => {
+            row.classList.remove('nom-dragging');
+            dragEl = null;
+            renumberNomRows();
+        });
+        row.addEventListener('dragover', e => {
+            e.preventDefault();
+            if (dragEl && dragEl !== row) {
+                const rect = row.getBoundingClientRect();
+                const midY = rect.top + rect.height / 2;
+                if (e.clientY < midY) {
+                    list.insertBefore(dragEl, row);
+                } else {
+                    list.insertBefore(dragEl, row.nextSibling);
+                }
+            }
+        });
+    });
+
+    overlay.classList.add('active');
+}
+
+function closeNominationSetup() {
+    document.getElementById('nom-setup-overlay')?.classList.remove('active');
+}
+
+function moveNomRow(btn, direction) {
+    const row = btn.closest('.nom-setup-row');
+    const list = document.getElementById('nom-setup-list');
+    if (!row || !list) return;
+    if (direction === -1 && row.previousElementSibling) {
+        list.insertBefore(row, row.previousElementSibling);
+    } else if (direction === 1 && row.nextElementSibling) {
+        list.insertBefore(row, row.nextElementSibling.nextSibling);
+    }
+    renumberNomRows();
+}
+
+function renumberNomRows() {
+    const rows = document.querySelectorAll('#nom-setup-list .nom-setup-row');
+    rows.forEach((row, i) => {
+        row.querySelector('.nom-setup-num').textContent = i + 1;
+    });
+}
+
+async function saveNominationOrder() {
+    const rows = document.querySelectorAll('#nom-setup-list .nom-setup-row');
+    const order = Array.from(rows).map(r => r.dataset.name);
+    if (order.length === 0) return;
+
+    try {
+        const res = await fetch('/api/set_nomination_order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ order }),
+        });
+        const data = await res.json();
+        if (data.success) {
+            appState.nomination_order = data.nomination_order;
+            appState.nomination_index = data.nomination_index;
+            renderNominationStrip();
+            closeNominationSetup();
+            showToast('Nomination order saved');
+        } else {
+            showToast(data.error || 'Failed to save', true);
+        }
+    } catch (err) {
+        showToast('Failed to save nomination order', true);
     }
 }
 
