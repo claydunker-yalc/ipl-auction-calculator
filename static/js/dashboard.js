@@ -222,6 +222,57 @@ async function setMode(mode) {
 // ============================================================
 // Render Everything
 // ============================================================
+// ============================================================
+// Nomination Order Strip
+// ============================================================
+function renderNominationStrip() {
+    const strip = document.getElementById('nomination-strip');
+    const container = document.getElementById('nomination-names');
+    if (!strip || !container || !appState) return;
+
+    const order = appState.nomination_order || [];
+    if (order.length === 0) {
+        strip.style.display = 'none';
+        return;
+    }
+
+    strip.style.display = 'flex';
+    const idx = appState.nomination_index || 0;
+
+    container.innerHTML = order.map((name, i) => {
+        const isCurrent = i === idx;
+        const isMe = name === appState.my_manager;
+        // Check if this manager's roster is full
+        const team = appState.teams.find(t => t.manager === name);
+        const isFull = team && team.spots_remaining <= 0;
+        const displayName = name.split(' ')[0];
+        return `<span class="nom-name ${isCurrent ? 'nom-current' : ''} ${isMe ? 'nom-me' : ''} ${isFull ? 'nom-full' : ''}">${displayName}${isFull ? ' ✓' : ''}</span>`;
+    }).join('');
+
+    // Scroll the current nominator into view
+    const currentEl = container.querySelector('.nom-current');
+    if (currentEl) {
+        currentEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+}
+
+async function nominationNav(direction) {
+    try {
+        const res = await fetch('/api/nomination_nav', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ direction }),
+        });
+        const data = await res.json();
+        if (appState) {
+            appState.nomination_index = data.nomination_index;
+            renderNominationStrip();
+        }
+    } catch (err) {
+        console.error('Nomination nav error:', err);
+    }
+}
+
 function renderAll() {
     if (!appState) return;
     renderTopBar();
@@ -232,6 +283,7 @@ function renderAll() {
     renderInflationPanel();
     renderProfiles();
     updateAIControls();
+    renderNominationStrip();
     if (activeView === 'teams') renderTeamView();
     // Refresh position demand overlay if it's visible
     if (filters.position) renderPositionDemand(filters.position);
@@ -1020,14 +1072,10 @@ function openDraftModal(playerName, position) {
     // === Bidder Intel ===
     const intelEl = document.getElementById('modal-bidder-intel');
     if (intelEl && player) {
-        const eligibility = player.position_eligibility || [player.position_primary || position];
-        // Collect all roster slots this player can fill
-        const allSlots = new Set();
-        for (const pos of eligibility) {
-            for (const slot of getSlotsThatCanUse(pos)) {
-                allSlots.add(slot);
-            }
-        }
+        // The player's position_eligibility already lists exactly which roster slots they can fill
+        // (e.g. SS player: ['SS', 'MI', 'UTIL']). Use it directly — do NOT expand via getSlotsThatCanUse
+        // which would incorrectly turn UTIL into every position.
+        const allSlots = new Set(player.position_eligibility || [player.position_primary || position]);
 
         // Find managers who need any of those slots
         const bidders = [];

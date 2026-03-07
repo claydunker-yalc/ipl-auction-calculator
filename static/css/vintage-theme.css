@@ -2730,6 +2730,82 @@ thead .cat-divider {
     color: #fff;
 }
 
+/* Nomination Order Strip */
+.nomination-strip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    background: linear-gradient(180deg, #1a2744 0%, #243352 100%);
+    border-bottom: 2px solid var(--mustard, #c8a951);
+    overflow: hidden;
+}
+.nom-label {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mustard, #c8a951);
+    white-space: nowrap;
+}
+.nom-names {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.nom-names::-webkit-scrollbar {
+    display: none;
+}
+.nom-name {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.45);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+.nom-name.nom-current {
+    color: #fff;
+    font-weight: 700;
+    background: var(--burgundy, #800000);
+    box-shadow: 0 0 8px rgba(200, 169, 81, 0.4);
+    font-size: 0.8rem;
+    padding: 3px 12px;
+}
+.nom-name.nom-me {
+    color: var(--mustard, #c8a951);
+}
+.nom-name.nom-me.nom-current {
+    color: #fff;
+    background: linear-gradient(135deg, var(--burgundy, #800000), #4a0e0e);
+    box-shadow: 0 0 12px rgba(200, 169, 81, 0.6);
+}
+.nom-name.nom-full {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+.nom-arrow {
+    background: none;
+    border: 1px solid rgba(200, 169, 81, 0.4);
+    color: var(--mustard, #c8a951);
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+.nom-arrow:hover {
+    background: rgba(200, 169, 81, 0.15);
+    border-color: var(--mustard, #c8a951);
+}
+
 /* PitcherList link in stats popup */
 .stats-popup-links {
     margin-top: 6px;

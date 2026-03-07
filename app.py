@@ -96,6 +96,9 @@ state = {
     "mode": "manual",          # manual | interactive | batch
     "last_batch_results": None, # Store last batch sim for standings
     "draft_active": False,     # When False, public board hides draft picks (sim mode)
+    # Nomination order for auction day — set manager names in draft order, index tracks who's up
+    "nomination_order": [],    # e.g. ["Clay Dunker", "Brad Garrett", ...]
+    "nomination_index": 0,     # current nominator position in the list
 }
 
 MY_MANAGER = "Clay Dunker"
@@ -393,6 +396,54 @@ def api_state():
         "mode": state["mode"],
         "draft_active": state["draft_active"],
         "profiles": state["manager_profiles_analyzed"],
+        "nomination_order": state["nomination_order"],
+        "nomination_index": state["nomination_index"],
+    })
+
+
+def _manager_spots_remaining(manager_name):
+    """How many roster spots does this manager still need to fill?"""
+    total_roster = state["league_settings"].get("total_roster_size", 22)
+    team = next((t for t in state["league_state"].get("teams", []) if t["manager"] == manager_name), None)
+    if not team:
+        return 0
+    keeper_count = team.get("keeper_count", 0)
+    drafted_count = sum(1 for p in state["draft_log"] if p["manager"] == manager_name)
+    return total_roster - keeper_count - drafted_count
+
+
+def advance_nomination(direction=1):
+    """Advance (or retreat) the nomination index, skipping managers with full rosters.
+    direction: +1 for forward, -1 for backward.
+    """
+    order = state["nomination_order"]
+    if not order:
+        return
+    n = len(order)
+    idx = state["nomination_index"]
+    # Try up to n steps to find a manager who still has spots
+    for _ in range(n):
+        idx = (idx + direction) % n
+        if _manager_spots_remaining(order[idx]) > 0:
+            break
+    state["nomination_index"] = idx
+
+
+@app.route("/api/nomination_nav", methods=["POST"])
+def api_nomination_nav():
+    """Manually move the nomination pointer. Body: {direction: 1 or -1} or {index: N}"""
+    data = request.json
+    if "index" in data:
+        # Jump to a specific index
+        order = state["nomination_order"]
+        if order:
+            state["nomination_index"] = max(0, min(data["index"], len(order) - 1))
+    else:
+        direction = data.get("direction", 1)
+        advance_nomination(direction)
+    return safe_jsonify({
+        "nomination_index": state["nomination_index"],
+        "nomination_order": state["nomination_order"],
     })
 
 
@@ -448,6 +499,9 @@ def api_draft():
     state["draft_log"].append(pick)
     auto_save_draft()
 
+    # Advance nomination order (skip full rosters)
+    advance_nomination(1)
+
     return safe_jsonify({"success": True, "pick": pick})
 
 
@@ -459,6 +513,10 @@ def api_undraft():
 
     removed = state["draft_log"].pop()
     auto_save_draft()
+
+    # Step nomination order back (skip full rosters)
+    advance_nomination(-1)
+
     return safe_jsonify({"success": True, "removed": removed})
 
 
