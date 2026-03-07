@@ -1,5 +1,11 @@
 {
   "draft_log": [],
   "mode": "manual",
-  "draft_active": false
+  "draft_active": false,
+  "nomination_order": [
+    "Tim Peasley",
+    "Clay Dunker",
+    "Brad Garrett"
+  ],
+  "nomination_index": 0
 }

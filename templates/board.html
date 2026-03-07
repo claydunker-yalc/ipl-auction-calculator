@@ -414,6 +414,11 @@
         </div>
     </div>
 
+    <div id="board-nomination-strip" class="nomination-strip" style="display:none">
+        <span class="nom-label">On the clock:</span>
+        <div id="board-nomination-names" class="nom-names"></div>
+    </div>
+
     <div class="draft-ticker">
         <div class="ticker-label">Recent Picks</div>
         <div class="ticker-items" id="ticker-items">
@@ -515,8 +520,37 @@
 
             renderTicker(hasNew);
             renderSpreadsheet();
+            renderBoardNominationStrip();
 
             lastPickCount = picks;
+        }
+
+        function renderBoardNominationStrip() {
+            const strip = document.getElementById('board-nomination-strip');
+            const container = document.getElementById('board-nomination-names');
+            if (!strip || !container) return;
+
+            const order = boardState.nomination_order || [];
+            if (order.length === 0) {
+                strip.style.display = 'none';
+                return;
+            }
+
+            strip.style.display = 'flex';
+            const idx = boardState.nomination_index || 0;
+
+            container.innerHTML = order.map((name, i) => {
+                const isCurrent = i === idx;
+                const team = boardState.teams.find(t => t.manager === name);
+                const isFull = team && team.spots_remaining <= 0;
+                const displayName = name.split(' ')[0];
+                return `<span class="nom-name ${isCurrent ? 'nom-current' : ''} ${isFull ? 'nom-full' : ''}">${displayName}${isFull ? ' \u2713' : ''}</span>`;
+            }).join('');
+
+            const currentEl = container.querySelector('.nom-current');
+            if (currentEl) {
+                currentEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
         }
 
         // ---- Ticker ----

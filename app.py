@@ -138,8 +138,12 @@ def load_data():
             state["draft_log"] = saved.get("draft_log", [])
             state["mode"] = saved.get("mode", "manual")
             state["draft_active"] = saved.get("draft_active", False)
+            state["nomination_order"] = saved.get("nomination_order", [])
+            state["nomination_index"] = saved.get("nomination_index", 0)
             if state["draft_log"]:
                 print(f"Auto-restored {len(state['draft_log'])} picks from saved draft")
+            if state["nomination_order"]:
+                print(f"Restored nomination order: {len(state['nomination_order'])} managers, index {state['nomination_index']}")
             print(f"Draft active: {state['draft_active']}")
         except Exception as e:
             print(f"[WARNING] Could not restore draft save: {e}")
@@ -167,6 +171,8 @@ def auto_save_draft():
             "draft_log": state["draft_log"],
             "mode": state["mode"],
             "draft_active": state["draft_active"],
+            "nomination_order": state["nomination_order"],
+            "nomination_index": state["nomination_index"],
         })
     except Exception as e:
         print(f"[WARNING] Auto-save failed: {e}")
@@ -305,6 +311,8 @@ def api_board_state():
         "draft_log": visible_log,
         "draft_active": state["draft_active"],
         "total_roster_size": state["league_settings"].get("total_roster_size", 22),
+        "nomination_order": state["nomination_order"],
+        "nomination_index": state["nomination_index"],
     })
 
 
@@ -456,6 +464,7 @@ def api_set_nomination_order():
         return safe_jsonify({"error": "Order list is required"}), 400
     state["nomination_order"] = order
     state["nomination_index"] = 0
+    auto_save_draft()
     return safe_jsonify({"success": True, "nomination_order": order, "nomination_index": 0})
 
 
@@ -754,6 +763,9 @@ def api_load_draft():
 
     state["draft_log"] = saved.get("draft_log", [])
     state["mode"] = saved.get("mode", "manual")
+    state["draft_active"] = saved.get("draft_active", False)
+    state["nomination_order"] = saved.get("nomination_order", [])
+    state["nomination_index"] = saved.get("nomination_index", 0)
     return safe_jsonify({"success": True, "picks_loaded": len(state["draft_log"])})
 
 

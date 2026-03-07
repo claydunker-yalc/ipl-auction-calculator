@@ -78,7 +78,7 @@
 
 <!-- Nomination Setup Modal -->
 <div id="nom-setup-overlay" class="modal-overlay">
-    <div class="modal-content" style="max-width:400px">
+    <div class="modal" style="max-width:400px">
         <h3 style="font-family:var(--font-display);color:var(--burgundy);margin:0 0 8px">Set Nomination Order</h3>
         <p style="font-size:0.75rem;color:var(--text-muted);margin:0 0 10px">Drag to reorder, or type numbers to set position. First name nominates first.</p>
         <div id="nom-setup-list" class="nom-setup-list"></div>
@@ -92,7 +92,8 @@
 <!-- ============================================================ -->
 <!-- AI CONTROLS BAR (visible based on mode)                       -->
 <!-- ============================================================ -->
-<div class="ai-controls-bar" id="ai-controls-bar">
+<!-- AI Controls hidden for 2026 draft day — code preserved for next year -->
+<div class="ai-controls-bar" id="ai-controls-bar" style="display:none">
     <!-- Manual Mode: AI Assist -->
     <div id="ai-assist-controls" class="ai-control-group">
         <span class="ai-label">AI Assist:</span>
