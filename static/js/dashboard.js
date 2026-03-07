@@ -279,10 +279,19 @@ function openNominationSetup() {
     const list = document.getElementById('nom-setup-list');
     if (!overlay || !list || !appState) return;
 
-    // Use current order if set, otherwise use team list
-    const currentOrder = (appState.nomination_order && appState.nomination_order.length > 0)
-        ? appState.nomination_order
-        : appState.teams.map(t => t.manager);
+    // Always show all managers. If an order is already set, keep that order
+    // but make sure any missing managers are appended at the end.
+    const allManagers = appState.teams.map(t => t.manager);
+    const savedOrder = appState.nomination_order || [];
+    const currentOrder = [];
+    // First add saved names that still exist
+    for (const name of savedOrder) {
+        if (allManagers.includes(name)) currentOrder.push(name);
+    }
+    // Then append any managers not in the saved order
+    for (const name of allManagers) {
+        if (!currentOrder.includes(name)) currentOrder.push(name);
+    }
 
     list.innerHTML = currentOrder.map((name, i) => `
         <div class="nom-setup-row" draggable="true" data-name="${escapeHtml(name)}">
